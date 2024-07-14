@@ -18,6 +18,12 @@
             background-color: white; /* Background color set to white */
             font-family: Impact, sans-serif; /* Fallback font */
         }
+        
+        /* Prevent scrolling */
+        html, body {
+            overflow: hidden;
+            height: 100%;
+        }
 
         header {
             height: 8vh; /* Adjusted to 8% of viewport height */
@@ -150,29 +156,42 @@
             transform: translateY(-50%); /* Center vertically */
         }
         /* First rectangle */
-        .rectangle-left {
+        .divider-left {
             position: absolute;
             left: 0;
             top: 0;
-            width: 49%;
+            width: 50%;
             height: 100%;
-            background-color: #ccc; /* Gray background */
+            background-color: #101720; /* Gray background */
         }
 
         /* Second rectangle */
-        .rectangle-right {
+        .divider-right {
             position: absolute;
             right: 0;
             top: 0;
-            width: 49%;
+            width: 50%;
             height: 100%;
-            background-color: #f0f0f0; /* Light gray background */
+            background-color: #111; /* Light gray background */
         }
+        
+        /* Vertical line styling */
+        .vertical-line {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 1.5px; /* Same width as the other line */
+            height: 92vh; /* Adjusted height */
+            background-color: #303747; /* Same color as the other line */
+            transform: translateX(-50%);
+        }
+        
     </style>
 </head>
 <body>
-    <div class="rectangle rectangle-left"></div>
-    <div class="rectangle rectangle-right"></div>
+    <div class="divider-left"></div>
+    <div class="vertical-line"></div>
+    <div class="divider-right"></div>
     <header>
         <div class="top-line"></div> <!-- Thin line -->
         <a href="/home" class="logo">
