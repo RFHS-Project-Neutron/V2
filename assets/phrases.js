@@ -1,16 +1,14 @@
 // phrases.js
 
-function getRandomPhrase() {
-    const phrases = [
-        "Phrase 1",
-        "Phrase 2",
-        "Phrase 3"
-    ];
-    const randomIndex = Math.floor(Math.random() * phrases.length);
-    return phrases[randomIndex];
-}
+const phrases = [
+    "Welcome to Project Neutron!",
+    "Explore the world of games and entertainment.",
+    "Discover new movies and TV shows.",
+    "Enhance your gaming experience.",
+    "Stay tuned for exciting updates!",
+    "Join our community today!",
+    "Experience entertainment like never before."
+];
 
-document.addEventListener('DOMContentLoaded', function() {
-    const randomTextElement = document.getElementById('randomText');
-    randomTextElement.textContent = getRandomPhrase();
-});
+// Export the array to make it accessible
+export default phrases;
