@@ -155,22 +155,13 @@
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
         }
-        /* First rectangle */
-        .divider-left {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 50%;
-            height: 100%;
-            background-color: #101720; /* Gray background */
-        }
 
         /* Second rectangle */
         .divider-right {
             position: absolute;
             right: 0;
             top: 0;
-            width: 50%;
+            width: 60%;
             height: 100%;
             background-color: #111; /* Light gray background */
         }
@@ -178,18 +169,103 @@
         /* Vertical line styling */
         .vertical-line {
             position: absolute;
-            left: 50%;
+            left: 40%;
             bottom: 0;
             width: 1.5px; /* Same width as the other line */
             height: 92vh; /* Adjusted height */
             background-color: #303747; /* Same color as the other line */
             transform: translateX(-50%);
         }
+
+        /* First rectangle */
+        .divider-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40%;
+            height: 100%;
+            background-color: #101720; /* Gray background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login {
+            position: absolute;
+            left: 25%;
+            top: 40%;
+            width: 50%;
+            height: 8%; /* Adjust height as needed */
+            background-color: transparent; /* Darker gold color */
+            border-radius: 12px;
+            border: 1.5px solid #303747;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sign-up {
+            position: absolute;
+            left: 25%;
+            bottom: 40%;
+            width: 50%;
+            height: 8%; /* Adjust height as needed */
+            background-color: #303747; /* Darker gold color */
+            border-radius: 12px;
+            border: 1.5px solid #303747;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1rem; /* Adjust font size as needed */
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline */
+        }
         
+        .sign-up-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1rem; /* Adjust font size as needed */
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Styles for login and sign-up buttons */
+        .login, .sign-up {
+            cursor: pointer; /* Change cursor to pointer */
+            transition: transform 0.3s ease; /* Add transition for smooth animation */
+        }
+
+        .login:hover, .sign-up:hover {
+            transform: scale(1.05); /* Scale up the button on hover */
+        }
+
+        /* Additional styles for login and sign-up text */
+        .login-text, .sign-up-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1rem; /* Adjust font size as needed */
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline */
+        }
+
     </style>
 </head>
 <body>
-    <div class="divider-left"></div>
+    <div class="divider-left">
+        <div class="sign-up">
+            <span class="sign-up-text">Sign Up</span>
+        </div>
+        <div class="login">
+            <span class="login-text">Login</span>
+        </div>
+    </div>
     <div class="vertical-line"></div>
     <div class="divider-right"></div>
     <header>
