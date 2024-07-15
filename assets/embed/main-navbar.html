@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Neutron</title>
-    <link rel="icon" href="/assets/images/no-bg-logo.png?raw=true" type="image/png">
+    <link rel="icon" href="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" type="image/png">
     <style>
         /* Reset default margin and padding */
         * {
@@ -34,6 +34,8 @@
             display: flex;
             align-items: center;
             margin-left: -5px; /* Adjusted to 20px from the left side of the screen */
+            text-decoration: none; /* Remove underline */
+            color: white; /* Text color */
         }
 
         .logo img {
@@ -60,6 +62,22 @@
             position: relative; /* Enable relative positioning */
         }
 
+        .nav-text::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Adjust position as needed */
+            width: 0;
+            height: 3px; /* Height of the underline */
+            background-color: white; /* Underline color */
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-text:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
         /* Thin line */
         .top-line {
             position: absolute;
@@ -80,6 +98,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: transform 0.3s ease; /* Add transition for smooth animation */
+        }
+
+        .rectangle:hover {
+            transform: scale(1.1); /* Scale up the rectangle on hover */
         }
 
         .rectangle-text {
@@ -119,21 +142,29 @@
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
         }
+
+        .tv-text {
+            position: absolute;
+            left: 546px; /* Original position for TV Shows */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="top-line"></div> <!-- Thin line -->
-        <div class="logo">
-            <img src="/assets/images/no-bg-logo.png?raw=true" alt="Project Neutron Logo">
+        <a href="/home" class="logo">
+            <img src="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" alt="Project Neutron Logo">
             <span class="logo-text">Project Neutron</span>
-        </div>
+        </a>
         <a href="/home" class="nav-text home-text">Home</a>
         <a href="/gs" class="nav-text games-text">Games</a>
         <a href="/apps" class="nav-text apps-text">Apps</a>
         <a href="/mov" class="nav-text movies-text">Movies</a>
+        <a href="/tv" class="nav-text tv-text">TV Shows</a>
         <div class="rectangle">
-            <a href="/auth" class="rectangle-text">Project Neutron +</a>
+            <a href="/plus" class="rectangle-text">Project Neutron +</a>
         </div> <!-- Rectangle at the right side of the header -->
     </header>
     <!-- Main content of your website -->
