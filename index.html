@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Title and Favicon -->
-    <title>Redirect</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
-    
-    <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEVWPFQ71E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'G-ZEVWPFQ71E');
-    </script>
-    
-    <!-- Clarity Tag -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "mgjkyicl12");
-    </script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEVWPFQ71E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZEVWPFQ71E');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "mgjkyicl12");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirect</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
+<script>
+window.onload = function() {
+    var win = window.open();
+    win.document.body.style.margin = '0';
+    win.document.body.style.height = '100vh';
+    var iframe = win.document.createElement('iframe');
+    iframe.style.border = 'none';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.margin = '0';
+    iframe.src = '/home';
+    win.document.body.appendChild(iframe);
+    setTimeout(function() {
+        window.location.replace('https://nasa.gov');
+    }, 0); // Immediate redirect without saving to history
+};
+</script>
 </head>
 <body>
-    <!-- JavaScript -->
-    <script src="script.js"></script>
 </body>
 </html>
