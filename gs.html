@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LVCEWNB2TH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LVCEWNB2TH');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "n7w6y6wzt8");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Neutron</title>
+    <link rel="icon" href="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling for header and navigation */
+        body {
+            background-color: #101720; /* Background color set to white */
+            font-family: Impact, sans-serif; /* Fallback font */
+        }
+
+        header {
+            height: 8vh; /* Adjusted to 8% of viewport height */
+            background-color: #101720; /* Background color set to #101720 */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: relative; /* Enable relative positioning */
+        }
+
+        /* Logo styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: -5px; /* Adjusted to 20px from the left side of the screen */
+            text-decoration: none; /* Remove underline */
+            color: white; /* Text color */
+        }
+
+        .logo img {
+            height: 6vh; /* Adjusted to 6% of viewport height */
+            margin-right: 20px; /* Space between logo and text */
+        }
+
+        .logo-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1.6rem; /* Increased font size for Project Neutron text */
+            color: white; /* Adjust text color */
+            position: relative; /* Enable relative positioning */
+        }
+
+        /* Navigation text styling */
+        .nav-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 100; /* Font weight adjusted to 100 */
+            font-size: 1.2rem; /* Adjust font size as needed */
+            color: white; /* Adjust text color */
+            text-decoration: none; /* Remove underline */
+            margin-right: 50px; /* Adjust space between navigation items */
+            position: relative; /* Enable relative positioning */
+        }
+
+        .nav-text::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Adjust position as needed */
+            width: 0;
+            height: 3px; /* Height of the underline */
+            background-color: white; /* Underline color */
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-text:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Thin line */
+        .top-line {
+            position: absolute;
+            top: 100%; /* Positioned 100% from the top */
+            left: 0;
+            width: 100%;
+            height: 1.5px; /* 1.5px height for the line */
+            background-color: #303747; /* Color set to #303747 */
+        }
+
+        /* Rectangle styling */
+        .rectangle {
+            height: 75%; /* Height set to 70% */
+            width: 175px; /* Increased width */
+            background-color: transparent; /* Background color set to transparent */
+            border-radius: 10px; /* Rounded edges */
+            border: 2px solid #d4af37; /* Darker gold outline */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease; /* Add transition for smooth animation */
+        }
+
+        .rectangle:hover {
+            transform: scale(1.1); /* Scale up the rectangle on hover */
+        }
+
+        .rectangle-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1.2rem; /* Font size for the text */
+            color: #d4af37; /* Darker gold color for the text */
+            text-decoration: none; /* Remove underline */
+            padding: 10px; /* Add padding for better click area */
+        }
+
+        /* Positioning */
+        .home-text {
+            position: absolute;
+            left: 270px; /* Original position for Home */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .games-text {
+            position: absolute;
+            left: 335px; /* Original position for Games */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .apps-text {
+            position: absolute;
+            left: 410px; /* Original position for Apps */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .movies-text {
+            position: absolute;
+            left: 470px; /* Original position for Movies */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .tv-text {
+            position: absolute;
+            left: 546px; /* Original position for TV Shows */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+        
+        .centered-text {
+            position: absolute;
+            left: calc(50% - 82.5px); /* Updated position */
+            top: 16vh;
+            transform: translate(-50%, -50%);
+            font-family: Impact, sans-serif;
+            font-weight: 300;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .search-bar {
+            position: absolute;
+            left: calc(50% - 82.5px); /* Updated position */
+            top: 24vh; /* 18% of viewport height */
+            transform: translateX(-50%);
+            width: 300px; /* Adjust width as needed */
+            height: 50px; /* Adjust height as needed */
+            background-color: transparent; /* Background color set to transparent */
+            border: 2px solid white; /* Border styling */
+            border-radius: 12px; /* Rounded corners */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-bar i {
+            color: white; /* Set icon color to white */
+            position: absolute;
+            left: calc(50% - 135px); /* Position the icon 250px to the left of the center */
+            font-size: 1rem; /* Adjust icon size */
+        }
+        
+        .ad-space {
+            width: 140px;
+            height: 525px;
+            background-color: #fff; /* Example background color */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 54vh;
+            right: 2%;
+            transform: translateY(-50%);
+            z-index: 1000; /* Adjust z-index as needed */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .ad-label {
+            position: absolute;
+            bottom: 3px; /* Adjust as needed */
+            left: 3px; /* Adjust as needed */
+            background-color: rgba(50, 50, 50, 0.7); /* Darker gray with transparency */
+            padding: 5px;
+            color: white; /* Text color */
+            font-size: 12px; /* Font size */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2%; /* Adds 2% gap between games */
+        }
+
+        .game {
+            text-align: center;
+            padding: 1%;
+            border-radius: 15px;
+            margin-bottom: 10px; /* Adjusted margin for spacing */
+            margin-top: 15px; /* 16% margin from the top */
+            background-color: #303747;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc((100% - 6 * 35px) / 6); /* Calculate width for 6 items with 35px margin */
+            text-decoration: none; /* Remove underline from the link */
+            color: #f5f5f5; /* Set text color for the link */
+            display: block; /* Make the entire box clickable */
+            transition: transform 0.3s ease; /* Hover animation */
+            position: relative; /* Add relative positioning */
+        }
+
+        /* Adjust left margin for 1st game in each row */
+        .game:nth-child(5n + 1) {
+            margin-left: 3%; /* 3% margin on the left */
+        }
+
+        /* Adjust right margin for 5th game in each row */
+        .game:nth-child(5n + 5) {
+            margin-right: calc(5% + 140px); /* 5% + 140px margin on the right */
+        }
+
+        /* Top margin adjustment for the first row of games */
+        .game:nth-child(-n+5) {
+            margin-top: 16%; /* 16% margin from the top */
+        }
+
+        /* Hover Animation */
+        .game:hover {
+            transform: scale(1.07);
+        }
+
+        .game img {
+            border-radius: 12px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .game h3 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-line"></div> <!-- Thin line -->
+        <a href="/home" class="logo">
+            <img src="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" alt="Project Neutron Logo">
+            <span class="logo-text">Project Neutron</span>
+        </a>
+        <a href="/home" class="nav-text home-text">Home</a>
+        <a href="/gs" class="nav-text games-text">Games</a>
+        <a href="/apps" class="nav-text apps-text">Apps</a>
+        <a href="/mov" class="nav-text movies-text">Movies</a>
+        <a href="/tv" class="nav-text tv-text">TV Shows</a>
+        <div class="rectangle">
+            <a href="/plus" class="rectangle-text">Project Neutron +</a>
+        </div> <!-- Rectangle at the right side of the header -->
+    </header>
+    <div class="centered-text">Games</div>
+    <div class="search-bar">
+        <i class="fas fa-search"></i>
+    </div>
+    <div class="ad-space" id="ad-space">
+        <div class="ad-label">Advertisement</div>
+    </div>
+<div class="game-container">
+    <!-- First Row -->
+    <!-- Game 1 -->
+    <a href="/gs/2048" class="game">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png">
+        <h3>2048</h3>
+    </a>
+
+    <!-- Game 2 -->
+    <a href="/gs/game2" class="game">
+        <img src="game2_image_url">
+        <h3>Game 2</h3>
+    </a>
+
+    <!-- Game 3 -->
+    <a href="/gs/game3" class="game">
+        <img src="game3_image_url">
+        <h3>Game 3</h3>
+    </a>
+
+    <!-- Game 4 -->
+    <a href="/gs/game4" class="game">
+        <img src="game4_image_url">
+        <h3>Game 4</h3>
+    </a>
+
+    <!-- Game 5 -->
+    <a href="/gs/game5" class="game">
+        <img src="game5_image_url">
+        <h3>Game 5</h3>
+    </a>
+
+    <!-- Second Row -->
+    <!-- Game 6 -->
+    <a href="/gs/game6" class="game">
+        <img src="game6_image_url">
+        <h3>Game 6</h3>
+    </a>
+
+    <!-- Game 7 -->
+    <a href="/gs/game7" class="game">
+        <img src="game7_image_url">
+        <h3>Game 7</h3>
+    </a>
+
+    <!-- Game 8 -->
+    <a href="/gs/game8" class="game">
+        <img src="game8_image_url">
+        <h3>Game 8</h3>
+    </a>
+
+    <!-- Game 9 -->
+    <a href="/gs/game9" class="game">
+        <img src="game9_image_url">
+        <h3>Game 9</h3>
+    </a>
+
+    <!-- Game 10 -->
+    <a href="/gs/game10" class="game">
+        <img src="game10_image_url">
+        <h3>Game 10</h3>
+    </a>
+</div>
+
+    
+        <script>
+        // Function to update ad image
+        function updateAdImage() {
+            // Retrieve the div element with id 'ad-space'
+            const adSpace = document.getElementById('ad-space');
+            
+            // Function to get a random image URL
+            function getRandomAdImageUrl() {
+                const adImages = [
+                    'https://s.yimg.com/cv/apiv2/adspecs/format/demos/33/Publix_sw__160x600_1630036809791.jpg',
+                    'https://live.staticflickr.com/8339/8263840740_b14ae73d1a_z.jpg'
+                ];
+                const randomIndex = Math.floor(Math.random() * adImages.length);
+                return adImages[randomIndex];
+            }
+
+            // Update adSpace background image
+            const randomImageUrl = getRandomAdImageUrl();
+            adSpace.style.backgroundImage = `url('${randomImageUrl}')`;
+        }
+
+        // Initial load of ad image
+        updateAdImage();
+
+        // Change ad image every 60 seconds
+        setInterval(updateAdImage, 60000);
+    </script>
+</body>
+</html>
