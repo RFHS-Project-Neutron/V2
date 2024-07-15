@@ -1,0 +1,20 @@
+/* Your existing CSS styles here */
+
+/* Additional style for home button */
+.home-button {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    padding: 10px 20px; /* Padding for the button */
+    font-family: Impact, sans-serif; /* Use Impact font */
+    font-size: 1.2rem; /* Font size */
+    background-color: #d4af37; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.home-button:hover {
+    background-color: #b5912f; /* Darker background color on hover */
+}
