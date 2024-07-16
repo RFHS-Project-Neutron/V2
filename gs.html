@@ -180,27 +180,44 @@
             color: white;
         }
 
-        .search-bar {
-            position: absolute;
-            left: calc(50% - 82.5px); /* Updated position */
-            top: 24vh; /* 18% of viewport height */
-            transform: translateX(-50%);
-            width: 300px; /* Adjust width as needed */
-            height: 50px; /* Adjust height as needed */
-            background-color: transparent; /* Background color set to transparent */
-            border: 2px solid white; /* Border styling */
-            border-radius: 12px; /* Rounded corners */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.search-bar {
+    position: absolute;
+    left: calc(50% - 82.5px); /* Adjusted left position */
+    top: 24vh;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #ffffff; /* Add a white border */
+    border-radius: 12px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    padding: 0 10px; /* Padding for the left and right */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
 
-        .search-bar i {
-            color: white; /* Set icon color to white */
-            position: absolute;
-            left: calc(50% - 135px); /* Position the icon 250px to the left of the center */
-            font-size: 1rem; /* Adjust icon size */
-        }
+.search-bar input[type="text"] {
+    width: 100%; /* Full width of the remaining space */
+    height: 100%;
+    padding-left: 40px; /* Space for the icon */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    background-color: transparent; /* Set background to transparent */
+    color: white; /* Text color */
+    font-size: 16px; /* Adjust font size */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Adjust placeholder color */
+}
+
+.search-bar i {
+    color: white;
+    font-size: 1rem; /* Adjust icon size */
+    position: absolute;
+    left: 15px; /* Position icon inside the bar */
+}
         
         .ad-space {
             width: 140px;
@@ -304,9 +321,11 @@
         </div> <!-- Rectangle at the right side of the header -->
     </header>
     <div class="centered-text">Games</div>
-    <div class="search-bar">
-        <i class="fas fa-search"></i>
-    </div>
+<div class="search-bar">
+    <i class="fas fa-search"></i>
+    <input type="text" id="searchInput" oninput="filterGames()" placeholder="Search...">
+</div>
+
     <div class="ad-space" id="ad-space">
         <div class="ad-label">Advertisement</div>
     </div>
@@ -319,27 +338,27 @@
     </a>
 
     <!-- Game 2 -->
-    <a href="/gs/game2" class="game">
-        <img src="game2_image_url">
-        <h3>Game 2</h3>
+    <a href="/gs/bit-planes" class="game">
+        <img src="/assets/images/bit-planes-logo.png">
+        <h3>Bit Planes</h3>
     </a>
 
     <!-- Game 3 -->
     <a href="/gs/game3" class="game">
         <img src="game3_image_url">
-        <h3>Game 3</h3>
+        <h3> 3</h3>
     </a>
 
     <!-- Game 4 -->
     <a href="/gs/game4" class="game">
         <img src="game4_image_url">
-        <h3>Game 4</h3>
+        <h3>2048 4</h3>
     </a>
 
     <!-- Game 5 -->
     <a href="/gs/game5" class="game">
         <img src="game5_image_url">
-        <h3>Game 5</h3>
+        <h3>2048 5</h3>
     </a>
 
     <!-- Second Row -->
@@ -352,25 +371,25 @@
     <!-- Game 7 -->
     <a href="/gs/game7" class="game">
         <img src="game7_image_url">
-        <h3>Game 7</h3>
+        <h3>2048 7</h3>
     </a>
 
     <!-- Game 8 -->
     <a href="/gs/game8" class="game">
         <img src="game8_image_url">
-        <h3>Game 8</h3>
+        <h3>2048 8</h3>
     </a>
 
     <!-- Game 9 -->
     <a href="/gs/game9" class="game">
         <img src="game9_image_url">
-        <h3>Game 9</h3>
+        <h3>2048 9</h3>
     </a>
 
     <!-- Game 10 -->
     <a href="/gs/game10" class="game">
         <img src="game10_image_url">
-        <h3>Game 10</h3>
+        <h3>2048 10</h3>
     </a>
 </div>
 
@@ -402,5 +421,32 @@
         // Change ad image every 60 seconds
         setInterval(updateAdImage, 60000);
     </script>
+<script>
+    // Function to filter games based on search input
+    function filterGames() {
+        const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+        const games = document.querySelectorAll('.game');
+
+        games.forEach(game => {
+            const title = game.querySelector('h3').textContent.trim().toLowerCase();
+            if (title.includes(searchInput)) {
+                game.style.display = 'inline-block'; // Show game if title matches search
+            } else {
+                game.style.display = 'none'; // Hide game if title doesn't match search
+            }
+        });
+
+        // Reset display for all games if search input is empty
+        if (searchInput === '') {
+            games.forEach(game => {
+                game.style.display = 'inline-block'; // Show all games
+            });
+        }
+    }
+
+    // Add event listener for input event on search input
+    document.getElementById('searchInput').addEventListener('input', filterGames);
+</script>
+
 </body>
 </html>
