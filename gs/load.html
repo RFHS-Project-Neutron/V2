@@ -20,8 +20,8 @@
         }
 
         .embed-container iframe {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             border: none;
         }
     </style>
@@ -31,8 +31,14 @@
         <iframe id="game-iframe" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <script src="js/embeds.js"></script>
     <script>
+        const embeds = {
+            'subway-surfers': '/gs/subway-surfers',
+            'gswitch': '/gs/gswitch',
+            '2048': '/gs/2048',
+            'default': 'https://testing-v2.pages.dev/gs/2048'
+        };
+
         function getQueryParam(param) {
             let urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
