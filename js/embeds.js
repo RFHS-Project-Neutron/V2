@@ -1,5 +1,5 @@
 const embeds = {
-    'subway-surfers': '/gs/subway-surfers',
+    '2048': '/gs/2048',
     'gswitch': '/gs/gswitch',
     'default': '/gs/default'
 };
