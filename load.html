@@ -298,7 +298,6 @@
             text.textContent = '1V1.LOL';
             break;
           default:
-            // Default values or handling if needed
             iframe.src = 'https://project-neutron.site';
             image.src = 'https://via.placeholder.com/150';
             text.textContent = 'XXXXXXXXXXX';
@@ -306,8 +305,23 @@
         }
       }
 
+      // Function to toggle fullscreen
+      function toggleFullscreen() {
+        const iframe = document.getElementById('embed');
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          iframe.requestFullscreen().catch(err => {
+            console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+          });
+        }
+      }
+
       // Update content on page load
       document.addEventListener('DOMContentLoaded', updateContent);
+
+      // Add event listener to the fullscreen button
+      document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
     </script>
 </body>
 </html>
