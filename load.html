@@ -235,6 +235,20 @@
             object-fit: cover; /* Ensure the image covers the square area without distortion */
             border-radius: 10px; /* Optional: rounded corners */
         }
+
+        .image-text {
+            position: fixed; /* Fix the position relative to the viewport */
+            top: 27vh; /* Position it below the image */
+            right: 14vw; /* Align with the image */
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Adjust font weight */
+            font-size: 1.5rem; /* Font size */
+            color: white; /* Text color */
+            text-align: center; /* Center the text */
+            width: 25vw; /* Match the width of the image */
+            transform: translateX(50%); /* Move the text to center it */
+        }
+
     </style>
 </head>
 <body>
@@ -250,47 +264,50 @@
         <a href="/mov" class="nav-text movies-text">Movies</a>
         <a href="/tv" class="nav-text tv-text">TV Shows</a>
     </header>
-        <div class="embed-container">
-        </div>
-        <div class="button-container">
-            <a href="/gs">
-                <button class="square-button"><i class="fas fa-arrow-left"></i></button>
-            </a>
-            <button class="square-button"><i class="fas fa-expand"></i></button>
-        </div>
-        <img src="https://via.placeholder.com/150" alt="Sample Image" class="square-image">
-        <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Get URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const game = urlParams.get('game');
+    <div class="embed-container">
+        <iframe id="embed" src="https://project-neutron.site" allowfullscreen></iframe>
+    </div>
+    <div class="button-container">
+        <a href="/gs">
+            <button class="square-button"><i class="fas fa-arrow-left"></i></button>
+        </a>
+        <button class="square-button"><i class="fas fa-expand"></i></button>
+    </div>
+    <img id="content-logo" src="https://via.placeholder.com/150" alt="Content Logo" class="square-image">
+    <div id="image-text" class="image-text">XXXXXXXXXXX</div>
 
-        // Default embed URL
-        let embedSrc = '/load';
+    <script>
+      // Function to update content based on URL parameters
+      function updateContent() {
+        const params = new URLSearchParams(window.location.search);
+        const game = params.get('game');
+        
+        const iframe = document.getElementById('embed');
+        const image = document.getElementById('content-logo');
+        const text = document.getElementById('image-text');
 
-        // Update embed URL and image source based on 'game' parameter
-        if (game) {
-            embedSrc = `/gs/${game}`;
-
-            // Update the iframe source
-            const iframe = document.querySelector('.embed-container iframe');
-            iframe.src = embedSrc;
-
-            // Update the image source
-            const squareImage = document.querySelector('.square-image');
-            let imageSrc = '/assets/images/default'; // Default image
-
-            // Set image source based on the game parameter
-            if (game === '2048') {
-                imageSrc = '/assets/images/2048';
-            } else if (game === '1v1lol') {
-                imageSrc = '/assets/images/1v1lol';
-            }
-
-            // Set the image src
-            squareImage.src = imageSrc;
+        switch (game) {
+          case '2048':
+            iframe.src = '/gs/2048';
+            image.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/800px-2048_logo.svg.png';
+            text.textContent = '2048';
+            break;
+          case '1v1lol':
+            iframe.src = '/gs/1v1.lol';
+            image.src = 'https://images.sftcdn.net/images/t_app-icon-m/p/77f9e3d7-4fdf-4df3-9f2f-266985f8e8f0/490128247/1v1-lol-download-1v1-lol-for-Windows.jpg';
+            text.textContent = '1V1.LOL';
+            break;
+          default:
+            // Default values or handling if needed
+            iframe.src = 'https://project-neutron.site';
+            image.src = 'https://via.placeholder.com/150';
+            text.textContent = 'XXXXXXXXXXX';
+            break;
         }
-    });
-</script>
+      }
+
+      // Update content on page load
+      document.addEventListener('DOMContentLoaded', updateContent);
+    </script>
 </body>
 </html>
