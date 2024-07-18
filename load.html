@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LVCEWNB2TH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LVCEWNB2TH');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "n7w6y6wzt8");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Neutron</title>
+    <link rel="icon" href="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling for header and navigation */
+        body {
+            background-color: #101720; /* Background color set to white */
+            font-family: Impact, sans-serif; /* Fallback font */
+        }
+
+        header {
+            height: 8vh; /* Adjusted to 8% of viewport height */
+            background-color: #101720; /* Background color set to #101720 */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: relative; /* Enable relative positioning */
+        }
+
+        /* Logo styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: -5px; /* Adjusted to 20px from the left side of the screen */
+            text-decoration: none; /* Remove underline */
+            color: white; /* Text color */
+        }
+
+        .logo img {
+            height: 6vh; /* Adjusted to 6% of viewport height */
+            margin-right: 20px; /* Space between logo and text */
+        }
+
+        .logo-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1.6rem; /* Increased font size for Project Neutron text */
+            color: white; /* Adjust text color */
+            position: relative; /* Enable relative positioning */
+        }
+
+        /* Navigation text styling */
+        .nav-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 100; /* Font weight adjusted to 100 */
+            font-size: 1.2rem; /* Adjust font size as needed */
+            color: white; /* Adjust text color */
+            text-decoration: none; /* Remove underline */
+            margin-right: 50px; /* Adjust space between navigation items */
+            position: relative; /* Enable relative positioning */
+        }
+
+        .nav-text::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Adjust position as needed */
+            width: 0;
+            height: 3px; /* Height of the underline */
+            background-color: white; /* Underline color */
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-text:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Thin line */
+        .top-line {
+            position: absolute;
+            top: 100%; /* Positioned 100% from the top */
+            left: 0;
+            width: 100%;
+            height: 1.5px; /* 1.5px height for the line */
+            background-color: #303747; /* Color set to #303747 */
+        }
+
+        /* Rectangle styling */
+        .rectangle {
+            height: 75%; /* Height set to 70% */
+            width: 175px; /* Increased width */
+            background-color: transparent; /* Background color set to transparent */
+            border-radius: 10px; /* Rounded edges */
+            border: 2px solid #d4af37; /* Darker gold outline */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease; /* Add transition for smooth animation */
+        }
+
+        .rectangle:hover {
+            transform: scale(1.1); /* Scale up the rectangle on hover */
+        }
+
+        .rectangle-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1.2rem; /* Font size for the text */
+            color: #d4af37; /* Darker gold color for the text */
+            text-decoration: none; /* Remove underline */
+            padding: 10px; /* Add padding for better click area */
+        }
+
+        /* Positioning */
+        .home-text {
+            position: absolute;
+            left: 270px; /* Original position for Home */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .games-text {
+            position: absolute;
+            left: 335px; /* Original position for Games */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .apps-text {
+            position: absolute;
+            left: 410px; /* Original position for Apps */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .movies-text {
+            position: absolute;
+            left: 470px; /* Original position for Movies */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .tv-text {
+            position: absolute;
+            left: 546px; /* Original position for TV Shows */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .embed-container {
+            position: absolute;
+            left: 2vh;
+            width: 70vw;
+            height: auto; /* 16:9 aspect ratio */
+            top: 10vh;
+            bottom: 2vh;
+            background-color: #f0f0f0; /* Optional background color for visibility */
+            border-radius: 10px;
+            box-sizing: border-box; /* Ensures padding is included in the total height */
+        }
+
+        .embed-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 3vh; /* Position 5vh from the bottom */
+            right: 10vw; /* Space from the right edge */
+            display: flex;
+            gap: 10px; /* Space between buttons */
+        }
+
+        .square-button {
+            width: 50px; /* Width of the button */
+            height: 50px; /* Height of the button */
+            background-color: white; /* Button background color */
+            color: white; /* Text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Slightly rounded corners */
+            font-family: Impact, sans-serif; /* Font */
+            font-size: 1.2rem; /* Font size for icons */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth color transition */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s ease;
+            
+        }
+
+        .square-button i {
+            font-size: 1.2rem; /* Adjust icon size */
+            color: #101720;
+        }
+
+        .square-button:hover {
+            transform: scale(1.12); /* Scale up the rectangle on hover */
+        }
+        
+        .button-container a {
+            text-decoration: none; /* Remove underline */
+        }
+        
+        .square-image {
+            position: fixed; /* Fix the position relative to the viewport */
+            top: 10vh; /* 10% of the viewport height from the top */
+            right: 10vw; /* 10% of the viewport width from the right */
+            width: 8vw; /* Set a fixed width */
+            height: 8vw; /* Set the height to match the width to keep it square */
+            object-fit: cover; /* Ensure the image covers the square area without distortion */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-line"></div> <!-- Thin line -->
+        <a href="/home" class="logo">
+            <img src="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" alt="Project Neutron Logo">
+            <span class="logo-text">Project Neutron</span>
+        </a>
+        <a href="/home" class="nav-text home-text">Home</a>
+        <a href="/gs" class="nav-text games-text">Games</a>
+        <a href="/apps" class="nav-text apps-text">Apps</a>
+        <a href="/mov" class="nav-text movies-text">Movies</a>
+        <a href="/tv" class="nav-text tv-text">TV Shows</a>
+    </header>
+        <div class="embed-container">
+        </div>
+        <div class="button-container">
+            <a href="/gs">
+                <button class="square-button"><i class="fas fa-arrow-left"></i></button>
+            </a>
+            <button class="square-button"><i class="fas fa-expand"></i></button>
+        </div>
+        <img src="https://via.placeholder.com/150" alt="Sample Image" class="square-image">
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const game = urlParams.get('game');
+
+        // Default embed URL
+        let embedSrc = '/load';
+
+        // Update embed URL and image source based on 'game' parameter
+        if (game) {
+            embedSrc = `/gs/${game}`;
+
+            // Update the iframe source
+            const iframe = document.querySelector('.embed-container iframe');
+            iframe.src = embedSrc;
+
+            // Update the image source
+            const squareImage = document.querySelector('.square-image');
+            let imageSrc = '/assets/images/default'; // Default image
+
+            // Set image source based on the game parameter
+            if (game === '2048') {
+                imageSrc = '/assets/images/2048';
+            } else if (game === '1v1lol') {
+                imageSrc = '/assets/images/1v1lol';
+            }
+
+            // Set the image src
+            squareImage.src = imageSrc;
+        }
+    });
+</script>
+</body>
+</html>
