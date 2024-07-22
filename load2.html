@@ -294,36 +294,35 @@
     const video = params.get('video');
     
     const iframe = document.getElementById('embed');
-    const videoContainer = document.getElementById('video-container');
-    const videoSource = document.getElementById('video-source');
+    const videoElement = document.getElementById('video-element');
     const image = document.getElementById('content-logo');
     const text = document.getElementById('image-text');
 
     if (video) {
       document.body.style.backgroundColor = 'black';
       document.querySelector('header').style.backgroundColor = 'black';
-      videoContainer.style.display = 'block';
       iframe.style.display = 'none';
+      videoElement.style.display = 'block';
 
       switch (video) {
         case 'video1':
-          videoSource.src = 'https://ribe2.nebula.to/751ceda793b58d944aad0bdb0e875b8c18bc943a.mp4?md5=1Lgz_M-VCzhYyjSUzFe6sw&expires=1721696414';
+          videoElement.src = 'https://ribe2.nebula.to/751ceda793b58d944aad0bdb0e875b8c18bc943a.mp4?md5=1Lgz_M-VCzhYyjSUzFe6sw&expires=1721696414';
           break;
         case 'video2':
-          videoSource.src = 'https://hanoi.nebula.to/db6b6f2471908d83691dc327c17b93a69104fe02.mp4?md5=H7_ESHX2SGxeoLTKCdqOLA&expires=1721696391';
+          videoElement.src = 'https://hanoi.nebula.to/db6b6f2471908d83691dc327c17b93a69104fe02.mp4?md5=H7_ESHX2SGxeoLTKCdqOLA&expires=1721696391';
           break;
         default:
-          videoSource.src = ''; // Fallback or default video URL
+          videoElement.src = ''; // Fallback or default video URL
           break;
       }
       
-      videoSource.load();
+      videoElement.load();
       text.textContent = video.replace(/-/g, ' '); // Display video title
     } else if (game) {
       document.body.style.backgroundColor = '#101720';
       document.querySelector('header').style.backgroundColor = '#101720';
-      videoContainer.style.display = 'none';
       iframe.style.display = 'block';
+      videoElement.style.display = 'none';
 
       switch (game) {
         case '2048':
@@ -350,21 +349,21 @@
     } else {
       document.body.style.backgroundColor = '#101720';
       document.querySelector('header').style.backgroundColor = '#101720';
-      videoContainer.style.display = 'none';
       iframe.style.display = 'block';
+      videoElement.style.display = 'none';
       iframe.src = 'https://project-neutron.site';
       image.src = 'https://via.placeholder.com/150';
       text.textContent = 'XXXXXXXXXXX';
     }
   }
 
-  // Function to toggle fullscreen
+  // Function to toggle fullscreen mode for embed container
   function toggleFullscreen() {
-    const iframe = document.getElementById('embed');
+    const embedContainer = document.querySelector('.embed-container');
     if (document.fullscreenElement) {
       document.exitFullscreen();
     } else {
-      iframe.requestFullscreen().catch(err => {
+      embedContainer.requestFullscreen().catch(err => {
         console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
       });
     }
