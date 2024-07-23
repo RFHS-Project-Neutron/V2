@@ -1,0 +1,1040 @@
+{
+
+    "songs":
+      {
+        
+      "Intro":{"title":"Intro","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":1, "length":19,"features":["DeRay Davis"]},
+      
+      "We Don't Care": {"title":"We Don't Care","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":2, "length":240,"features":[""]},
+        
+      "Graduation Day":{"title":"Graduation Day","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":3, "length":82,"features":[""]},
+        
+      "All Falls Down":{"title":"All Falls Down","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":4, "length":224,"features":["Syleena Johnson"]},
+        
+      "I'll Fly Away":{"title":"I'll Fly Away","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":5, "length":70,"features":["The World Famous Tony Williams", "DeRay Davis"]},
+          
+      "Spaceship":{"title":"Spaceship","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":6, "length":324,"features":["GLC","Consequence"]},
+        
+      "Jesus Walks":{"title":"Jesus Walks","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":7, "length":194,"features":[""]},
+        
+      "Never Let Me Down":{"title":"Never Let Me Down","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":8, "length":324,"features":["Jay-Z", "J. Ivy"]},
+          
+      "Get Em High":{"title":"Get Em High","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":9, "length":289,"features":["Talib Kweli","Common"]},
+          
+      "Workout Plan":{"title":"Workout Plan","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":10, "length":46,"features":[""]},
+          
+      "The New Workout Plan":{"title":"The New Workout Plan","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":11, "length":323,"features":[""]},
+          
+      "Slow Jamz":{"title":"Slow Jamz","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":12, "length":316,"features":["Twista", "Jamie Foxx"]},
+          
+      "Breathe In Breathe Out":{"title":"Breathe In Breathe Out","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":13, "length":247,"features":["Ludacris"]},
+          
+      "School Spirit Skit 1":{"title":"School Spirit Skit 1","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":14, "length":79,"features":["DeRay Davis"]},
+          
+      "School Spirit":{"title":"School Spirit","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":15, "length":182,"features":[""]},
+          
+      "School Spirit Skit 2":{"title":"School Spirit Skit 2","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":16, "length":44,"features":["DeRay Davis"]},
+          
+      "Lil Jimmy Skit":{"title":"Lil Jimmy Skit","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":17, "length":54,"features":["The World Famous Tony Williams", "DeRay Davis"]},
+          
+      "Two Words":{"title":"Two Words","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":18, "length":266,"features":["Mos Def","Freeway","The Boys Choir Of Harlem"]},
+          
+      "Through The Wire":{"title":"Through The Wire","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":19, "length":221,"features":[""]},
+          
+      "Family Business":{"title":"Family Business","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":20, "length":279,"features":[""]},
+          
+      "Last Call":{"title":"Last Call","album":1,
+          "cover":"https://www.udiscovermusic.com/wp-content/uploads/2019/02/Kanye-West-The-College-Dropout-album-cover-web-optimised-820.jpg",
+          "track":21, "length":761,"features":[""]},
+          
+          
+          
+          
+      "Wake Up Mr West":{"title":"Wake Up Mr West","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":1, "length":41,"features":["DeRay Davis"]},
+      
+      "Heard Em' Say":{"title":"Heard Em' Say","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":2, "length":203,"features":["Adam Levine"]},
+          
+      "Touch The Sky":{"title":"Touch The Sky","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":3, "length":236,"features":["Lupe Fiasco"]},
+          
+      "Gold Digger":{"title":"Gold Digger","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":4, "length":207,"features":["Jamie Foxx"]},
+          
+      "Skit 1":{"title":"Skit 1","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":5, "length":33,"features":["DeRay Davis"]},
+          
+      "Drive Slow":{"title":"Drive Slow","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":6, "length":272,"features":["Paul Wall", "GLC"]},
+          
+      "My Way Home":{"title":"My Way Home","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":7, "length":103,"features":["Common"]},
+          
+      "Crack Music":{"title":"Crack Music","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":8, "length":270,"features":["The Game"]},
+          
+      "Roses":{"title":"Roses","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":9, "length":245,"features":[""]},
+        
+      "Bring Me Down":{"title":"Bring Me Down","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":10, "length":198,"features":["Brandy"]},
+          
+      "Addiction":{"title":"Addiction","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":11, "length":267,"features":[""]},
+          
+      "Skit 2":{"title":"Skit 2","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":12, "length":31,"features":["DeRay Davis"]},
+        
+      "Diamonds From Sierra Leone - Remix":{"title":"Diamonds From Sierra Leone - Remix","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":13, "length":233,"features":["Jay-Z"]},
+        
+      "We Major":{"title":"We Major","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":14, "length":448,"features":["Nas","Really Doe"]},
+          
+      "Skit 3":{"title":"Skit 3","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":15, "length":24,"features":["DeRay Davis"]},
+          
+      "Hey Mama":{"title":"Hey Mama","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":16, "length":305,"features":[""]},
+          
+      "Celebration":{"title":"Celebration","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":17, "length":198,"features":[""]},
+          
+      "Skit 4":{"title":"Skit 4","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":18, "length":78,"features":["DeRay Davis"]},
+          
+      "Gone":{"title":"Gone","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":19, "length":333,"features":["Consequence", "Cam'ron"]},
+          
+      "Diamonds From Sierra Leone - Bonus Track":{"title":"Diamonds From Sierra Leone - Bonus Track","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":20, "length":238,"features":[""]},
+        
+      "Late":{"title":"Late","album":2,
+          "cover":"https://yeezle.xyz/albums/h_2.jpg",
+          "track":21, "length":230,"features":[""]},
+      
+      
+      
+      
+      
+      "Good Morning":{"title":"Good Morning","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":1, "length":195,"features":[""]},
+      
+      
+      "Champion":{"title":"Champion","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":2, "length":167,"features":[""]},
+    
+      
+      "Stronger":{"title":"Stronger","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":3, "length":311,"features":[""]},
+      
+      
+      "I Wonder":{"title":"I Wonder","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":4, "length":243,"features":[""]},
+          
+      "Good Life":{"title":"Good Life","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":5, "length":207,"features":["T-Pain"]},
+      
+      "Can't Tell Me Nothing":{"title":"Can't Tell Me Nothing","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":6, "length":271,"features":[""]},
+          
+      "Barry Bonds":{"title":"Barry Bonds","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":7, "length":204,"features":["Lil Wayne"]},
+          
+      "Drunk and Hot Girls":{"title":"Drunk and Hot Girls","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":8, "length":313,"features":["Mos Def"]},
+          
+      "Flashing Lights":{"title":"Flashing Lights","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":9, "length":237,"features":["Dwele"]},
+          
+      "Everything I Am":{"title":"Everything I Am","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":10, "length":227,"features":["DJ Premier"]},
+          
+      "The Glory":{"title":"The Glory","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":11, "length":212,"features":[""]},  
+          
+      "Homecoming":{"title":"Homecoming","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":12, "length":203,"features":["Chris Martin"]},
+          
+      "Big Brother":{"title":"Big Brother","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":13, "length":287,"features":[""]},
+          
+      "Good Night":{"title":"Good Night","album":3,
+          "cover":"https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_SL1200_.jpg",
+          "track":14, "length":185,"features":["Mos Def", "Albe Back"]},
+          
+          
+          
+          
+          
+      "Say You Will":{"title":"Say You Will","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":1, "length":377,"features":[""]},
+          
+      "Welcome To Heartbreak":{"title":"Welcome To Heartbreak","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":2, "length":262,"features":["Kid Cudi"]},
+      
+      "Heartless":{"title":"Heartless","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":3, "length":211,"features":[""]},
+          
+      "Amazing":{"title":"Amazing","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":4, "length":238,"features":["Jeezy"]},
+          
+      "Love Lockdown":{"title":"Love Lockdown","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":5, "length":270,"features":[""]},
+          
+      "Paranoid":{"title":"Paranoid","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":6, "length":277,"features":["Mr Hudson"]},
+          
+      "RoboCop":{"title":"RoboCop","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":7, "length":274,"features":[""]},
+          
+      "Street Lights":{"title":"Street Lights","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":8, "length":189,"features":[""]},
+        
+      "Bad News":{"title":"Bad News","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":9, "length":238,"features":[""]},
+          
+      "See You In My Nightmares":{"title":"See You In My Nightmares","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":10, "length":258,"features":["Lil Wayne"]},
+          
+      "Coldest Winter":{"title":"Coldest Winter","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":11, "length":164,"features":[""]},
+          
+      "Pinocchio Story":{"title":"Pinocchio Story","album":4,
+          "cover":"https://m.media-amazon.com/images/I/51FvW2ILXTL._SL1200_.jpg",
+          "track":12, "length":361,"features":[""]},
+          
+          
+          
+          
+          
+      "Dark Fantasy":{"title":"Dark Fantasy","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":1, "length":280,"features":["Nicki Minaj", "Justin Vernon", "Teyana Taylor"]},
+          
+      "Gorgeous":{"title":"Gorgeous","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":2, "length":357,"features":["Kid Cudi", "Raekwon"]},
+          
+      "POWER":{"title":"POWER","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":3, "length":292,"features":["Dwele"]},
+          
+      "All Of The Lights (Interlude)":{"title":"All Of The Lights (Interlude)","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":4, "length":62,"features":[""]},
+            
+      "All Of The Lights":{"title":"All Of The Lights","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":5, "length":299,"features":["Rihanna","Fergie","Kid Cudi", "Elly Jackson"]},
+      
+      "Monster":{"title":"Monster","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":6, "length":378,"features":["Jay-Z","Rick Ross","Nicki Minaj","Bon Iver", "Charlie Wilson"]},
+        
+      "So Appalled":{"title":"So Appalled","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":7, "length":397,"features":["Jay-Z", "Pusha T", "CyHy The Prynce","Swizz Beatz","RZA"]},
+          
+      "Devil In A New Dress":{"title":"Devil In A New Dress","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":8, "length":351,"features":["Rick Ross"]},
+          
+      "Runaway":{"title":"Runaway","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":9, "length":537,"features":["Pusha T"]},
+      
+      "Hell Of A Life":{"title":"Hell Of A Life","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":10, "length":327,"features":[""]},
+      
+      "Blame Game":{"title":"Blame Game","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":11, "length":469,"features":["John Legend", "Chris Rock"]},
+      
+      "Lost In The World":{"title":"Lost In The World","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":12, "length":256,"features":["Bon Iver", "Elly Jackson"]},
+      
+      "Who Will Survive In America":{"title":"Who Will Survive In America","album":5,
+          "cover":"https://www.boulderweekly.com/wp-content/uploads/2010/10/1199.jpg",
+          "track":13, "length":98,"features":["Gil Scott-Heron"]},
+          
+        
+        
+        
+      "No Church In The Wild":{"title":"No Church In The Wild","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":1, "length":272,"features":["Jay-Z", "Frank Ocean", "The-Dream"]},
+          
+      "Lift Off":{"title":"Lift Off","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":2, "length":266,"features":["Jay-Z", "Beyonce"]},
+          
+      "Ni**as In Paris":{"title":"Ni**as In Paris","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":3, "length":219,"features":["Jay-Z"]},
+          
+      "Otis":{"title":"Otis","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":4, "length":178,"features":["Jay-Z", "Otis Redding"]},
+        
+      "Gotta Have It":{"title":"Gotta Have It","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":5, "length":140,"features":["Jay-Z"]},
+          
+      "New Day":{"title":"New Day","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":6, "length":252,"features":["Jay-Z"]},
+          
+      "That's My Bitch":{"title":"That's My Bitch","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":7, "length":202,"features":["Jay-Z", "Justin Vernon", "Elly Jackson"]},
+          
+      "Welcome To The Jungle":{"title":"Welcome To The Jungle","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":8, "length":174,"features":["Jay-Z"]},
+          
+      "Who Gon Stop Me":{"title":"Who Gon Stop Me","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":9, "length":296,"features":["Jay-Z"]},
+          
+      "Murder To Excellence":{"title":"Murder To Excellence","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":10, "length":300,"features":["Jay-Z"]},
+          
+      "Made In America":{"title":"Made In America","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":11, "length":292,"features":["Jay-Z", "Frank Ocean"]},
+          
+      "Why I Love You":{"title":"Why I Love You","album":6,
+          "cover":"https://m.media-amazon.com/images/I/81EkIPgCYkL.jpg",
+          "track":12, "length":201,"features":["Jay-Z", "Mr Hudson"]},
+     
+    
+
+
+
+      "On Sight":{"title":"On Sight","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":1, "length":156,"features":[""]},
+          
+      "Black Skinhead":{"title":"Black Skinhead","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":2, "length":188,"features":[""]},
+          
+      "I Am A God":{"title":"I Am A God","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":3, "length":231,"features":["Justin Vernon", "Capelton"]},
+          
+      "New Slaves":{"title":"New Slaves","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":4, "length":256,"features":["Frank Ocean"]},
+      
+      "Hold My Liquor":{"title":"Hold My Liquor","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":5, "length":326,"features":["Chief Keef", "Justin Vernon"]},
+          
+      "I'm In It":{"title":"I'm In It","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":6, "length":234,"features":["Justin Vernon", "Assassin"]},
+          
+      "Blood On The Leaves":{"title":"Blood On The Leaves","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":7, "length":359,"features":[""]},
+          
+      "Guilt Trip":{"title":"Guilt Trip","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":8, "length":243,"features":["Kid Cudi"]},
+        
+      "Send It Up":{"title":"Send It Up","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":9, "length":178,"features":["King Louie"]},
+          
+      "Bound 2":{"title":"Bound 2","album":7,
+          "cover":"https://yeezle.xyz/albums/h_7.jpg",
+          "track":10, "length":229,"features":["Charlie Wilson"]},
+      
+      
+      
+      
+      "Ultralight Beam":{"title":"Ultralight Beam","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":1, "length":320,"features":["Chance the Rapper", "The-Dream", "Kelly Price"]},
+      
+      "Father Stretch My Hands Pt 1":{"title":"Father Stretch My Hands Pt 1","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":2, "length":135,"features":["Kid Cudi"]},
+          
+      "Pt 2":{"title":"Pt 2","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":3, "length":130,"features":["Desiigner"]},
+          
+      "Famous":{"title":"Famous","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":4, "length":196,"features":["Rihanna", "Swizz Beatz"]},
+          
+      "Feedback":{"title":"Feedback","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":5, "length":147,"features":[""]},
+          
+      "Low Lights":{"title":"Low Lights","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":6, "length":131,"features":["Kelly Price"]},
+      
+      "Highlights":{"title":"Highlights","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":7, "length":199,"features":["Young Thug", "The-Dream"]},
+      
+      "Freestyle 4":{"title":"Freestyle 4","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":8, "length":183,"features":["Desiigner"]},
+          
+      "I Love Kanye":{"title":"I Love Kanye","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":9, "length":44,"features":[""]},
+      
+      "Waves":{"title":"Waves","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":10, "length":181,"features":["Chris Brown"]},
+          
+      "FML":{"title":"FML","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":11, "length":236,"features":["The Weeknd"]},
+      
+      "Real Friends":{"title":"Real Friends","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":12, "length":251,"features":["Ty Dolla Sign"]},
+          
+      "Wolves":{"title":"Wolves","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":13, "length":301,"features":["Sia", "VIC MENSA"]},
+          
+      "Frank's Track":{"title":"Frank's Track","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":14, "length":38,"features":["Frank Ocean"]},
+          
+      "Siiiiiiiiilver Surffffeeeeer Intermission":{"title":"Siiiiiiiiilver Surffffeeeeer Intermission","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":15, "length":56,"features":["Max B"]},
+          
+      "30 Hours":{"title":"30 Hours","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":16, "length":323,"features":["Andre 3000"]},
+          
+      "No More Parties In LA":{"title":"No More Parties In LA","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":17, "length":374,"features":["Kendrick Lamar"]},
+          
+      "Facts (Charlie Heat Version)":{"title":"Facts (Charlie Heat Version)","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":18, "length":200,"features":[""]},
+          
+      "Fade":{"title":"Fade","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":19, "length":193,"features":["Post Malone", "Ty Dolla Sign"]},
+        
+      "Saint Pablo":{"title":"Saint Pablo","album":8,
+          "cover":"https://m.media-amazon.com/images/I/91EJXyuLDOL._AC_SL1500_.jpg",
+          "track":20, "length":372,"features":["Sampha"]},
+          
+          
+          
+        
+      "I Thought About Killing You":{"title":"I Thought About Killing You","album":9,
+          "cover":"https://i0.wp.com/fantastichiphop.blog/wp-content/uploads/2021/06/Ye.jpg?fit=1000%2C1000&ssl=1",
+          "track":1, "length":274,"features":[""]},
+          
+      "Yikes":{"title":"Yikes","album":9,
+          "cover":"https://i0.wp.com/fantastichiphop.blog/wp-content/uploads/2021/06/Ye.jpg?fit=1000%2C1000&ssl=1",
+          "track":2, "length":188,"features":[""]},
+          
+      "All Mine":{"title":"All Mine","album":9,
+          "cover":"https://i0.wp.com/fantastichiphop.blog/wp-content/uploads/2021/06/Ye.jpg?fit=1000%2C1000&ssl=1",
+          "track":3, "length":145,"features":["Ant Clemons", "Ty Dolla Sign"]},
+          
+      "Wouldn't Leave":{"title":"Wouldn't Leave","album":9,
+          "cover":"https://i0.wp.com/fantastichiphop.blog/wp-content/uploads/2021/06/Ye.jpg?fit=1000%2C1000&ssl=1",
+          "track":4, "length":205,"features":["PARTYNEXTDOOR","Jeremih","Ty Dolla Sign"]},
+          
+      "No Mistakes":{"title":"No Mistakes","album":9,
+          "cover":"https://i0.wp.com/fantastichiphop.blog/wp-content/uploads/2021/06/Ye.jpg?fit=1000%2C1000&ssl=1",
+          "track":5, "length":123,"features":["Kid Cudi","Charlie Wilson"]},
+          
+      "Ghost Town":{"title":"Ghost Town","album":9,
+          "cover":"https://i0.wp.com/fantastichiphop.blog/wp-content/uploads/2021/06/Ye.jpg?fit=1000%2C1000&ssl=1",
+          "track":6, "length":271,"features":["PARTYNEXTDOOR","070 Shake", "Kid Cudi"]},
+          
+      "Violent Crimes":{"title":"Violent Crimes","album":9,
+          "cover":"https://i0.wp.com/fantastichiphop.blog/wp-content/uploads/2021/06/Ye.jpg?fit=1000%2C1000&ssl=1",
+          "track":7, "length":215,"features":["Ty Dolla Sign", "Nicki Minaj", "070 Shake"]},
+          
+          
+          
+          
+      "Feel The Love":{"title":"Feel The Love","album":10,
+          "cover":"https://m.media-amazon.com/images/I/81vqCvM2EJL.jpg",
+          "track":1, "length":165,"features":["Kid Cudi", "Pusha T"]},
+        
+      "Fire":{"title":"Fire","album":10,
+          "cover":"https://m.media-amazon.com/images/I/81vqCvM2EJL.jpg",
+          "track":2, "length":140,"features":["Kid Cudi"]},  
+          
+      "4th Dimension":{"title":"4th Dimension","album":10,
+          "cover":"https://m.media-amazon.com/images/I/81vqCvM2EJL.jpg",
+          "track":3, "length":153,"features":["Kid Cudi","Louis Prima"]},  
+          
+      "Freee (Ghost Town Pt 2)":{"title":"Freee (Ghost Town Pt 2)","album":10,
+          "cover":"https://m.media-amazon.com/images/I/81vqCvM2EJL.jpg",
+          "track":4, "length":206,"features":["Kid Cudi", "Ty Dolla Sign"]},
+          
+      "Reborn":{"title":"Reborn","album":10,
+          "cover":"https://m.media-amazon.com/images/I/81vqCvM2EJL.jpg",
+          "track":5, "length":324,"features":["Kid Cudi"]},
+          
+      "Kids See Ghosts":{"title":"Kids See Ghosts","album":10,
+          "cover":"https://m.media-amazon.com/images/I/81vqCvM2EJL.jpg",
+          "track":6, "length":245,"features":["Kid Cudi","Yasiin Bey"]},
+          
+      "Cudi Montage":{"title":"Cudi Montage","album":10,
+          "cover":"https://m.media-amazon.com/images/I/81vqCvM2EJL.jpg",
+          "track":7, "length":197,"features":["Kid Cudi"]},
+          
+      
+      
+        "Every Hour":{"title":"Every Hour","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":1, "length":112,"features":["Sunday Service Choir"]},
+          
+        "Selah":{"title":"Selah","album":11,
+          "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+          "track":2, "length":164,"features":[""]},  
+          
+        "Follow God":{"title":"Follow God","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":3, "length":104,"features":[""]},  
+
+        "Closed On Sunday":{"title":"Closed On Sunday","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":4, "length":151,"features":[""]},  
+
+        "On God":{"title":"On God","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":5, "length":136,"features":[""]},  
+    
+        "Everything We Need":{"title":"Everything We Need","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":6, "length":116,"features":["Ty Dolla Sign", "Ant Clemons"]},
+            
+        "Water":{"title":"Water","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":7, "length":168,"features":["Ant Clemons"]},   
+
+        "God Is":{"title":"God Is","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":8, "length":203,"features":[""]},   
+
+        "Hands On":{"title":"Hands On","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":9, "length":203,"features":["Fred Hammond"]},  
+        
+        "Use This Gospel":{"title":"Use This Gospel","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":10, "length":213,"features":["Clipse","Kenny G"]},
+        
+        "Jesus Is Lord":{"title":"Jesus Is Lord","album":11,
+            "cover":"https://m.media-amazon.com/images/I/61Ptk7IYKDL.jpg",
+            "track":11, "length":49,"features":[""]},
+
+
+        
+        "Donda Chant":{"title":"Donda Chant","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":1, "length":52,"features":["Syleena Johnson"]},
+
+        "Jail":{"title":"Jail","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":2, "length":297,"features":["Jay-Z"]},
+        
+        "God Breathed":{"title":"God Breathed","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":3, "length":333,"features":["Vory"]},
+
+        "Off The Grid":{"title":"Off The Grid","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":4, "length":339,"features":["Fivio Foreign", "Playboi Carti"]},
+        
+        "Hurricane":{"title":"Hurricane","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":5, "length":244,"features":["The Weeknd","Lil Baby"]},
+
+        "Praise God":{"title":"Praise God","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":6, "length":226,"features":["Baby Keem","Travis Scott"]},
+
+        "Jonah":{"title":"Jonah","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":7, "length":195,"features":["Lil Durk","Vory"]},
+
+        "Ok Ok":{"title":"Ok Ok","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":8, "length":204,"features":["Lil Yachty","Rooga"]},
+
+        "Junya":{"title":"Junya","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":9, "length":147,"features":["Playboi Carti"]},
+
+        "Believe What I Say":{"title":"Believe What I Say","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":10, "length":242,"features":[""]},
+
+        "24":{"title":"24","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":11, "length":197,"features":[""]},
+
+        "Remote Control":{"title":"Remote Control","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":12, "length":198,"features":["Young Thug"]},
+
+        "Moon":{"title":"Moon","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":13, "length":156,"features":["Don Toliver","Kid Cudi"]},
+        
+        "Heaven and Hell":{"title":"Heaven and Hell","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":14, "length":145,"features":[""]},
+
+        "Donda":{"title":"Donda","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":15, "length":128,"features":["Stalone","The World Famous Tony Williams"]},
+        
+        "Keep My Spirit Alive":{"title":"Keep My Spirit Alive","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":16, "length":221,"features":["KayCyy"]},
+
+        "Jesus Lord":{"title":"Jesus Lord","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":17, "length":528,"features":["Jay Electronica"]},
+
+        "New Again":{"title":"New Again","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":18, "length":183,"features":[""]},
+
+        "Tell The Vision":{"title":"Tell The Vision","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":19, "length":104,"features":["Pop Smoke"]},
+
+        "Lord I Need You":{"title":"Lord I Need You","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":20, "length":162,"features":[""]},
+
+        "Pure Souls":{"title":"Pure Souls","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":21, "length":358,"features":["Roddy Ricch","Shenseea"]},
+
+        "Come To Life":{"title":"Come To Life","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":22, "length":310,"features":[""]},
+
+        "No Child Left Behind":{"title":"No Child Left Behind","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":23, "length":178,"features":["Vory"]},
+        
+        "Jail pt 2":{"title":"Jail pt 2","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":24, "length":297,"features":["DaBaby"]},
+
+        "Ok Ok pt 2":{"title":"Ok Ok pt 2","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":25, "length":204,"features":["Rooga","Shenseea"]},
+
+        "Junya pt 2":{"title":"Junya pt 2","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":26, "length":182,"features":["Playboi Carti", "Ty Dolla Sign"]},
+
+        "Jesus Lord pt 2":{"title":"Jesus Lord pt 2","album":12,
+            "cover":"https://www.shareicon.net/data/256x256/2015/11/08/668660_box_512x512.png",
+            "track":27, "length":690,"features":["The LOX","Jay Electronica"]},
+
+          
+            "STARS":{"title":"STARS","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":1, "length":115,"features":["Ty Dolla Sign", "Dijon"]},
+            
+        "KEYS TO MY LIFE":{"title":"KEYS TO MY LIFE","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":2, "length":174,"features":["Ty Dolla Sign", "India Love"]},
+            
+        "PAID":{"title":"PAID","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":3, "length":195,"features":["Ty Dolla Sign", "Marshawn Lynch", "K-Ci"]},
+            
+        "TALKING":{"title":"TALKING","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":4, "length":185,"features":["Ty Dolla Sign", "North West", "James Blake"]},
+            
+        "BACK TO ME":{"title":"BACK TO ME","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":5, "length":295,"features":["Ty Dolla Sign", "Quavo", "Freddie Gibbs"]},
+            
+        "HOODRAT":{"title":"HOODRAT","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":6, "length":222,"features":["Ty Dolla Sign"]},
+            
+        "DO IT":{"title":"DO IT","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":7, "length":225,"features":["Ty Dolla Sign", "Nipsey Hussle", "YG"]},
+            
+        "PAPERWORK":{"title":"PAPERWORK","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":8, "length":145,"features":["Ty Dolla Sign","Quavo"]},
+            
+        "BURN":{"title":"BURN","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":9, "length":111,"features":["Ty Dolla Sign"]},
+            
+        "FUK SUMN":{"title":"FUK SUMN","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":10, "length":209,"features":["Ty Dolla Sign", "Playboi Carti", "Travis Scott"]},
+            
+        "VULTURES":{"title":"VULTURES","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":11, "length":276,"features":["Ty Dolla Sign", "Bump J", "Lil Durk", "DJ Pharris"]},
+            
+        "CARNIVAL":{"title":"CARNIVAL","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":12, "length":264,"features":["Ty Dolla Sign", "Playboi Carti", "Rich The Kid"]},
+            
+        "BEG FORGIVENESS":{"title":"BEG FORGIVENESS","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":13, "length":368,"features":["Ty Dolla Sign", "Chris Brown"]},
+            
+        "GOOD (DON'T DIE)":{"title":"GOOD (DON'T DIE)","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":14, "length":199,"features":["Ty Dolla Sign"]},
+            
+        "PROBLEMATIC":{"title":"PROBLEMATIC","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":15, "length":194,"features":["Ty Dolla Sign"]},
+            
+        "KING":{"title":"KING","album":13,
+            "cover":"https://resources.tidal.com/images/1d597035/8c18/4d30/85cc/44157c6724d1/640x640.jpg",
+            "track":16, "length":156,"features":["Ty Dolla Sign"]}
+        
+            
+
+      },
+      
+      
+      
+    "numbers": 
+        {
+        "1":{"title":"Amazing"},
+        "2":{"title":"We Don't Care"},
+        "3":{"title":"Graduation Day"},
+        "4":{"title":"All Falls Down"},
+        "5":{"title":"I'll Fly Away"},
+        "6":{"title":"Spaceship"},
+        "7":{"title":"Jesus Walks"},
+        "8":{"title":"Never Let Me Down"},
+        "9":{"title":"Get Em High"},
+        "10":{"title":"Workout Plan"},
+        "11":{"title":"The New Workout Plan"},
+        "12":{"title":"Slow Jamz"},
+        "13":{"title":"Breathe In Breathe Out"},
+        "14":{"title":"Runaway"},
+        "15":{"title":"School Spirit"},
+        "16":{"title":"Off The Grid"},
+        "17":{"title":"Lil Jimmy Skit"},
+        "18":{"title":"Two Words"},
+        "19":{"title":"Through The Wire"},
+        "20":{"title":"Family Business"},
+        "21":{"title":"Last Call"},
+        
+        "22":{"title":"Wake Up Mr West"},
+        "23":{"title":"Heard Em' Say"},
+        "24":{"title":"Touch The Sky"},
+        "25":{"title":"Gold Digger"},
+        "26":{"title":"No More Parties In LA"},
+        "27":{"title":"Drive Slow"},
+        "28":{"title":"My Way Home"},
+        "29":{"title":"Crack Music"},
+        "30":{"title":"Roses"},
+        "31":{"title":"Bring Me Down"},
+        "32":{"title":"Addiction"},
+        "33":{"title":"Send It Up"},
+        "34":{"title":"Diamonds From Sierra Leone - Remix"},
+        "35":{"title":"We Major"},
+        "36":{"title":"Murder To Excellence"},
+        "37":{"title":"Hey Mama"},
+        "38":{"title":"Celebration"},
+        "39":{"title":"Violent Crimes"},
+        "40":{"title":"Gone"},
+        "41":{"title":"Diamonds From Sierra Leone - Bonus Track"},
+        "42":{"title":"Late"},
+        
+        "43":{"title":"Good Morning"},
+        "44":{"title":"Champion"},
+        "45":{"title":"Stronger"},
+        "46":{"title":"I Wonder"},
+        "47":{"title":"Good Life"},
+        "48":{"title":"Can't Tell Me Nothing"},
+        "49":{"title":"Barry Bonds"},
+        "50":{"title":"Drunk and Hot Girls"},
+        "51":{"title":"Flashing Lights"},
+        "52":{"title":"Everything I Am"},
+        "53":{"title":"The Glory"},
+        "54":{"title":"Homecoming"},
+        "55":{"title":"Big Brother"},
+        "56":{"title":"Good Night"},
+        
+        "57":{"title":"Say You Will"},
+        "58":{"title":"Welcome To Heartbreak"},
+        "59":{"title":"Heartless"},
+        "60":{"title":"Amazing"},
+        "61":{"title":"Love Lockdown"},
+        "62":{"title":"Paranoid"},
+        "63":{"title":"RoboCop"},
+        "64":{"title":"Street Lights"},
+        "65":{"title":"Bad News"},
+        "66":{"title":"See You In My Nightmares"},
+        "67":{"title":"Coldest Winter"},
+        "68":{"title":"Pinocchio Story"},
+        
+        "69":{"title":"Dark Fantasy"},
+        "70":{"title":"Gorgeous"},
+        "71":{"title":"POWER"},
+        "72":{"title":"All Of The Lights (Interlude)"},
+        "73":{"title":"All Of The Lights"},
+        "74":{"title":"Monster"},
+        "75":{"title":"So Appalled"},
+        "76":{"title":"Devil In A New Dress"},
+        "77":{"title":"Runaway"},
+        "78":{"title":"Hell Of A Life"},
+        "79":{"title":"Blame Game"},
+        "80":{"title":"Lost In The World"},
+        "81":{"title":"Who Will Survive In America"},
+        
+        "82":{"title":"On Sight"},
+        "83":{"title":"Black Skinhead"},
+        "84":{"title":"I Am A God"},
+        "85":{"title":"New Slaves"},
+        "86":{"title":"Hold My Liquor"},
+        "87":{"title":"I'm In It"},
+        "88":{"title":"Blood On The Leaves"},
+        "89":{"title":"Guilt Trip"},
+        "90":{"title":"Send It Up"},
+        "91":{"title":"Bound 2"},
+        
+        "92":{"title":"Ultralight Beam"},
+        "93":{"title":"Father Stretch My Hands Pt 1"},
+        "94":{"title":"Pt 2"},
+        "95":{"title":"Famous"},
+        "96":{"title":"Feedback"},
+        "97":{"title":"Low Lights"},
+        "98":{"title":"Highlights"},
+        "99":{"title":"Freestyle 4"},
+        "100":{"title":"I Love Kanye"},
+        "101":{"title":"Waves"},
+        "102":{"title":"FML"},
+        "103":{"title":"Real Friends"},
+        "104":{"title":"Wolves"},
+        "105":{"title":"Frank's Track"},
+        "106":{"title":"Siiiiiiiiilver Surffffeeeeer Intermission"},
+        "107":{"title":"30 Hours"},
+        "108":{"title":"No More Parties In LA"},
+        "109":{"title":"Facts (Charlie Heat Version)"},
+        "110":{"title":"Fade"},
+        "111":{"title":"Saint Pablo"},
+        
+        "112":{"title":"No Church In The Wild"},
+        "113":{"title":"Lift Off"},
+        "114":{"title":"Ni**as In Paris"},
+        "115":{"title":"Otis"},
+        "116":{"title":"Gotta Have It"},
+        "117":{"title":"New Day"},
+        "118":{"title":"That's My Bitch"},
+        "119":{"title":"Welcome To The Jungle"},
+        "120":{"title":"Who Gon Stop Me"},
+        "121":{"title":"Murder To Excellence"},
+        "122":{"title":"Made In America"},
+        "123":{"title":"Why I Love You"},
+        
+        "124":{"title":"I Thought About Killing You"},
+        "125":{"title":"Yikes"},
+        "126":{"title":"All Mine"},
+        "127":{"title":"Wouldn't Leave"},
+        "128":{"title":"No Mistakes"},
+        "129":{"title":"Ghost Town"},
+        "130":{"title":"Violent Crimes"},
+
+        "131":{"title":"Feel The Love"},
+        "132":{"title":"Fire"},
+        "133":{"title":"4th Dimension"},
+        "134":{"title":"Freee (Ghost Town Pt 2)"},
+        "135":{"title":"Reborn"},
+        "136":{"title":"Kids See Ghosts"},
+        "137":{"title":"Cudi Montage"},
+
+        "138":{"title":"Every Hour"},
+        "139":{"title":"Selah"},
+        "140":{"title":"Follow God"},
+        "141":{"title":"Closed On Sunday"},
+        "142":{"title":"On God"},
+        "143":{"title":"Everything We Need"},
+        "144":{"title":"Water"},
+        "145":{"title":"God Is"},
+        "146":{"title":"Hands On"},
+        "147":{"title":"Use This Gospel"},
+        "148":{"title":"Jesus Is Lord"},
+
+        "149":{"title":"Donda Chant"},
+        "150":{"title":"Jail"},
+        "151":{"title":"God Breathed"},
+        "152":{"title":"Off The Grid"},
+        "153":{"title":"Hurricane"},
+        "154":{"title":"Praise God"},
+        "155":{"title":"Jonah"},
+        "156":{"title":"Ok Ok"},
+        "157":{"title":"Junya"},
+        "158":{"title":"Believe What I Say"},
+        "159":{"title":"24"},
+        "160":{"title":"Remote Control"},
+        "161":{"title":"Moon"},
+        "162":{"title":"Heaven and Hell"},
+        "163":{"title":"Donda"},
+        "164":{"title":"Keep My Spirit Alive"},
+        "165":{"title":"Jesus Lord"},
+        "166":{"title":"New Again"},
+        "167":{"title":"Tell The Vision"},
+        "168":{"title":"Lord I Need You"},
+        "169":{"title":"Pure Souls"},
+        "170":{"title":"Come To Life"},
+        "171":{"title":"No Child Left Behind"},
+        "172":{"title":"Jail pt 2"},
+        "173":{"title":"Ok Ok pt 2"},
+        "174":{"title":"Junya pt 2"},
+        "175":{"title":"Jesus Lord pt 2"},
+        
+        
+        "176":{"title":"STARS"},
+        "177":{"title":"KEYS TO MY LIFE"},
+        "178":{"title":"PAID"},
+        "179":{"title":"TALKING"},
+        "180":{"title":"BACK TO ME"},
+        "181":{"title":"HOODRAT"},
+        "182":{"title":"DO IT"},
+        "183":{"title":"PAPERWORK"},
+        "184":{"title":"BURN"},
+        "185":{"title":"FUK SUMN"},
+        "186":{"title":"VULTURES"},
+        "187":{"title":"CARNIVAL"},
+        "188":{"title":"BEG FORGIVENESS"},
+        "189":{"title":"GOOD (DON'T DIE)"},
+        "190":{"title":"PROBLEMATIC"},
+        "191":{"title":"KING"}
+        
+        
+        
+        },
+        
+    "results":
+        {
+      "nothing":
+        {
+          "title":"clear",
+          "album":"clear",
+          "track":"clear", 
+          "length":"clear",
+          "features":"clear"
+        }
+    }
+    }
+    
+    
+    
