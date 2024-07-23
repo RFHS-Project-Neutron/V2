@@ -271,62 +271,63 @@
         <a href="/gs">
             <button class="square-button"><i class="fas fa-arrow-left"></i></button>
         </a>
-        <button class="square-button"><i class="fas fa-expand"></i></button>
+        <button id="fullscreen-btn" class="square-button"><i class="fas fa-expand"></i></button>
     </div>
     <img id="content-logo" src="https://via.placeholder.com/150" alt="Content Logo" class="square-image">
     <div id="image-text" class="image-text">XXXXXXXXXXX</div>
 
     <script>
-      // Function to update content based on URL parameters
-      function updateContent() {
-        const params = new URLSearchParams(window.location.search);
-        const game = params.get('game');
-        
-        const iframe = document.getElementById('embed');
-        const image = document.getElementById('content-logo');
-        const text = document.getElementById('image-text');
+// Function to update content based on URL parameters
+function updateContent() {
+    const params = new URLSearchParams(window.location.search);
+    const game = params.get('game');
 
-        switch (game) {
-          case '2048':
+    const iframe = document.getElementById('embed');
+    const image = document.getElementById('content-logo');
+    const text = document.getElementById('image-text');
+
+    switch (game) {
+        case '2048':
             iframe.src = '/gs/2048';
             image.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/800px-2048_logo.svg.png';
             text.textContent = '2048';
             break;
-          case '1v1lol':
+        case '1v1lol':
             iframe.src = '/gs/1v1.lol';
             image.src = 'https://images.sftcdn.net/images/t_app-icon-m/p/77f9e3d7-4fdf-4df3-9f2f-266985f8e8f0/490128247/1v1-lol-download-1v1-lol-for-Windows.jpg';
             text.textContent = '1V1.LOL';
             break;
-          case 'getting-over-it':
+        case 'getting-over-it':
             iframe.src = 'https://scratch.mit.edu/projects/389464290/embed';
             image.src = 'https://scratchgames.co/data/image/game/getting-over-it.jpg';
             text.textContent = 'Getting Over It';
             break;
-          default:
+        default:
             iframe.src = 'https://project-neutron.site';
             image.src = 'https://via.placeholder.com/150';
             text.textContent = 'XXXXXXXXXXX';
             break;
-        }
-      }
+    }
+}
 
-      // Function to toggle fullscreen
-      function toggleFullscreen() {
-        const iframe = document.getElementById('embed');
-        if (document.fullscreenElement) {
-          document.exitFullscreen();
-        } else {
-          iframe.requestFullscreen().catch(err => {
+// Function to toggle fullscreen for the embed container
+function toggleFullscreen() {
+    const embedContainer = document.querySelector('.embed-container');
+
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        embedContainer.requestFullscreen().catch(err => {
             console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-          });
-        }
-      }
+        });
+    }
+}
 
-      // Update content on page load
-      document.addEventListener('DOMContentLoaded', updateContent);
+// Update content on page load
+document.addEventListener('DOMContentLoaded', updateContent);
 
-      // Add event listener to the fullscreen button
-      document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
-    </script>
+// Add event listener to the fullscreen button
+document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
+        </script>
 </body>
 </html>
