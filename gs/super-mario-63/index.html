@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset='utf8'>
+    <style>
+        body {
+            background-color: #101720; /* Set background color */
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Hide any overflow */
+        }
+        #container {
+            width: 100vw; /* Full width of viewport */
+            height: 100vh; /* Full height of viewport */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+    </style>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.style.width = '100%'; /* Set player width to 100% of container */
+        player.style.height = '100%'; /* Set player height to 100% of container */
+        player.load("/gs/swf-assets/wingeria.swf"); /* Replace with your SWF file URL */
+    });
+</script>
+<script src="/assets/ruffle/ruffle.js"></script> <!-- Replace with your Ruffle.js URL -->
+</body>
+</html>
