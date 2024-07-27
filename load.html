@@ -332,7 +332,9 @@
         <a href="/gs">
             <button class="square-button"><i class="fas fa-arrow-left"></i></button>
         </a>
+        <button id="reload-button" class="square-button"><i class="fas fa-rotate-left"></i></button>
         <button id="fullscreen-btn" class="square-button"><i class="fas fa-expand"></i></button>
+        <button id="about-blank" class="square-button"><i class="fas fa-arrow-up-right-from-square"></i></button>
     </div>
     <img id="content-logo" src="https://via.placeholder.com/150" alt="Content Logo" class="square-image">
     <div id="image-text" class="image-text">XXXXXXXXXXX</div>
@@ -624,8 +626,8 @@ function updateContent() {
             text.textContent = 'YoHoHo.io';
             break;
         default:
-            iframe.src = 'https://project-neutron.site/404';
-            image.src = 'https://testing-v2.pages.dev/assets/images/no-bg-logo.png';
+            iframe.src = '/404';
+            image.src = '/assets/images/no-bg-logo.png';
             text.textContent = 'Project Neutron';
             break;
     }
@@ -673,6 +675,52 @@ setInterval(updateTime, 1000);
 
 // Initial call to display time immediately
 updateTime();
+</script>
+<script>
+document.getElementById('reload-button').addEventListener('click', function() {
+    const iframe = document.getElementById('embed');
+    iframe.src = iframe.src;  // This effectively reloads the iframe
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('about-blank');
+
+    if (button) {
+        button.addEventListener('click', function() {
+            // Find the current iframe
+            const iframe = document.getElementById('embed');
+
+            if (iframe) {
+                const iframeUrl = iframe.src; // Get the current iframe URL
+                
+                // Open a new tab and create an iframe in it
+                var win = window.open(); // Open a new window/tab
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                
+                var iframeElement = win.document.createElement('iframe');
+                iframeElement.style.border = 'none';
+                iframeElement.style.width = '100%';
+                iframeElement.style.height = '100%';
+                iframeElement.style.margin = '0';
+                iframeElement.src = 'about:blank'; // Set the initial src to about:blank
+
+                // Append the iframe to the new tab
+                win.document.body.appendChild(iframeElement);
+
+                // Use a small timeout to allow about:blank to load, then replace it with the actual URL
+                setTimeout(function() {
+                    iframeElement.src = iframeUrl;
+                }, 100); // Adjust timeout as necessary
+            } else {
+                console.error('No iframe with id "embed" found.');
+            }
+        });
+    } else {
+        console.error('No button with id "about-blank" found.');
+    }
+});
 </script>
 </body>
 </html>
