@@ -302,6 +302,59 @@
             margin-top: 10px;
         }
 
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 155px; /* Adjust space from the time display */
+            margin-left: auto; /* Push icons to the left */
+        }
+        
+        .social-icon {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-size: 1.15rem; /* Size of the icons */
+            color: white; /* Icon color */
+            margin-right: 10px; /* Reduced space between icons */
+            transition: color 0.3s ease, background 0.3s ease; /* Smooth color transition on hover */
+            position: relative; /* Relative positioning for background */
+        }
+        
+        .social-icon:hover {
+            color: white; /* Default color stays white for hover */
+        }
+        
+        /* Specific hover colors */
+        .social-icon.snap:hover {
+            color: #FFFC00; /* Snapchat color */
+        }
+        
+        .social-icon.discord:hover {
+            color: #5865F2; /* Discord color */
+        }
+        
+        .social-icon.instagram:hover {
+            color: #C13584;
+        }
+        
+        .social-icon.tiktok:hover {
+            color: #FE2c55; /* TikTok color */
+        }
+        
+        .social-icon.youtube:hover {
+            color: #FF0000; /* YouTube color */
+        }
+        
+        /* Time display styling */
+        .time-display {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1.8rem; /* Font size for the time */
+            color: white; /* Text color */
+            position: absolute;
+            right: 20px; /* Space from the right edge */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
     </style>
 </head>
 <body>
@@ -316,9 +369,14 @@
         <a href="/apps" class="nav-text apps-text">Apps</a>
         <a href="/mov" class="nav-text movies-text">Movies</a>
         <a href="/tv" class="nav-text tv-text">TV Shows</a>
-        <div class="rectangle">
-            <a href="/plus" class="rectangle-text">Project Neutron +</a>
-        </div> <!-- Rectangle at the right side of the header -->
+        <div class="social-icons">
+            <a href="https://discord.gg/nWNcMBQcX6" class="social-icon discord"><i class="fab fa-discord"></i></a>
+            <a href="https://www.tiktok.com/@project.neutron" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/project.neutron/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.snapchat.com/add/project.neutron" class="social-icon snap"><i class="fab fa-snapchat"></i></a>
+            <a href="https://www.youtube.com/@project.neutron" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="time-display" id="timeDisplay"></div> <!-- Time display -->
     </header>
     <div class="centered-text">Games</div>
 <div class="search-bar">
@@ -447,6 +505,29 @@
     // Add event listener for input event on search input
     document.getElementById('searchInput').addEventListener('input', filterGames);
 </script>
+<script>
+function updateTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
 
+    // Convert to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    // Format hours with leading zero if necessary
+    const hoursString = String(hours).padStart(2, '0');
+    const timeString = `${hoursString}:${minutes}:${seconds} ${ampm}`;
+    document.getElementById('timeDisplay').textContent = timeString;
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial call to display time immediately
+updateTime();
+</script>
 </body>
 </html>
