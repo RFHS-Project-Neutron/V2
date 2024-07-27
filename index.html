@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title></title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <script src="UnityProgress.js"></script>  
-    <script src="UnityLoader.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/BulletForceWebGL_New.json", {onProgress: UnityProgress});
+    window.onload = function() {
+        var win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = '/home'; // Replace with your actual target URL
+        win.document.body.appendChild(iframe);
+        setTimeout(function() {
+            window.location.replace('https://nasa.gov');
+        }, 0); // Immediate redirect without saving to history
+    };
     </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 540px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Bullet Force WebGL</div>
-      </div>
-    </div>
-  </body>
+</head>
+<body>
+</body>
 </html>
