@@ -189,8 +189,8 @@
 
         .button-container {
             position: fixed;
-            bottom: 3vh; /* Position 5vh from the bottom */
-            right: 10vw; /* Space from the right edge */
+            bottom: 3vh; /* Position 3vh from the bottom */
+            right: 5vw; /* Increase this value to move buttons further to the right */
             display: flex;
             gap: 10px; /* Space between buttons */
         }
@@ -205,12 +205,10 @@
             font-family: Impact, sans-serif; /* Font */
             font-size: 1.2rem; /* Font size for icons */
             cursor: pointer; /* Pointer cursor on hover */
-            transition: background-color 0.3s ease; /* Smooth color transition */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s ease;
-            
         }
 
         .square-button i {
@@ -219,13 +217,13 @@
         }
 
         .square-button:hover {
-            transform: scale(1.12); /* Scale up the rectangle on hover */
+            transform: scale(1.12); /* Scale up the button on hover */
         }
-        
+
         .button-container a {
             text-decoration: none; /* Remove underline */
         }
-        
+
         .square-image {
             position: fixed; /* Fix the position relative to the viewport */
             top: 10vh; /* 10% of the viewport height from the top */
