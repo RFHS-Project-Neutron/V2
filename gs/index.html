@@ -171,7 +171,7 @@
         
         .centered-text {
             position: absolute;
-            left: calc(50% - 82.5px); /* Updated position */
+            left: 50%; /* Updated position */
             top: 16vh;
             transform: translate(-50%, -50%);
             font-family: Impact, sans-serif;
@@ -180,128 +180,141 @@
             color: white;
         }
 
-.search-bar {
-    position: absolute;
-    left: calc(50% - 82.5px); /* Adjusted left position */
-    top: 24vh;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 50px;
-    background-color: transparent;
-    border: 2px solid #ffffff; /* Add a white border */
-    border-radius: 12px; /* Rounded corners */
-    display: flex;
-    align-items: center;
-    padding: 0 10px; /* Padding for the left and right */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
-}
-
-.search-bar input[type="text"] {
-    width: 100%; /* Full width of the remaining space */
-    height: 100%;
-    padding-left: 40px; /* Space for the icon */
-    border: none; /* Remove default border */
-    outline: none; /* Remove default outline */
-    background-color: transparent; /* Set background to transparent */
-    color: white; /* Text color */
-    font-size: 16px; /* Adjust font size */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
-}
-
-.search-bar input[type="text"]::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Adjust placeholder color */
-}
-
-.search-bar i {
-    color: white;
-    font-size: 1rem; /* Adjust icon size */
-    position: absolute;
-    left: 15px; /* Position icon inside the bar */
-}
-        
-        .ad-space {
-            width: 140px;
-            height: 525px;
-            background-color: #fff; /* Example background color */
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 54vh;
-            right: 2%;
-            transform: translateY(-50%);
-            z-index: 1000; /* Adjust z-index as needed */
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .ad-label {
+        .search-bar {
             position: absolute;
-            bottom: 3px; /* Adjust as needed */
-            left: 3px; /* Adjust as needed */
-            background-color: rgba(50, 50, 50, 0.7); /* Darker gray with transparency */
-            padding: 5px;
+            left: 50%; /* Adjusted left position */
+            top: 24vh;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 50px;
+            background-color: transparent;
+            border: 2px solid #ffffff; /* Add a white border */
+            border-radius: 12px; /* Rounded corners */
+            display: flex;
+            align-items: center;
+            padding: 0 10px; /* Padding for the left and right */
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%; /* Full width of the remaining space */
+            height: 100%;
+            padding-left: 40px; /* Space for the icon */
+            border: none; /* Remove default border */
+            outline: none; /* Remove default outline */
+            background-color: transparent; /* Set background to transparent */
             color: white; /* Text color */
-            font-size: 12px; /* Font size */
-            font-family: Arial, sans-serif; /* Font family */
+            font-size: 16px; /* Adjust font size */
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+        }
+
+        .search-bar input[type="text"]::placeholder {
+            color: rgba(255, 255, 255, 0.7); /* Adjust placeholder color */
+        }
+
+        .search-bar i {
+            color: white;
+            font-size: 1rem; /* Adjust icon size */
+            position: absolute;
+            left: 15px; /* Position icon inside the bar */
         }
 
         .game-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 2%; /* Adds 2% gap between games */
+            justify-content: flex-start; /* Align items to the start of the container */
+            gap: 20px; /* Space between items */
+            padding: 20px 0px 20px 160px; /* Add 140px margin on the left */
+            box-sizing: border-box; /* Include padding in width calculation */
         }
 
         .game {
             text-align: center;
-            padding: 1%;
+            padding: 10px; /* Padding inside each game item */
             border-radius: 15px;
-            margin-bottom: 10px; /* Adjusted margin for spacing */
-            margin-top: 15px; /* 16% margin from the top */
             background-color: #303747;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: calc((100% - 6 * 35px) / 6); /* Calculate width for 6 items with 35px margin */
+            width: calc((100% - 4 * 20px - 160px) / 5); /* Calculate width considering margins and padding */
+            height: 210px;
+            overflow: hidden; /* Hide content that overflows */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
             text-decoration: none; /* Remove underline from the link */
             color: #f5f5f5; /* Set text color for the link */
             display: block; /* Make the entire box clickable */
             transition: transform 0.3s ease; /* Hover animation */
-            position: relative; /* Add relative positioning */
+            margin-bottom: 20px; /* Add space below each game item */
         }
 
-        /* Adjust left margin for 1st game in each row */
-        .game:nth-child(5n + 1) {
-            margin-left: 3%; /* 3% margin on the left */
-        }
-
-        /* Adjust right margin for 5th game in each row */
-        .game:nth-child(5n + 5) {
-            margin-right: calc(5% + 140px); /* 5% + 140px margin on the right */
-        }
-
-        /* Top margin adjustment for the first row of games */
+        /* Add margin-top to the first 5 game containers */
         .game:nth-child(-n+5) {
-            margin-top: 16%; /* 16% margin from the top */
+            margin-top: 80px; /* Move down by 80px */
+        }
+
+        /* Adjust margin-top for rows below the first */
+        .game:nth-child(5n + 1) {
+            margin-top: 20px; /* Space between rows */
+        }
+
+        /* Adjust game position for items in the first row */
+        .game:nth-child(-n+5) {
+            position: relative; /* Enable relative positioning for offset */
+            top: 24vh; /* Move down by 24vh to be beneath the search bar */
+        }
+
+        /* Game image styling */
+        .game img {
+            border-radius: 12px;
+            max-width: 100%; /* Ensure image fits within its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Game title styling */
+        .game h3 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px; /* Adjust font size as needed */
+            margin-top: 10px; /* Space above the title */
+            margin-bottom: 0; /* Remove bottom margin for closer spacing */
+        }
+
+        /* Ensure no extra margin on the left for the first item and no extra margin on the right for the last item in each row */
+        .game:nth-child(5n + 1) {
+            margin-left: 0; /* No margin-left for the first item in each row */
+        }
+
+        .game:nth-child(5n) {
+            margin-right: 0; /* No margin-right for the last item in each row */
         }
 
         /* Hover Animation */
         .game:hover {
-            transform: scale(1.07);
+            transform: scale(1.07); /* Slightly enlarge the item on hover */
         }
 
-        .game img {
-            border-radius: 12px;
-            max-width: 100%;
-            height: auto;
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .game-container {
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
         }
 
-        .game h3 {
-            font-family: 'Roboto Condensed', sans-serif;
-            font-size: 16px;
-            margin-top: 10px;
+        @media (max-width: 900px) {
+            .game-container {
+                padding: 20px; /* Further adjust padding */
+            }
         }
 
+        @media (max-width: 600px) {
+            .game-container {
+                padding: 20px; /* Minimum padding for very small screens */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .game-container {
+                padding: 20px; /* Minimum padding for very small screens */
+            }
+        }
+        
         /* Social Icons */
         .social-icons {
             display: flex;
@@ -355,6 +368,89 @@
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
         }
+
+        /* Adjust the position of each row */
+        .game.second-row {
+            margin-top: 140px; /* Move down by 20px from the first row */
+        }
+
+        .game.third-row {
+            margin-top: -20px; /* Move down by 40px from the first row */
+        }
+
+        .game.fourth-row {
+            margin-top: -20px; /* Move down by 60px from the first row */
+        }
+
+        .game.fifth-row {
+            margin-top: -20px; /* Move down by 80px from the first row */
+        }
+
+        /* Adjust the position of each row */
+        .game.sixth-row {
+            margin-top: -20px; /* Move down by 20px from the first row */
+        }
+
+        .game.seventh-row {
+            margin-top: -20px; /* Move down by 40px from the first row */
+        }
+
+        .game.eighth-row {
+            margin-top: -20px; /* Move down by 60px from the first row */
+        }
+
+        .game.ninth-row {
+            margin-top: -20px; /* Move down by 80px from the first row */
+        }
+
+        /* Add margin-top to the first 5 game containers */
+        .game:nth-child(-n+5) {
+            margin-top: 60px; /* Move down by 80px */
+        }
+
+        /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+        }
+
+        /* Hide scrollbar for Firefox */
+        * {
+            scrollbar-width: none; /* Hide scrollbar */
+        }
+
+        /* Hide scrollbar for Edge and Internet Explorer */
+        .scroll-container {
+            -ms-overflow-style: none; /* Hide scrollbar */
+        }
+
+        /* Ensure the scroll container is scrollable */
+        .scroll-container {
+            overflow: auto; /* Ensure scrolling works */
+        }
+
+        .random-game {
+            position: absolute;
+            left: 50%; /* Center the button horizontally */
+            top: 34.25vh; /* Position 20px below the search bar */
+            transform: translateX(-50%); /* Center the button horizontally */
+            background-color: transparent; /* Transparent background */
+            color: white; /* White text color */
+            font-family: Impact, sans-serif; /* Font family */
+            font-size: 1.2rem; /* Font size */
+            border: 1.5px solid #fff; /* 1.5px white border */
+            border-radius: 12px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            transform-origin: center; /* Scale from the center */
+        }
+
+        .random-game:hover {
+            background-color: #303747; /* Slightly visible white background on hover */
+            color: #fff; /* Ensure text remains white on hover */
+            transform: translateX(-50%) scale(1.1); /* Slightly enlarge the button on hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+        }
     </style>
 </head>
 <body>
@@ -383,151 +479,326 @@
     <i class="fas fa-search"></i>
     <input type="text" id="searchInput" oninput="filterGames()" placeholder="Search...">
 </div>
-
-    <div class="ad-space" id="ad-space">
-        <div class="ad-label">Advertisement</div>
-    </div>
+<button id="randomGameButton" class="random-game">Random Game</button>
 <div class="game-container">
-    <!-- First Row -->
-    <!-- Game 1 -->
-    <a href="/gs/2048" class="game">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png">
-        <h3>2048</h3>
-    </a>
+<!-- First Row -->
+<a href="/load?game=2048" class="game">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/800px-2048_logo.svg.png">
+    <h3>2048</h3>
+</a>
 
-    <!-- Game 2 -->
-    <a href="/gs/bit-planes" class="game">
-        <img src="/assets/images/bit-planes-logo.png">
-        <h3>Bit Planes</h3>
-    </a>
+<a href="/load?game=bacon-may-die" class="game">
+    <img src="https://cdn-1.webcatalog.io/catalog/poki-bacon-may-die/poki-bacon-may-die-icon-filled-256.png?v=1714778477508">
+    <h3>Bacon May Die</h3>
+</a>
 
-    <!-- Game 3 -->
-    <a href="/gs/game3" class="game">
-        <img src="game3_image_url">
-        <h3> 3</h3>
-    </a>
+<a href="/load?game=baldis-basics" class="game">
+    <img src="https://images.dwncdn.net/images/t_app-icon-l/p/d64affff-31fb-479d-8547-dce12d4e61d5/2380320661/2119_4-78421653-logo">
+    <h3>Baldi's Basics</h3>
+</a>
 
-    <!-- Game 4 -->
-    <a href="/gs/game4" class="game">
-        <img src="game4_image_url">
-        <h3>2048 4</h3>
-    </a>
+<a href="/load?game=bit-planes" class="game">
+    <img src="/assets/images/bit-planes-logo.png">
+    <h3>Bit Planes</h3>
+</a>
 
-    <!-- Game 5 -->
-    <a href="/gs/game5" class="game">
-        <img src="game5_image_url">
-        <h3>2048 5</h3>
-    </a>
+<a href="/load?game=bitlife" class="game">
+    <img src="https://d.newsweek.com/en/full/1317374/bitlife-ribbons-how-get-all-complete-list-android-ios-cheats-guide-tips-become.jpg?w=1600&h=1600&q=88&f=75befc746fb83a0c568c44ca07bc5e64">
+    <h3>BitLife</h3>
+</a>
 
-    <!-- Second Row -->
-    <!-- Game 6 -->
-    <a href="/gs/game6" class="game">
-        <img src="game6_image_url">
-        <h3>Game 6</h3>
-    </a>
+<!-- Second Row -->
+<a href="/load?game=blackjack" class="game second-row">
+    <img src="https://www.istockphoto.com/illustrations/blackjack-logo">
+    <h3>Blackjack</h3>
+</a>
 
-    <!-- Game 7 -->
-    <a href="/gs/game7" class="game">
-        <img src="game7_image_url">
-        <h3>2048 7</h3>
-    </a>
+<a href="/load?game=bloxorz" class="game second-row">
+    <img src="https://images.sftcdn.net/images/t_app-icon-m/p/65210e9e-a9af-4786-9fd2-2dab7e14322e/136346332/bloxorz-magic-logo">
+    <h3>Bloxorz</h3>
+</a>
 
-    <!-- Game 8 -->
-    <a href="/gs/game8" class="game">
-        <img src="game8_image_url">
-        <h3>2048 8</h3>
-    </a>
+<a href="/load?game=bob-the-robber" class="game second-row">
+    <img src="https://gameforge.com/de-DE/littlegames/includes/images/games/10139_5eb3f08bdb854.jpg">
+    <h3>Bob the Robber</h3>
+</a>
 
-    <!-- Game 9 -->
-    <a href="/gs/game9" class="game">
-        <img src="game9_image_url">
-        <h3>2048 9</h3>
-    </a>
+<a href="/load?game=breaking-the-bank" class="game second-row">
+    <img src="https://breaking-the-bank.en.uptodown.com/android">
+    <h3>Henry Stickman: Breaking The Bank</h3>
+</a>
 
-    <!-- Game 10 -->
-    <a href="/gs/game10" class="game">
-        <img src="game10_image_url">
-        <h3>2048 10</h3>
-    </a>
+<a href="/load?game=drift-hunters" class="game second-row">
+    <img src="https://drifthunters2.io/data/image/favicon.png">
+    <h3>Drift Hunters</h3>
+</a>
+
+<!-- Third Row -->
+<a href="/load?game=duck-life-1" class="game third-row">
+    <img src="https://static.wikia.nocookie.net/ducklife/images/f/f2/Duck_Life_Mobile_Old_Icon.png/revision/latest/scale-to-width/360?cb=20201002120900">
+    <h3>Duck Life</h3>
+</a>
+
+<a href="/load?game=duck-life-2" class="game third-row">
+    <img src="https://cdn-1.webcatalog.io/catalog/poki-ducklife-2/poki-ducklife-2-icon-filled-256.webp?v=1714779497116">
+    <h3>Duck Life 2</h3>
+</a>
+
+<a href="/load?game=duck-life-3" class="game third-row">
+    <img src="https://cdn2.steamgriddb.com/grid/7e4d2cda1bd4477dcc31f4ebb1b2f036.png">
+    <h3>Duck Life 3: Evolution</h3>
+</a>
+
+<a href="/load?game=eaglercraft-1.5.2" class="game third-row">
+    <img src="https://www.jopi.com/cdn-cgi/image/quality=70,width=256,height=256,f=auto/img/t/eaglercraft-minecraft-online.png">
+    <h3>Eaglercraft 1.5.2</h3>
+</a>
+
+<a href="/load?game=eaglercraft-1.8.8" class="game third-row">
+    <img src="https://www.jopi.com/cdn-cgi/image/quality=70,width=256,height=256,f=auto/img/t/eaglercraft-minecraft-online.png">
+    <h3>Eaglercraft 1.8.8</h3>
+</a>
+
+<!-- Fourth Row -->
+<a href="/load?game=escaping-the-prison" class="game fourth-row">
+    <img src="https://play-lh.googleusercontent.com/0Pc3AvSLq2h8cCa38LU_ud-T2eBTYT3amYLaQEAi9AGgzloAiGrbGhxI-CLYCANhpaRL=w240-h480-rw">
+    <h3>Henry Stickman: Escaping the Prison</h3>
+</a>
+
+<a href="/load?game=getting-over-it" class="game fourth-row">
+    <img src="https://scratchgames.co/data/image/game/getting-over-it.jpg">
+    <h3>Getting Over It</h3>
+</a>
+
+<a href="/load?game=happy-wheels" class="game fourth-row">
+    <img src="https://play.google.com/store/apps/details/Happy_Wheels?id=com.fancyforce.happywheels&hl=en_SG">
+    <h3>Happy Wheels</h3>
+</a>
+
+<a href="/load?game=idle-breakout" class="game fourth-row">
+    <img src="https://play.google.com/store/apps/details?id=com.kodiqi.IdleBreakout&hl=en_IN">
+    <h3>Idle Breakout</h3>
+</a>
+
+<a href="/load?game=impossible-quiz-1" class="game fourth-row">
+    <img src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/3cd96c99-46c1-4ff0-b04a-82381ea07349.png">
+    <h3>The Impossible Quiz</h3>
+</a>
+<!-- Fifth Row -->
+<a href="/load?game=impossible-quiz-2" class="game fifth-row">
+    <img src="https://img.poki-cdn.com/assets/c7d9a31b11c7b0238d8fb4c91e645eb5.png">
+    <h3>Impossible Quiz 2</h3>
+</a>
+
+<a href="/load?game=madalin-stunt-cars-2" class="game fifth-row">
+    <img src="https://play-lh.googleusercontent.com/vi7M9bED_m5MGX_rOXm38S7hXhzK4X_kE_oBYebNoH8XZXCDKZswIoq1iEDWSEvHz6A">
+    <h3>Madalin Stunt Cars 2</h3>
+</a>
+
+<a href="/load?game=melon-playground" class="game fifth-row">
+    <img src="https://play-lh.googleusercontent.com/4sTFc9DZ78-bwi7OaKkN-HId6erBPPh0xHzR93gAz6HiRo_xkThsnD44Eicw3JcTLA">
+    <h3>Melon Playground</h3>
+</a>
+
+<a href="/load?game=minesweeper" class="game fifth-row">
+    <img src="https://play-lh.googleusercontent.com/8WnKX_RJ8cfTEY4Yygo32LOFg2uomYz-8kp_bFXX5_q9AsTlS_S8RKnEVHzZDBH4Cek">
+    <h3>Minesweeper</h3>
+</a>
+
+<a href="/load?game=monopoly" class="game fifth-row">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Monopoly_game_logo.svg/800px-Monopoly_game_logo.svg.png">
+    <h3>Monopoly</h3>
+</a>
+
+<!-- Sixth Row -->
+<a href="/load?game=moonbase-inc" class="game sixth-row">
+    <img src="https://cdn-1.webcatalog.io/catalog/poki-moonbase-inc/poki-moonbase-inc-icon-filled-256.png?v=1714779443078">
+    <h3>Moonbase Inc</h3>
+</a>
+
+<a href="/load?game=nyan-cat" class="game sixth-row">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/44/NyanCat_website_logo.png/800px-NyanCat_website_logo.png">
+    <h3>Nyan Cat</h3>
+</a>
+
+<a href="/load?game=pacman" class="game sixth-row">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Pacman_HD.png/800px-Pacman_HD.png">
+    <h3>Pac-Man</h3>
+</a>
+
+<a href="/load?game=papa-burgeria" class="game sixth-row">
+    <img src="https://play-lh.googleusercontent.com/_kMlLg0EOY5F3T3j4UVK1n8iXuErhpuNQ-v-pN_m86rRBK7DeYleWYTrY-gPKKP7RkT9">
+    <h3>Papa's Burgeria</h3>
+</a>
+
+<a href="/load?game=papa-pizzeria" class="game sixth-row">
+    <img src="https://play-lh.googleusercontent.com/DVRt6O_Mq2qN9Q2f9rEzRogG74uU7iGloVDVJJn4f8yGeCoNxeYxIczDB9Ch26UwkbI">
+    <h3>Papa's Pizzeria</h3>
+</a>
+
+<!-- Seventh Row -->
+<a href="/load?game=papa-taco-mia" class="game seventh-row">
+    <img src="https://play-lh.googleusercontent.com/_O9LNOF9sEKXgBNGRjlVm41w2ib4tx2r7S5A7lPAP7uKck-8F3u7sVZ2sH8H2cNqB2g">
+    <h3>Papa's Taco Mia</h3>
+</a>
+
+<a href="/load?game=plants-vs-zombies" class="game seventh-row">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Plants_vs._Zombies_cover_art.png">
+    <h3>Plants vs. Zombies</h3>
+</a>
+
+<a href="/load?game=run-1" class="game seventh-row">
+    <img src="https://play-lh.googleusercontent.com/7lb41AgU4NYRTdR-ujAt5DWt0myj4fSCMY7wOY0C3H3EYWzTbSPEA9AqBoMhxexOIA">
+    <h3>Run 1</h3>
+</a>
+
+<a href="/load?game=run-2" class="game seventh-row">
+    <img src="https://play-lh.googleusercontent.com/2ti3uUb3y-OglumhU9kFbkdxGV3W3G7zzbB5nnzBG68RNPnoGyNCZbAD4nXbPZliA_I">
+    <h3>Run 2</h3>
+</a>
+
+<a href="/load?game=run-3" class="game seventh-row">
+    <img src="https://play-lh.googleusercontent.com/R7lfuXHOn2SGq6DWG5Z95pzxVJ2X5Txyeyh3W0-WkIxO4VoZZy2MiT2OW5-fjDRWGA">
+    <h3>Run 3</h3>
+</a>
+
+<!-- Eighth Row -->
+<a href="/load?game=slope" class="game eighth-row">
+    <img src="https://play-lh.googleusercontent.com/vy2KEXtWl-r_m-ehxhY_sTDfduXvYpgDOV_TB-Mg-4e9qD4qEGo9vFROuP7I-timY9dl">
+    <h3>Slope</h3>
+</a>
+
+<a href="/load?game=smash-karts" class="game eighth-row">
+    <img src="https://play-lh.googleusercontent.com/t-n2xwET5HDTdSpu1JwiF1ncu8qCHL5qvlxwA6kRF60p0o_N3MmWvjQZlAguhUzBYC4">
+    <h3>Smash Karts</h3>
+</a>
+
+<a href="/load?game=snake" class="game eighth-row">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Snake_Classic.png">
+    <h3>Snake</h3>
+</a>
+
+<a href="/load?game=stealing-the-diamond" class="game eighth-row">
+    <img src="https://play-lh.googleusercontent.com/VzBlrvvGf6TX_h2TZtG7_hUPILlv4hG6IliGRy04ODc3kIfiDDcF9bg5bmyZVgfPLg">
+    <h3>Henry Stickman: Stealing the Diamond</h3>
+</a>
+
+<a href="/load?game=subway-surfers" class="game eighth-row">
+    <img src="https://play-lh.googleusercontent.com/nZ_eEXimOoy4sKUwtDiZ6N8rNCOIVmDum4hCNrIoEpdWhJGT13byo5ZDR3tsYYs5kA">
+    <h3>Subway Surfers</h3>
+</a>
+
+<!-- Ninth Row -->
+<a href="/load?game=sugar-sugar" class="game ninth-row">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Sugar_Sugar_logo.png">
+    <h3>Sugar, Sugar</h3>
+</a>
+
+<a href="/load?game=summon-the-hero" class="game ninth-row">
+    <img src="https://play-lh.googleusercontent.com/nK61xA8MQNxAy1hD9ka7IzsygNjTB6IrZxCmP57tVhrD4VWUbINo_vleXzCU5dyCpA">
+    <h3>Summon the Hero</h3>
+</a>
+
+<a href="/load?game=tetris" class="game ninth-row">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Tetris_1984_progression.png">
+    <h3>Tetris</h3>
+</a>
+
+<a href="/load?game=wordle" class="game ninth-row">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Wordle_%E2%80%93_2021.png/640px-Wordle_%E2%80%93_2021.png">
+    <h3>Wordle</h3>
+</a>
+
+<a href="/load?game=worlds-biggest-pacman" class="game ninth-row">
+    <img src="https://worldsbiggestpacman.com/assets/images/favicon-32x32.png">
+    <h3>World's Biggest Pac-Man</h3>
+</a>
+
+<!-- Tenth Row -->
+<a href="/load?game=worlds-dumbest-game" class="game tenth-row">
+    <img src="https://play-lh.googleusercontent.com/p7STk5yU7CjC3Ubscy3CeB2fXLp1alFFKNt6gKt9W1eIY1ulOTyksDdb0jcG0eJS9h0">
+    <h3>World's Dumbest Game</h3>
+</a>
+
+<a href="/load?game=zombie-tsunami" class="game tenth-row">
+    <img src="https://play-lh.googleusercontent.com/OpxY95qHCcXs7DEpJ5tb-GsRzoEVazx1dT18mDSEgEPpI9Dz1zNtycGkZ8cyVZsgA2Zk">
+    <h3>Zombie Tsunami</h3>
+</a>
 </div>
+    <script>
+        // Function to filter games based on search input
+        function filterGames() {
+            const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+            const games = document.querySelectorAll('.game');
 
-    
-        <script>
-        // Function to update ad image
-        function updateAdImage() {
-            // Retrieve the div element with id 'ad-space'
-            const adSpace = document.getElementById('ad-space');
-            
-            // Function to get a random image URL
-            function getRandomAdImageUrl() {
-                const adImages = [
-                    'https://s.yimg.com/cv/apiv2/adspecs/format/demos/33/Publix_sw__160x600_1630036809791.jpg',
-                    'https://live.staticflickr.com/8339/8263840740_b14ae73d1a_z.jpg'
-                ];
-                const randomIndex = Math.floor(Math.random() * adImages.length);
-                return adImages[randomIndex];
-            }
-
-            // Update adSpace background image
-            const randomImageUrl = getRandomAdImageUrl();
-            adSpace.style.backgroundImage = `url('${randomImageUrl}')`;
-        }
-
-        // Initial load of ad image
-        updateAdImage();
-
-        // Change ad image every 60 seconds
-        setInterval(updateAdImage, 60000);
-    </script>
-<script>
-    // Function to filter games based on search input
-    function filterGames() {
-        const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
-        const games = document.querySelectorAll('.game');
-
-        games.forEach(game => {
-            const title = game.querySelector('h3').textContent.trim().toLowerCase();
-            if (title.includes(searchInput)) {
-                game.style.display = 'inline-block'; // Show game if title matches search
-            } else {
-                game.style.display = 'none'; // Hide game if title doesn't match search
-            }
-        });
-
-        // Reset display for all games if search input is empty
-        if (searchInput === '') {
             games.forEach(game => {
-                game.style.display = 'inline-block'; // Show all games
+                const title = game.querySelector('h3').textContent.trim().toLowerCase();
+                if (title.includes(searchInput)) {
+                    game.style.display = 'block'; // Show game if title matches search
+                } else {
+                    game.style.display = 'none'; // Hide game if title doesn't match search
+                }
             });
+
+            // Reset display for all games if search input is empty
+            if (searchInput === '') {
+                games.forEach(game => {
+                    game.style.display = 'block'; // Show all games
+                });
+            }
         }
+
+        // Add event listener for input event on search input
+        document.getElementById('searchInput').addEventListener('input', filterGames);
+    </script>
+    <script>
+    function updateTime() {
+        const now = new Date();
+        let hours = now.getHours();
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+
+        // Convert to 12-hour format
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+
+        // Format hours with leading zero if necessary
+        const hoursString = String(hours).padStart(2, '0');
+        const timeString = `${hoursString}:${minutes}:${seconds} ${ampm}`;
+        document.getElementById('timeDisplay').textContent = timeString;
     }
 
-    // Add event listener for input event on search input
-    document.getElementById('searchInput').addEventListener('input', filterGames);
-</script>
-<script>
-function updateTime() {
-    const now = new Date();
-    let hours = now.getHours();
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    const ampm = hours >= 12 ? 'PM' : 'AM';
+    // Update time every second
+    setInterval(updateTime, 1000);
 
-    // Convert to 12-hour format
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
+    // Initial call to display time immediately
+    updateTime();
+    </script>
+    <script>
+    // Function to pick a random game from the container and redirect
+function pickRandomGame() {
+    // Get all game elements from the container
+    const gameItems = document.querySelectorAll('#game-container .game-item');
 
-    // Format hours with leading zero if necessary
-    const hoursString = String(hours).padStart(2, '0');
-    const timeString = `${hoursString}:${minutes}:${seconds} ${ampm}`;
-    document.getElementById('timeDisplay').textContent = timeString;
+    // If no games are found, exit the function
+    if (gameItems.length === 0) {
+        console.error('No game items found.');
+        return;
+    }
+
+    // Choose a random index
+    const randomIndex = Math.floor(Math.random() * gameItems.length);
+
+    // Get the URL from the chosen game item
+    const randomGameUrl = gameItems[randomIndex].getAttribute('data-url');
+
+    // Redirect to the chosen game URL
+    window.location.href = randomGameUrl;
 }
 
-// Update time every second
-setInterval(updateTime, 1000);
-
-// Initial call to display time immediately
-updateTime();
+// Add event listener to the button
+document.getElementById('random-game').addEventListener('click', pickRandomGame);
 </script>
 </body>
 </html>
