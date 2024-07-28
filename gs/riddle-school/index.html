@@ -1,26 +1,38 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset='utf8'>
-    </head>
-    <body>
-        <div id='ruffle'></div>
-        <script src="assets/ruffle.js"></script>
-        <script>
-var swfobject = {};
+<head>
+    <meta charset='utf8'>
+    <style>
+        body {
+            background-color: #101720; /* Set background color */
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Hide any overflow */
+        }
+        #container {
+            width: 100vw; /* Full width of viewport */
+            height: 100vh; /* Full height of viewport */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+    </style>
+</head>
+<body>
 
-swfobject.embedSWF = function(url, cont, width, height){
-    var ruffle = window.RufflePlayer.newest(),
-        player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
-            width: width,
-            height: height,
-            style: 'width: ' + width + 'px; height: ' + height + 'px',
-        });
-    
-    player.load({ url: url });
-}
+<div id="container"></div>
 
-swfobject.embedSWF('https://github.com/Falcon-Games-GS/RiddleSchool/blob/main/riddleschool.swf', 'ruffle', 500, 500);
-        </script>
-    </body>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.style.width = '100%'; /* Set player width to 100% of container */
+        player.style.height = '100%'; /* Set player height to 100% of container */
+        player.load("/gs/riddle-school/riddleschool.swf"); /* Replace with your SWF file URL */
+    });
+</script>
+<script src="/assets/ruffle/ruffle.js"></script> <!-- Replace with your Ruffle.js URL -->
+</body>
 </html>
