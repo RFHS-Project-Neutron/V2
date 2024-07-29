@@ -424,11 +424,14 @@
             height: 40px; /* Height of each button */
             width: 40px; /* Width of each button */
             background-color: transparent; /* Transparent background */
+            background-size: 16px 16px; /* Scale the background image to fit within the button */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent repeating the background image */
             color: white; /* Text color */
             font-family: Impact, sans-serif; /* Font family */
             font-size: 1.2rem; /* Font size */
             border: 1.5px solid #fff; /* Border */
-            border-radius: 5px; /* Slightly rounded corners */
+            border-radius: 8px; /* Slightly rounded corners */
             cursor: pointer; /* Pointer cursor on hover */
             transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
         }
@@ -585,38 +588,33 @@
     <button id="ab-cloak">Open in About:Blank</button>
     <div class="themes-text">Themes</div>
     <div class="dropdown">
-        Themes
-        <div class="dropdown-content">
-            <a href="#link1">Link 1</a>
-            <a href="#link2">Link 2</a>
-            <a href="#link3">Link 3</a>
-        </div>
+        Coming Soon...
     </div>
     <div class="cloak-text">Tab Cloaking</div>
     <div class="text-cloak-container">
-        <div class="text-cloak-box" contenteditable="true">Tab Name</div>
+        <input type="text" class="text-cloak-box" id="tab-name-input" placeholder="Tab Name">
         <button id="set-tab-name" class="set-tab-name-button">Set Tab Name</button>
     </div>
     <div class="icon-cloak-container">
-        <div class="icon-cloak-box" contenteditable="true">Icon Name</div>
-        <button id="set-tab-icon" class="set-tab-icon-button">Set Icon Name</button>
+        <input type="text" class="icon-cloak-box" id="icon-url-input" placeholder="Tab Icon URL">
+        <button id="set-tab-icon" class="set-tab-icon-button">Set Icon</button>
     </div>
-    <div class="preset-buttons">
-        <button class="preset-button">1</button>
-        <button class="preset-button">2</button>
-        <button class="preset-button">3</button>
-        <button class="preset-button">4</button>
-        <button class="preset-button">5</button>
-    </div>
+<div class="preset-buttons">
+    <button class="preset-button" data-title="Project Neutron" data-favicon="/assets/images/main-favicon.ico" style="background-image: url('/assets/images/main-favicon.ico');"></button>
+    <button class="preset-button" data-title="Google" data-favicon="https://google.com/favicon.ico" style="background-image: url('https://google.com/favicon.ico');"></button>
+    <button class="preset-button" data-title="My Drive - Google Drive" data-favicon="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" style="background-image: url('https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png');"></button>
+    <button class="preset-button" data-title="Google Docs" data-favicon="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico" style="background-image: url('https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico');"></button>
+    <button class="preset-button" data-title="Home | Schoology" data-favicon="https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico" style="background-image: url('https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico');"></button>
+</div>
     <div class="panic-key-text">Panic Key</div>
     <div class="set-panic-key-container">
-        <div class="set-panic-key-box" contenteditable="true">Panic Key</div>
+        <input type="text" class="set-panic-key-box" placeholder="Panic Key">
         <button id="set-panic-key" class="set-panic-key-button">Set Panic Key</button>
     </div>
     <div class="set-panic-url-container">
-        <div class="set-panic-url-box" contenteditable="true">Panic Key</div>
-        <button id="set-panic-url" class="set-panic-url-button">Set Panic Key</button>
-    <button id="ad-panic-key">Auto-Detect Panic Key</button>
+        <input type="text" class="set-panic-url-box" placeholder="Panic URL">
+        <button id="set-panic-url" class="set-panic-url-button">Set Panic URL</button>
+        <button id="ad-panic-key" class="ad-panic-key-button">Auto-Detect Panic Key</button>
     </div>
     <div class="hidden-text-container">
         <p class="hidden-text">Congrats! You found the hidden text!</p>
@@ -644,6 +642,135 @@
 
         // Initial call to display time immediately
         updateTime();
+    </script>
+    <script>
+        document.getElementById('ab-cloak').addEventListener('click', function() {
+        var win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = '/';  // Replace '/' with your desired URL if needed
+        win.document.body.appendChild(iframe);
+    });
+    </script>
+    <script>
+        // Function to set initial values for the input fields from local storage
+    function setInitialValues() {
+        // Set the tab name input value to the current document title
+        var tabNameInput = document.getElementById('tab-name-input');
+        tabNameInput.value = document.title;
+
+        // Set the icon URL input value to the current favicon URL
+        var iconUrlInput = document.getElementById('icon-url-input');
+        var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
+
+        if (link) {
+            iconUrlInput.value = link.href;
+        } else {
+            iconUrlInput.value = ''; // Clear the input if no favicon is set
+        }
+
+        // Set the panic key input value from local storage
+        var panicKeyInput = document.querySelector('.set-panic-key-box');
+        panicKeyInput.value = localStorage.getItem('panickey') || '';
+
+        // Set the panic URL input value from local storage
+        var panicUrlInput = document.querySelector('.set-panic-url-box');
+        panicUrlInput.value = localStorage.getItem('panicurl') || 'https://google.com';
+    }
+
+    // Set initial values on page load
+    window.onload = setInitialValues;
+
+    // Event listener for changing the tab name
+    document.getElementById('set-tab-name').addEventListener('click', function() {
+        var input = document.getElementById('tab-name-input');
+        var newTabName = input.value.trim(); // Get the input value and trim any extra spaces
+
+        if (newTabName) {
+            document.title = newTabName; // Set the page title
+            localStorage.setItem('tabName', newTabName); // Save to local storage
+        } else {
+            alert('Please enter a tab name'); // Alert if the input is empty
+        }
+    });
+
+    // Event listener for changing the favicon
+    document.getElementById('set-tab-icon').addEventListener('click', function() {
+        var input = document.getElementById('icon-url-input');
+        var iconUrl = input.value.trim(); // Get the input value and trim any extra spaces
+
+        if (iconUrl) {
+            var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
+
+            if (link) {
+                link.href = iconUrl; // Update the href attribute of the existing link
+            } else {
+                // If no link element with rel="shortcut icon" or rel="icon" exists, create one
+                link = document.createElement('link');
+                link.rel = 'icon';
+                link.href = iconUrl;
+                document.head.appendChild(link);
+            }
+
+            // Save the new favicon URL to local storage
+            localStorage.setItem('iconUrl', iconUrl);
+        } else {
+            alert('Please enter a valid icon URL'); // Alert if the input is empty
+        }
+    });
+
+    // Event listener for setting panic key
+    document.getElementById('set-panic-key').addEventListener('click', () => {
+        const panicKey = document.querySelector('.set-panic-key-box').value;
+        if (panicKey) {
+            localStorage.setItem('panickey', panicKey);
+            alert('Panic key set to ' + panicKey);
+        } else {
+            alert('Please enter a panic key.');
+        }
+    });
+
+    // Event listener for auto-detecting panic key
+    document.getElementById('ad-panic-key').addEventListener('click', () => {
+        alert('Press any key to set as Panic Key');
+
+        // Add a one-time keydown listener to detect the key
+        const handleKeyDown = (e) => {
+            const panicKey = e.key;
+            localStorage.setItem('panickey', panicKey);
+            document.querySelector('.set-panic-key-box').value = panicKey; // Set the key in the input box
+            alert('Panic key set to ' + panicKey);
+            document.removeEventListener('keydown', handleKeyDown); // Remove listener after setting key
+        };
+
+        document.addEventListener('keydown', handleKeyDown, { once: true });
+    });
+
+    // Event listener for setting panic URL
+    document.getElementById('set-panic-url').addEventListener('click', () => {
+        const panicUrl = document.querySelector('.set-panic-url-box').value;
+        if (!panicUrl) {
+            localStorage.setItem('panicurl', 'https://google.com');
+        } else {
+            localStorage.setItem('panicurl', panicUrl);
+        }
+        alert('Panic URL set to ' + (panicUrl || 'https://google.com'));
+    });
+
+    // Handle Panic Key Press
+    document.addEventListener('keydown', (e) => {
+        const panicKey = localStorage.getItem('panickey');
+        const panicUrl = localStorage.getItem('panicurl') || 'https://google.com';
+
+        if (panicKey && e.key === panicKey) {
+            window.location.replace(panicUrl);
+        }
+    });
     </script>
 </body>
 </html>
