@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LVCEWNB2TH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LVCEWNB2TH');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "n7w6y6wzt8");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Neutron</title>
+    <link rel="icon" href="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling for header and navigation */
+        body {
+            background-color: #101720; /* Background color set to white */
+            font-family: Impact, sans-serif; /* Fallback font */
+        }
+
+        header {
+            height: 8vh; /* Adjusted to 8% of viewport height */
+            background-color: #101720; /* Background color set to #101720 */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: relative; /* Enable relative positioning */
+        }
+
+        /* Logo styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: -5px; /* Adjusted to 20px from the left side of the screen */
+            text-decoration: none; /* Remove underline */
+            color: white; /* Text color */
+        }
+
+        .logo img {
+            height: 6vh; /* Adjusted to 6% of viewport height */
+            margin-right: 20px; /* Space between logo and text */
+        }
+
+        .logo-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1.6rem; /* Increased font size for Project Neutron text */
+            color: white; /* Adjust text color */
+            position: relative; /* Enable relative positioning */
+        }
+
+        /* Navigation text styling */
+        .nav-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 100; /* Font weight adjusted to 100 */
+            font-size: 1.2rem; /* Adjust font size as needed */
+            color: white; /* Adjust text color */
+            text-decoration: none; /* Remove underline */
+            margin-right: 50px; /* Adjust space between navigation items */
+            position: relative; /* Enable relative positioning */
+        }
+
+        .nav-text::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Adjust position as needed */
+            width: 0;
+            height: 3px; /* Height of the underline */
+            background-color: white; /* Underline color */
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-text:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Thin line */
+        .top-line {
+            position: absolute;
+            top: 100%; /* Positioned 100% from the top */
+            left: 0;
+            width: 100%;
+            height: 1.5px; /* 1.5px height for the line */
+            background-color: #303747; /* Color set to #303747 */
+        }
+
+        /* Rectangle styling */
+        .rectangle {
+            height: 75%; /* Height set to 70% */
+            width: 175px; /* Increased width */
+            background-color: transparent; /* Background color set to transparent */
+            border-radius: 10px; /* Rounded edges */
+            border: 2px solid #d4af37; /* Darker gold outline */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease; /* Add transition for smooth animation */
+        }
+
+        .rectangle:hover {
+            transform: scale(1.1); /* Scale up the rectangle on hover */
+        }
+
+        .rectangle-text {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1.2rem; /* Font size for the text */
+            color: #d4af37; /* Darker gold color for the text */
+            text-decoration: none; /* Remove underline */
+            padding: 10px; /* Add padding for better click area */
+        }
+
+        /* Positioning */
+        .home-text {
+            position: absolute;
+            left: 270px; /* Original position for Home */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .games-text {
+            position: absolute;
+            left: 335px; /* Original position for Games */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .apps-text {
+            position: absolute;
+            left: 410px; /* Original position for Apps */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .movies-text {
+            position: absolute;
+            left: 470px; /* Original position for Movies */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        .tv-text {
+            position: absolute;
+            left: 546px; /* Original position for TV Shows */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+        
+        .centered-text {
+            position: absolute;
+            left: 50%; /* Updated position */
+            top: 16vh;
+            transform: translate(-50%, -50%);
+            font-family: Impact, sans-serif;
+            font-weight: 300;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .search-bar {
+            position: absolute;
+            left: 50%; /* Adjusted left position */
+            top: 24vh;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 50px;
+            background-color: transparent;
+            border: 2px solid #ffffff; /* Add a white border */
+            border-radius: 12px; /* Rounded corners */
+            display: flex;
+            align-items: center;
+            padding: 0 10px; /* Padding for the left and right */
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%; /* Full width of the remaining space */
+            height: 100%;
+            padding-left: 40px; /* Space for the icon */
+            border: none; /* Remove default border */
+            outline: none; /* Remove default outline */
+            background-color: transparent; /* Set background to transparent */
+            color: white; /* Text color */
+            font-size: 16px; /* Adjust font size */
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+        }
+
+        .search-bar input[type="text"]::placeholder {
+            color: rgba(255, 255, 255, 0.7); /* Adjust placeholder color */
+        }
+
+        .search-bar i {
+            color: white;
+            font-size: 1rem; /* Adjust icon size */
+            position: absolute;
+            left: 15px; /* Position icon inside the bar */
+        }
+
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align items to the start of the container */
+            gap: 20px; /* Space between items */
+            padding: 20px 0px 20px 180px; /* Add 140px margin on the left */
+            box-sizing: border-box; /* Include padding in width calculation */
+            margin-left: -22px; /* Move 10px to the left */
+        }
+
+        .game {
+            text-align: center;
+            padding: 10px; /* Padding inside each game item */
+            border-radius: 15px;
+            background-color: #303747;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc((100% - 4 * 20px - 160px) / 5); /* Calculate width considering margins and padding */
+            height: 210px;
+            overflow: hidden; /* Hide content that overflows */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            text-decoration: none; /* Remove underline from the link */
+            color: #f5f5f5; /* Set text color for the link */
+            display: block; /* Make the entire box clickable */
+            transition: transform 0.3s ease; /* Hover animation */
+            margin-bottom: 20px; /* Add space below each game item */
+        }
+
+        /* Add margin-top to the first 5 game containers */
+        .game:nth-child(-n+5) {
+            margin-top: 80px; /* Move down by 80px */
+        }
+
+        /* Adjust margin-top for rows below the first */
+        .game:nth-child(5n + 1) {
+            margin-top: 20px; /* Space between rows */
+        }
+
+        /* Adjust game position for items in the first row */
+        .game:nth-child(-n+5) {
+            position: relative; /* Enable relative positioning for offset */
+            top: 24vh; /* Move down by 24vh to be beneath the search bar */
+        }
+
+        /* Game image styling */
+        .game img {
+            border-radius: 12px;
+            max-width: 100%; /* Ensure image fits within its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Game title styling */
+        .game h3 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px; /* Adjust font size as needed */
+            margin-top: 10px; /* Space above the title */
+            margin-bottom: 0; /* Remove bottom margin for closer spacing */
+        }
+
+        /* Ensure no extra margin on the left for the first item and no extra margin on the right for the last item in each row */
+        .game:nth-child(5n + 1) {
+            margin-left: 0; /* No margin-left for the first item in each row */
+        }
+
+        .game:nth-child(5n) {
+            margin-right: 0; /* No margin-right for the last item in each row */
+        }
+
+        /* Hover Animation */
+        .game:hover {
+            transform: scale(1.07); /* Slightly enlarge the item on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .game-container {
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 900px) {
+            .game-container {
+                padding: 20px; /* Further adjust padding */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .game-container {
+                padding: 20px; /* Minimum padding for very small screens */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .game-container {
+                padding: 20px; /* Minimum padding for very small screens */
+            }
+        }
+        
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 155px; /* Adjust space from the time display */
+            margin-left: auto; /* Push icons to the left */
+        }
+        
+        .social-icon {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-size: 1.15rem; /* Size of the icons */
+            color: white; /* Icon color */
+            margin-right: 10px; /* Reduced space between icons */
+            transition: color 0.3s ease, background 0.3s ease; /* Smooth color transition on hover */
+            position: relative; /* Relative positioning for background */
+        }
+        
+        .social-icon:hover {
+            color: white; /* Default color stays white for hover */
+        }
+        
+        /* Specific hover colors */
+        .social-icon.snap:hover {
+            color: #FFFC00; /* Snapchat color */
+        }
+        
+        .social-icon.discord:hover {
+            color: #5865F2; /* Discord color */
+        }
+        
+        .social-icon.instagram:hover {
+            color: #C13584;
+        }
+        
+        .social-icon.tiktok:hover {
+            color: #FE2c55; /* TikTok color */
+        }
+        
+        .social-icon.youtube:hover {
+            color: #FF0000; /* YouTube color */
+        }
+        
+        /* Time display styling */
+        .time-display {
+            font-family: Impact, sans-serif; /* Use Impact font */
+            font-weight: 300; /* Font weight adjusted to 300 */
+            font-size: 1.8rem; /* Font size for the time */
+            color: white; /* Text color */
+            position: absolute;
+            right: 20px; /* Space from the right edge */
+            top: 50%; /* Align vertically */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        /* Adjust the position of each row */
+        .game.second-row {
+            margin-top: 140px; /* Move down by 20px from the first row */
+        }
+
+        .game.third-row {
+            margin-top: -20px; /* Move down by 40px from the first row */
+        }
+
+        .game.fourth-row {
+            margin-top: -20px; /* Move down by 60px from the first row */
+        }
+
+        .game.fifth-row {
+            margin-top: -20px; /* Move down by 80px from the first row */
+        }
+
+        /* Adjust the position of each row */
+        .game.sixth-row {
+            margin-top: -20px; /* Move down by 20px from the first row */
+        }
+
+        .game.seventh-row {
+            margin-top: -20px; /* Move down by 40px from the first row */
+        }
+
+        .game.eighth-row {
+            margin-top: -20px; /* Move down by 60px from the first row */
+        }
+
+        .game.ninth-row {
+            margin-top: -20px; /* Move down by 80px from the first row */
+        }
+
+        /* Add margin-top to the first 5 game containers */
+        .game:nth-child(-n+5) {
+            margin-top: 60px; /* Move down by 80px */
+        }
+
+        /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+        }
+
+        /* Hide scrollbar for Firefox */
+        * {
+            scrollbar-width: none; /* Hide scrollbar */
+        }
+
+        /* Hide scrollbar for Edge and Internet Explorer */
+        .scroll-container {
+            -ms-overflow-style: none; /* Hide scrollbar */
+        }
+
+        /* Ensure the scroll container is scrollable */
+        .scroll-container {
+            overflow: auto; /* Ensure scrolling works */
+        }
+
+        .random-game {
+            position: absolute;
+            left: 50%; /* Center the button horizontally */
+            top: 34.25vh; /* Position 20px below the search bar */
+            transform: translateX(-50%); /* Center the button horizontally */
+            background-color: transparent; /* Transparent background */
+            color: white; /* White text color */
+            font-family: Impact, sans-serif; /* Font family */
+            font-size: 1.2rem; /* Font size */
+            border: 1.5px solid #fff; /* 1.5px white border */
+            border-radius: 12px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            transform-origin: center; /* Scale from the center */
+        }
+
+        .random-game:hover {
+            background-color: #303747; /* Slightly visible white background on hover */
+            color: #fff; /* Ensure text remains white on hover */
+            transform: translateX(-50%) scale(1.1); /* Slightly enlarge the button on hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-line"></div> <!-- Thin line -->
+        <a href="/" class="logo">
+            <img src="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" alt="Project Neutron Logo">
+            <span class="logo-text">Project Neutron</span>
+        </a>
+        <a href="/" class="nav-text home-text">Home</a>
+        <a href="/gs" class="nav-text games-text">Games</a>
+        <a href="/apps" class="nav-text apps-text">Apps</a>
+        <div class="social-icons">
+            <a href="https://discord.gg/nWNcMBQcX6" class="social-icon discord" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.tiktok.com/@project.neutron" class="social-icon tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/project.neutron/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.snapchat.com/add/project.neutron" class="social-icon snap" target="_blank"><i class="fab fa-snapchat"></i></a>
+            <a href="https://www.youtube.com/@project.neutron" class="social-icon youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="time-display" id="timeDisplay"></div> <!-- Time display -->
+    </header>
+    <div class="centered-text">Games</div>
+<div class="search-bar">
+    <i class="fas fa-search"></i>
+    <input type="text" id="searchInput" oninput="filterGames()" placeholder="Search...">
+</div>
+<button id="randomGameButton" class="random-game">Random Game</button>
+<div class="game-container">
+<!-- First Row -->
+<a href="/load?app=invisible-character" class="game">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/800px-2048_logo.svg.png">
+    <h3>Invisible Character</h3>
+</a>
+
+<a href="/forms/request-an-app" class="game seventh-row">
+    <img src="https://cdn-icons-png.flaticon.com/256/5968/5968528.png">
+    <h3>Request an App</h3>
+</a>
+</div>
+    <script>
+        // Function to filter games based on search input
+        function filterGames() {
+            const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+            const games = document.querySelectorAll('.game');
+
+            games.forEach(game => {
+                const title = game.querySelector('h3').textContent.trim().toLowerCase();
+                if (title.includes(searchInput)) {
+                    game.style.display = 'block'; // Show game if title matches search
+                } else {
+                    game.style.display = 'none'; // Hide game if title doesn't match search
+                }
+            });
+
+            // Reset display for all games if search input is empty
+            if (searchInput === '') {
+                games.forEach(game => {
+                    game.style.display = 'block'; // Show all games
+                });
+            }
+        }
+
+        // Add event listener for input event on search input
+        document.getElementById('searchInput').addEventListener('input', filterGames);
+    </script>
+    <script>
+    function updateTime() {
+        const now = new Date();
+        let hours = now.getHours();
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+
+        // Convert to 12-hour format
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+
+        // Format hours with leading zero if necessary
+        const hoursString = String(hours).padStart(2, '0');
+        const timeString = `${hoursString}:${minutes}:${seconds} ${ampm}`;
+        document.getElementById('timeDisplay').textContent = timeString;
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+
+    // Initial call to display time immediately
+    updateTime();
+    </script>
+    <script>
+    // Function to pick a random game from the container and redirect
+function pickRandomGame() {
+    // Get all game elements from the container
+    const gameItems = document.querySelectorAll('#game-container .game-item');
+
+    // If no games are found, exit the function
+    if (gameItems.length === 0) {
+        console.error('No game items found.');
+        return;
+    }
+
+    // Choose a random index
+    const randomIndex = Math.floor(Math.random() * gameItems.length);
+
+    // Get the URL from the chosen game item
+    const randomGameUrl = gameItems[randomIndex].getAttribute('data-url');
+
+    // Redirect to the chosen game URL
+    window.location.href = randomGameUrl;
+}
+
+// Add event listener to the button
+document.getElementById('random-app').addEventListener('click', pickRandomGame);
+</script>
+</body>
+</html>
