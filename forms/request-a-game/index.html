@@ -264,9 +264,9 @@
     <div class="statistics">
         <h2>Statistics</h2>
         <div id="request-count">
-            <p><span>Requests:</span> <span id="requests">Loading...</span></p>
-            <p><span>Processed:</span> <span id="processed">Loading...</span></p>
-            <p><span>Added:</span> <span id="added">Loading...</span></p>
+            <p><span>Game Requests:</span> <span id="game-requests">Loading...</span></p>
+            <p><span>Game Processed:</span> <span id="game-processed">Loading...</span></p>
+            <p><span>Game Added:</span> <span id="game-added">Loading...</span></p>
         </div>
     </div>
     <script>
@@ -295,26 +295,29 @@
     </script>
     <script>
         function fetchData() {
-        fetch('https://script.googleusercontent.com/macros/echo?user_content_key=u-F9f664Pm0FjLg5-bGrnK4Wf-LqR8C2hRsyE3LFToBr1hB-Wi8Vsof0q0XSEdUbgvUzHy6LVuOViMTLLsOjzH_BrQvLgVhgm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLPXvaftrYuzTjS2mAqcP7Bw99Es0kffW5L-cxdGM1tVbAg3Tdu7ORmufvdTSd-TeMCFuY5DButU_gI6ioyXnV_jcQeyWzHcZw&lib=Mb5UzilOu2lj9xQDtJM8DtlmvmH1sd9Lq')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('requests').innerText = data.requests;
-                document.getElementById('processed').innerText = data.processed;
-                document.getElementById('added').innerText = data.added;
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                document.getElementById('requests').innerText = 'Error';
-                document.getElementById('processed').innerText = 'Error';
-                document.getElementById('added').innerText = 'Error';
-            });
-    }
-
-    // Fetch data on initial load
-    fetchData();
-
-    // Fetch data every 5 seconds
-    setInterval(fetchData, 100);
+            fetch('https://script.googleusercontent.com/macros/echo?user_content_key=mwwd9fgTrvm16uXBXp8qtaTESg1EcXmkaXQleurw-dT4rufeA3fDfuVNl7gmBd_bhh8_PxmuA00vE9sEWZ3WqDNwUZhrWOk5m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIjAyI9GoMIb0VgfDAhb_9F-A12UwVRA-ZS1xEV2grYgAO3FIOTsCBLQuk7q15iOweVdxMUMVvr9BTpmces4cyCklJewGRr49A&lib=Mb5UzilOu2lj9xQDtJM8DtlmvmH1sd9Lq')
+                .then(response => response.json())
+                .then(data => {
+                    const gameStats = data.game;
+                    const appStats = data.app;
+                    
+                    // Update game stats
+                    document.getElementById('game-requests').innerText = gameStats.requests;
+                    document.getElementById('game-processed').innerText = gameStats.processed;
+                    document.getElementById('game-added').innerText = gameStats.added;
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('game-requests').innerText = 'Error';
+                    document.getElementById('game-processed').innerText = 'Error';
+                    document.getElementById('game-added').innerText = 'Error';
+                });
+        }
+        
+        // Fetch data on initial load
+        fetchData();
+        
+        // Fetch data every second
+        setInterval(fetchData, 1000);
     </script>
-</body>
 </html>
