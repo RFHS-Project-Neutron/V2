@@ -478,7 +478,7 @@
     <i class="fas fa-search"></i>
     <input type="text" id="searchInput" oninput="filterGames()" placeholder="Search...">
 </div>
-<button id="randomGameButton" class="random-game">Random Game</button>
+<button id="randomGameButton" class="random-game">Random App</button>
 <div class="game-container">
 <!-- First Row -->
 <a href="/load?app=invisible-character" class="game">
@@ -542,29 +542,20 @@
     updateTime();
     </script>
     <script>
-    // Function to pick a random game from the container and redirect
-function pickRandomGame() {
-    // Get all game elements from the container
-    const gameItems = document.querySelectorAll('#game-container .game-item');
+// Array of game links
+const gameLinks = [
+    "/load?app=invisible-character",
+];
 
-    // If no games are found, exit the function
-    if (gameItems.length === 0) {
-        console.error('No game items found.');
-        return;
-    }
-
-    // Choose a random index
-    const randomIndex = Math.floor(Math.random() * gameItems.length);
-
-    // Get the URL from the chosen game item
-    const randomGameUrl = gameItems[randomIndex].getAttribute('data-url');
-
-    // Redirect to the chosen game URL
-    window.location.href = randomGameUrl;
+// Function to pick a random game and load it
+function loadRandomGame() {
+    const randomIndex = Math.floor(Math.random() * gameLinks.length);
+    const randomGameLink = gameLinks[randomIndex];
+    window.location.href = randomGameLink;
 }
 
-// Add event listener to the button
-document.getElementById('random-app').addEventListener('click', pickRandomGame);
+// Add event listener to the random game button
+document.getElementById('randomGameButton').addEventListener('click', loadRandomGame);
 </script>
 </body>
 </html>
