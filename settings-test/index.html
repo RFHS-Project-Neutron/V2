@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Test Page</title>
+    <link rel="icon" href="default-icon.ico"> <!-- Default icon -->
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .settings { margin-bottom: 20px; }
+        .settings input { display: block; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Settings Test Page</h1>
+    
+    <div class="settings">
+        <label for="tab-name-input">Tab Name:</label>
+        <input type="text" id="tab-name-input" placeholder="Enter tab name">
+        <button id="set-tab-name">Set Tab Name</button>
+        
+        <label for="icon-url-input">Favicon URL:</label>
+        <input type="text" id="icon-url-input" placeholder="Enter favicon URL">
+        <button id="set-tab-icon">Set Favicon</button>
+        
+        <label for="set-panic-key-box">Panic Key:</label>
+        <input type="text" class="set-panic-key-box" placeholder="Enter panic key">
+        <button id="set-panic-key">Set Panic Key</button>
+        <button id="ad-panic-key">Auto-Detect Panic Key</button>
+        
+        <label for="set-panic-url-box">Panic URL:</label>
+        <input type="text" class="set-panic-url-box" placeholder="Enter panic URL">
+        <button id="set-panic-url">Set Panic URL</button>
+    </div>
+
+    <script>
+        // Function to set initial values for the input fields from local storage
+        function setInitialValues() {
+            var tabNameInput = document.getElementById('tab-name-input');
+            tabNameInput.value = document.title;
+
+            var iconUrlInput = document.getElementById('icon-url-input');
+            var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
+
+            if (link) {
+                iconUrlInput.value = link.href;
+            } else {
+                iconUrlInput.value = '';
+            }
+
+            var panicKeyInput = document.querySelector('.set-panic-key-box');
+            panicKeyInput.value = localStorage.getItem('panickey') || '';
+
+            var panicUrlInput = document.querySelector('.set-panic-url-box');
+            panicUrlInput.value = localStorage.getItem('panicurl') || 'https://google.com';
+        }
+
+        window.onload = setInitialValues;
+
+        document.getElementById('set-tab-name').addEventListener('click', function() {
+            var input = document.getElementById('tab-name-input');
+            var newTabName = input.value.trim();
+
+            if (newTabName) {
+                document.title = newTabName;
+                localStorage.setItem('tabName', newTabName);
+            } else {
+                alert('Please enter a tab name');
+            }
+        });
+
+        document.getElementById('set-tab-icon').addEventListener('click', function() {
+            var input = document.getElementById('icon-url-input');
+            var iconUrl = input.value.trim();
+
+            if (iconUrl) {
+                var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
+
+                if (link) {
+                    link.href = iconUrl;
+                } else {
+                    link = document.createElement('link');
+                    link.rel = 'icon';
+                    link.href = iconUrl;
+                    document.head.appendChild(link);
+                }
+
+                localStorage.setItem('iconUrl', iconUrl);
+            } else {
+                alert('Please enter a valid icon URL');
+            }
+        });
+
+        document.getElementById('set-panic-key').addEventListener('click', () => {
+            const panicKey = document.querySelector('.set-panic-key-box').value;
+            if (panicKey) {
+                localStorage.setItem('panickey', panicKey);
+                alert('Panic key set to ' + panicKey);
+            } else {
+                alert('Please enter a panic key.');
+            }
+        });
+
+        document.getElementById('ad-panic-key').addEventListener('click', () => {
+            alert('Press any key to set as Panic Key');
+
+            const handleKeyDown = (e) => {
+                const panicKey = e.key;
+                localStorage.setItem('panickey', panicKey);
+                document.querySelector('.set-panic-key-box').value = panicKey;
+                alert('Panic key set to ' + panicKey);
+                document.removeEventListener('keydown', handleKeyDown);
+            };
+
+            document.addEventListener('keydown', handleKeyDown, { once: true });
+        });
+
+        document.getElementById('set-panic-url').addEventListener('click', () => {
+            const panicUrl = document.querySelector('.set-panic-url-box').value;
+            if (!panicUrl) {
+                localStorage.setItem('panicurl', 'https://google.com');
+            } else {
+                localStorage.setItem('panicurl', panicUrl);
+            }
+            alert('Panic URL set to ' + (panicUrl || 'https://google.com'));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const panicKey = localStorage.getItem('panickey');
+            const panicUrl = localStorage.getItem('panicurl') || 'https://google.com';
+
+            if (panicKey && e.key === panicKey) {
+                window.location.replace(panicUrl);
+            }
+        });
+    </script>
+</body>
+</html>
