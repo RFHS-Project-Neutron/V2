@@ -4,61 +4,41 @@
 <head>
   <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
   <title>Art Class</title>
+
+  <link rel="stylesheet" href="./css/master.css" />
   <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
   <script src="/uv/uv.config.js"></script>
   <script src="./js/preload.js"></script>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-
-    .center-container {
-      text-align: center;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 600px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      margin-top: 0;
-      color: #333;
-    }
-
-    .pxyinput {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    .ad {
-      margin-top: 20px;
-    }
-
-    .frame {
-      display: block;
-      margin: 20px auto;
-      width: 100%;
-      max-width: 800px;
-      height: 400px;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <script>
+    atOptions = {
+      'key': 'fc0ad22bd8c1ea22c8c08df927121e8f',
+      'format': 'iframe',
+      'height': 60,
+      'width': 468,
+      'params': {}
+    };
+  </script>
 </head>
 
 <body theme="main">
- 
+  <nav>
+    <div class="logo">
+      <img src="./assets/images/icon.png" alt="Logo" draggable="false" />
+      <h1>Art Class</h1>
+    </div>
+
+    <p id="time"></p>
+
+    <div class="navitems">
+      <div class="navitem"><a href="/index.html">Home</a></div>
+      <div class="navitem"><a href="/gs.html">Games</a></div>
+      <div class="navitem"><a href="/apps.html">Apps</a></div>
+      <div class="navitem"><a href="/emulator.html">Emulator</a></div>
+      <div class="navitem"><a selected href="/search.html">Search</a></div>
+    </div>
+  </nav>
+
   <div class="center-container">
     <h1>Search</h1>
     <input class="pxyinput" type="text" placeholder="Search..." />
