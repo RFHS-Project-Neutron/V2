@@ -319,12 +319,11 @@
             const searchForm = document.getElementById('searchForm');
 
             // Set the value of the search input
-            searchInput.value = 'https://discord.com';
+            searchInput.value = 'discord.com';
 
-            // Submit the form or redirect to the URL
-            searchForm.submit(); // This will submit the form if you have a form action URL set
-            // Alternatively, you can use window.location.href to navigate directly:
-            // window.location.href = 'https://discord.com';
+            // Create and dispatch a submit event on the form
+            const submitEvent = new Event('submit', { bubbles: true });
+            searchForm.dispatchEvent(submitEvent);
         });
     </script>
 </body>
