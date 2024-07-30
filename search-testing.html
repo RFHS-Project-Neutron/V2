@@ -265,9 +265,7 @@
     </header>
       <div class="center-container">
         <h1>Search</h1>
-        <form id="searchForm" action="https://discord.com" method="get">
-            <input class="pxyinput" id="searchInput" type="text" placeholder="Search..." />
-        </form>
+        <input class="pxyinput" id="searchInput" type="text" placeholder="Search..." />
 
         <div class="ad">
           <!-- <script type="text/javascript" src="//www.topcreativeformat.com/fc0ad22bd8c1ea22c8c08df927121e8f/invoke.js"></script> -->
@@ -313,17 +311,23 @@
     <script src="/uv/uv.config.js"></script>
     <script src="./js/preload.js"></script>
     <script>
-        window.addEventListener('load', () => {
-            // Select the search input and form
+        document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('searchInput');
-            const searchForm = document.getElementById('searchForm');
+            const searchTerm = 'https://discord.com';
 
             // Set the value of the search input
-            searchInput.value = 'discord.com';
+            searchInput.value = searchTerm;
 
-            // Create and dispatch a submit event on the form
-            const submitEvent = new Event('submit', { bubbles: true });
-            searchForm.dispatchEvent(submitEvent);
+            // Simulate the input event to trigger any input listeners
+            const inputEvent = new Event('input', {
+                bubbles: true,
+                cancelable: true,
+            });
+            searchInput.dispatchEvent(inputEvent);
+
+            // If you have a specific function to handle the search, call it here
+            // For example, if your search is triggered by a form submit:
+            searchInput.form.submit();
         });
     </script>
 </body>
