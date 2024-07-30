@@ -644,21 +644,8 @@
         updateTime();
     </script>
     <script>
-        document.getElementById('ab-cloak').addEventListener('click', function() {
-        var win = window.open();
-        win.document.body.style.margin = '0';
-        win.document.body.style.height = '100vh';
-        var iframe = win.document.createElement('iframe');
-        iframe.style.border = 'none';
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
-        iframe.style.margin = '0';
-        iframe.src = '/';  // Replace '/' with your desired URL if needed
-        win.document.body.appendChild(iframe);
-    });
-    </script>
-    <script>
-        // Function to set initial values for the input fields from local storage
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to set initial values for the input fields from local storage
     function setInitialValues() {
         // Set the tab name input value to the current document title
         var tabNameInput = document.getElementById('tab-name-input');
@@ -684,7 +671,7 @@
     }
 
     // Set initial values on page load
-    window.onload = setInitialValues;
+    setInitialValues();
 
     // Event listener for changing the tab name
     document.getElementById('set-tab-name').addEventListener('click', function() {
@@ -771,6 +758,34 @@
             window.location.replace(panicUrl);
         }
     });
-    </script>
+
+    // Event listener for preset buttons
+    document.querySelectorAll('.preset-button').forEach(button => {
+        button.addEventListener('click', function() {
+            var title = this.getAttribute('data-title');
+            var faviconUrl = this.getAttribute('data-favicon');
+
+            // Set the page title
+            document.title = title;
+            localStorage.setItem('tabName', title);
+
+            // Set the favicon
+            var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
+            if (link) {
+                link.href = faviconUrl;
+            } else {
+                link = document.createElement('link');
+                link.rel = 'icon';
+                link.href = faviconUrl;
+                document.head.appendChild(link);
+            }
+            localStorage.setItem('iconUrl', faviconUrl);
+
+            // Update input fields with new values
+            setInitialValues();
+        });
+    });
+});
+</script>
 </body>
 </html>
