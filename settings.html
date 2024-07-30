@@ -644,148 +644,162 @@
         updateTime();
     </script>
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to set initial values for the input fields from local storage
-    function setInitialValues() {
-        // Set the tab name input value to the current document title
-        var tabNameInput = document.getElementById('tab-name-input');
-        tabNameInput.value = document.title;
-
-        // Set the icon URL input value to the current favicon URL
-        var iconUrlInput = document.getElementById('icon-url-input');
-        var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
-
-        if (link) {
-            iconUrlInput.value = link.href;
-        } else {
-            iconUrlInput.value = ''; // Clear the input if no favicon is set
-        }
-
-        // Set the panic key input value from local storage
-        var panicKeyInput = document.querySelector('.set-panic-key-box');
-        panicKeyInput.value = localStorage.getItem('panickey') || '';
-
-        // Set the panic URL input value from local storage
-        var panicUrlInput = document.querySelector('.set-panic-url-box');
-        panicUrlInput.value = localStorage.getItem('panicurl') || 'https://google.com';
-    }
-
-    // Set initial values on page load
-    setInitialValues();
-
-    // Event listener for changing the tab name
-    document.getElementById('set-tab-name').addEventListener('click', function() {
-        var input = document.getElementById('tab-name-input');
-        var newTabName = input.value.trim(); // Get the input value and trim any extra spaces
-
-        if (newTabName) {
-            document.title = newTabName; // Set the page title
-            localStorage.setItem('tabName', newTabName); // Save to local storage
-        } else {
-            alert('Please enter a tab name'); // Alert if the input is empty
-        }
+        document.getElementById('ab-cloak').addEventListener('click', function() {
+        var win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = '/';  // Replace '/' with your desired URL if needed
+        win.document.body.appendChild(iframe);
     });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to set initial values for the input fields from local storage
+            function setInitialValues() {
+                // Set the tab name input value to the current document title
+                var tabNameInput = document.getElementById('tab-name-input');
+                tabNameInput.value = document.title;
 
-    // Event listener for changing the favicon
-    document.getElementById('set-tab-icon').addEventListener('click', function() {
-        var input = document.getElementById('icon-url-input');
-        var iconUrl = input.value.trim(); // Get the input value and trim any extra spaces
+                // Set the icon URL input value to the current favicon URL
+                var iconUrlInput = document.getElementById('icon-url-input');
+                var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
 
-        if (iconUrl) {
-            var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
+                if (link) {
+                    iconUrlInput.value = link.href;
+                } else {
+                    iconUrlInput.value = ''; // Clear the input if no favicon is set
+                }
 
-            if (link) {
-                link.href = iconUrl; // Update the href attribute of the existing link
-            } else {
-                // If no link element with rel="shortcut icon" or rel="icon" exists, create one
-                link = document.createElement('link');
-                link.rel = 'icon';
-                link.href = iconUrl;
-                document.head.appendChild(link);
+                // Set the panic key input value from local storage
+                var panicKeyInput = document.querySelector('.set-panic-key-box');
+                panicKeyInput.value = localStorage.getItem('panickey') || '';
+
+                // Set the panic URL input value from local storage
+                var panicUrlInput = document.querySelector('.set-panic-url-box');
+                panicUrlInput.value = localStorage.getItem('panicurl') || 'https://google.com';
             }
 
-            // Save the new favicon URL to local storage
-            localStorage.setItem('iconUrl', iconUrl);
-        } else {
-            alert('Please enter a valid icon URL'); // Alert if the input is empty
-        }
-    });
-
-    // Event listener for setting panic key
-    document.getElementById('set-panic-key').addEventListener('click', () => {
-        const panicKey = document.querySelector('.set-panic-key-box').value;
-        if (panicKey) {
-            localStorage.setItem('panickey', panicKey);
-            alert('Panic key set to ' + panicKey);
-        } else {
-            alert('Please enter a panic key.');
-        }
-    });
-
-    // Event listener for auto-detecting panic key
-    document.getElementById('ad-panic-key').addEventListener('click', () => {
-        alert('Press any key to set as Panic Key');
-
-        // Add a one-time keydown listener to detect the key
-        const handleKeyDown = (e) => {
-            const panicKey = e.key;
-            localStorage.setItem('panickey', panicKey);
-            document.querySelector('.set-panic-key-box').value = panicKey; // Set the key in the input box
-            alert('Panic key set to ' + panicKey);
-            document.removeEventListener('keydown', handleKeyDown); // Remove listener after setting key
-        };
-
-        document.addEventListener('keydown', handleKeyDown, { once: true });
-    });
-
-    // Event listener for setting panic URL
-    document.getElementById('set-panic-url').addEventListener('click', () => {
-        const panicUrl = document.querySelector('.set-panic-url-box').value;
-        if (!panicUrl) {
-            localStorage.setItem('panicurl', 'https://google.com');
-        } else {
-            localStorage.setItem('panicurl', panicUrl);
-        }
-        alert('Panic URL set to ' + (panicUrl || 'https://google.com'));
-    });
-
-    // Handle Panic Key Press
-    document.addEventListener('keydown', (e) => {
-        const panicKey = localStorage.getItem('panickey');
-        const panicUrl = localStorage.getItem('panicurl') || 'https://google.com';
-
-        if (panicKey && e.key === panicKey) {
-            window.location.replace(panicUrl);
-        }
-    });
-
-    // Event listener for preset buttons
-    document.querySelectorAll('.preset-button').forEach(button => {
-        button.addEventListener('click', function() {
-            var title = this.getAttribute('data-title');
-            var faviconUrl = this.getAttribute('data-favicon');
-
-            // Set the page title
-            document.title = title;
-            localStorage.setItem('tabName', title);
-
-            // Set the favicon
-            var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
-            if (link) {
-                link.href = faviconUrl;
-            } else {
-                link = document.createElement('link');
-                link.rel = 'icon';
-                link.href = faviconUrl;
-                document.head.appendChild(link);
-            }
-            localStorage.setItem('iconUrl', faviconUrl);
-
-            // Update input fields with new values
+            // Set initial values on page load
             setInitialValues();
+
+            // Event listener for changing the tab name
+            document.getElementById('set-tab-name').addEventListener('click', function() {
+                var input = document.getElementById('tab-name-input');
+                var newTabName = input.value.trim(); // Get the input value and trim any extra spaces
+
+                if (newTabName) {
+                    document.title = newTabName; // Set the page title
+                    localStorage.setItem('tabName', newTabName); // Save to local storage
+                } else {
+                    alert('Please enter a tab name'); // Alert if the input is empty
+                }
+            });
+
+            // Event listener for changing the favicon
+            document.getElementById('set-tab-icon').addEventListener('click', function() {
+                var input = document.getElementById('icon-url-input');
+                var iconUrl = input.value.trim(); // Get the input value and trim any extra spaces
+
+                if (iconUrl) {
+                    var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
+
+                    if (link) {
+                        link.href = iconUrl; // Update the href attribute of the existing link
+                    } else {
+                        // If no link element with rel="shortcut icon" or rel="icon" exists, create one
+                        link = document.createElement('link');
+                        link.rel = 'icon';
+                        link.href = iconUrl;
+                        document.head.appendChild(link);
+                    }
+
+                    // Save the new favicon URL to local storage
+                    localStorage.setItem('iconUrl', iconUrl);
+                } else {
+                    alert('Please enter a valid icon URL'); // Alert if the input is empty
+                }
+            });
+
+            // Event listener for setting panic key
+            document.getElementById('set-panic-key').addEventListener('click', () => {
+                const panicKey = document.querySelector('.set-panic-key-box').value;
+                if (panicKey) {
+                    localStorage.setItem('panickey', panicKey);
+                    alert('Panic key set to ' + panicKey);
+                } else {
+                    alert('Please enter a panic key.');
+                }
+            });
+
+            // Event listener for auto-detecting panic key
+            document.getElementById('ad-panic-key').addEventListener('click', () => {
+                alert('Press any key to set as Panic Key');
+
+                // Add a one-time keydown listener to detect the key
+                const handleKeyDown = (e) => {
+                    const panicKey = e.key;
+                    localStorage.setItem('panickey', panicKey);
+                    document.querySelector('.set-panic-key-box').value = panicKey; // Set the key in the input box
+                    alert('Panic key set to ' + panicKey);
+                    document.removeEventListener('keydown', handleKeyDown); // Remove listener after setting key
+                };
+
+                document.addEventListener('keydown', handleKeyDown, { once: true });
+            });
+
+            // Event listener for setting panic URL
+            document.getElementById('set-panic-url').addEventListener('click', () => {
+                const panicUrl = document.querySelector('.set-panic-url-box').value;
+                if (!panicUrl) {
+                    localStorage.setItem('panicurl', 'https://google.com');
+                } else {
+                    localStorage.setItem('panicurl', panicUrl);
+                }
+                alert('Panic URL set to ' + (panicUrl || 'https://google.com'));
+            });
+
+            // Handle Panic Key Press
+            document.addEventListener('keydown', (e) => {
+                const panicKey = localStorage.getItem('panickey');
+                const panicUrl = localStorage.getItem('panicurl') || 'https://google.com';
+
+                if (panicKey && e.key === panicKey) {
+                    window.location.replace(panicUrl);
+                }
+            });
+
+            // Event listener for preset buttons
+            document.querySelectorAll('.preset-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    var title = this.getAttribute('data-title');
+                    var faviconUrl = this.getAttribute('data-favicon');
+
+                    // Set the page title
+                    document.title = title;
+                    localStorage.setItem('tabName', title);
+
+                    // Set the favicon
+                    var link = document.querySelector("link[rel='shortcut icon'], link[rel='icon']");
+                    if (link) {
+                        link.href = faviconUrl;
+                    } else {
+                        link = document.createElement('link');
+                        link.rel = 'icon';
+                        link.href = faviconUrl;
+                        document.head.appendChild(link);
+                    }
+                    localStorage.setItem('iconUrl', faviconUrl);
+
+                    // Update input fields with new values
+                    setInitialValues();
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
 </body>
 </html>
