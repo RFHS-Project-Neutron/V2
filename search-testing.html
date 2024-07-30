@@ -325,9 +325,14 @@
             });
             searchInput.dispatchEvent(inputEvent);
 
-            // If you have a specific function to handle the search, call it here
-            // For example, if your search is triggered by a form submit:
-            searchInput.form.submit();
+            // Simulate pressing the Enter key
+            const enterEvent = new KeyboardEvent('keydown', {
+                bubbles: true,
+                cancelable: true,
+                key: 'Enter',
+                code: 'Enter'
+            });
+            searchInput.dispatchEvent(enterEvent);
         });
     </script>
 </body>
