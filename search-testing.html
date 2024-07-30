@@ -313,7 +313,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('searchInput');
-            const searchTerm = 'https://chess.com';
+            const searchTerm = 'https://discord.com';
 
             // Set the value of the search input
             searchInput.value = searchTerm;
@@ -330,9 +330,17 @@
                 bubbles: true,
                 cancelable: true,
                 key: 'Enter',
-                code: 'Enter'
+                code: 'Enter',
+                keyCode: 13,  // Key code for Enter key
+                which: 13     // 'which' is a deprecated property, but some browsers might still use it
             });
             searchInput.dispatchEvent(enterEvent);
+
+            // Ensure the form gets submitted by simulating a form submit if necessary
+            const form = searchInput.form;
+            if (form) {
+                form.submit();
+            }
         });
     </script>
 </body>
