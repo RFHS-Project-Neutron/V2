@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="https://artclass.site/assets/images/icon.png" type="image/png" />
+  <title>Art Class</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=JetBrains+Mono:wght@300;400&display=swap');
+        @import url(https://artclass.site/css/main.css);
+        @import url(https://artclass.site/css/themes.css);
+        @import url(https://artclass.site/css/nav.css);
+
+        @font-face {
+            font-family: gg sans;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://artclass.site/assets/fonts/ggsans.woff2) format("woff2")
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "JetBrains Mono", monospace;
+            font-weight: 400;
+        }
+    </style>
+
+  <script src="https://artclass.site/uv/uv.bundle.js" charset="UTF-8"></script>
+  <script src="https://artclass.site/uv/uv.config.js"></script>
+  <script src="https://artclass.site/js/preload.js"></script>
+
+  <script type="text/javascript">
+    atOptions = {
+      'key': '8d57283b953b8b546d6a04d4deac19dc',
+      'format': 'iframe',
+      'height': 250,
+      'width': 300,
+      'params': {}
+    };
+  </script>
+</head>
+
+<body theme="main">
+  <nav>
+    <div class="logo">
+      <img src="https://artclass.site/assets/images/icon.png" alt="Logo" draggable="false" />
+      <h1>Art Class</h1>
+    </div>
+
+    <p id="time"></p>
+
+    <div class="navitems">
+      <div class="navitem"><a href="/">Home</a></div>
+      <div class="navitem"><a href="/gs.html">Games</a></div>
+      <div class="navitem"><a href="/apps.html">Apps</a></div>
+      <div class="navitem"><a href="/emulator.html">Emulator</a></div>
+      <div class="navitem"><a href="/search.html">Search</a></div>
+    </div>
+  </nav>
+
+  <div class="gamecontainer">
+    <iframe allowfullscreen frameborder="0" id="frame"></iframe>
+    <div id="gameInfo">
+      <div class="gameHeader">
+        <img id="gameImage" alt="icon" />
+        <h3 id="gameTitle"></h3>
+      </div>
+      <p id="gameDescription"></p>
+
+      <!-- <script type="text/javascript"
+        src="//www.topcreativeformat.com/8d57283b953b8b546d6a04d4deac19dc/invoke.js"></script> -->
+
+
+      <div id="menubtns">
+        <a href="https://artclass.site/gs.html">
+          <button onclick="window.location.href = '/'">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+        <button onclick="document.querySelector('iframe').requestFullscreen()">
+          <i class="fas fa-expand"></i>
+        </button>
+        <button onclick="favorite()">
+          <i class="favorited far fa-star"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://artclass.site/js/index.js"></script>
+<script src="https://artclass.site/assets/data/games.js"></script>
+<script src="https://artclass.site/assets/data/apps.js"></script>
+<script src="https://artclass.site/js/load.js"></script>
+
+</html>
