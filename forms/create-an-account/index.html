@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Account</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif, sans-serif;
+      font-weight: 300;
+      background-color: #101720;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      margin-top: 30px;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: black;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    input[type="number"]:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .form-group.error input {
+      border-color: #dc3545;
+    }
+
+    .form-group.error label {
+      color: #dc3545;
+    }
+
+    .form-group.success input {
+      border-color: #28a745;
+    }
+
+    .form-group.success label {
+      color: #28a745;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    .success-message {
+      color: #28a745;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .form-footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .required-icon {
+      color: #dc3545; /* Red color for the asterisk */
+      font-weight: bold;
+      margin-left: 4px; /* Space between label text and asterisk */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Create an Account</h1>
+    <form id="myForm">
+      <div class="form-group">
+        <label for="firstName">First Name:<span class="required-icon">*</span></label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:<span class="required-icon">*</span></label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="userCode">User Code:<span class="required-icon">*</span></label>
+        <input type="number" id="userCode" name="userCode" placeholder="4-6 digit code, used for signing in" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:<span class="required-icon">*</span></label>
+        <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:<span class="required-icon">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="birthday">Birthday:<span class="required-icon">*</span></label>
+        <input type="date" id="birthday" name="birthday" required>
+      </div>
+      <div class="form-group">
+        <label for="graduatingYear">Graduating Year:</label>
+        <input type="number" id="graduatingYear" name="graduatingYear">
+      </div>
+      <div class="form-footer">
+        <input type="submit" value="Create an Account">
+      </div>
+    </form>
+  </div>
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(this);
+      var data = {};
+      formData.forEach(function(value, key) {
+        data[key] = value;
+      });
+      fetch('https://script.google.com/macros/s/AKfycbyXTF-LmfcM-3wbbb350Pc97aEGqYsfLcZG84Gx2A4tDkpHup2_1mPY_Vbthgz2i-qn/exec', {  // Replace with your Web App URL
+        method: 'POST',
+        contentType: 'application/json',
+        body: JSON.stringify(data)
+      }).then(response => response.json())
+        .then(result => alert('Form submitted successfully!'))
+        .catch(error => alert('Error submitting form: ' + error));
+    });
+  </script>
+</body>
+</html>
