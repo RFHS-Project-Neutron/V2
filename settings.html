@@ -645,14 +645,13 @@
         // Initial call to display time immediately
         updateTime();
     </script>
-    <script>
+   <script>
         document.getElementById('ab-cloak').addEventListener('click', function() {
         var win = window.open();
         win.document.body.style.margin = '0';
         win.document.body.style.height = '100vh';
         var iframe = win.document.createElement('iframe');
         win.document.title = "Project Neutron";
-        setFavicon('/assets/images/main-favicon.ico');
         iframe.style.border = 'none';
         iframe.style.width = '100%';
         iframe.style.height = '100%';
