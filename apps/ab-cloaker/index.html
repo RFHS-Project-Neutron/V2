@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AB Cloaker</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #101720;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      margin-right: 10px;
+      border: 1.5px solid white;
+      border-radius: 8px;
+      background-color: #101720;
+      color: white;
+    }
+    button {
+      padding: 10px 20px;
+      border: 1.5px solid white;
+      border-radius: 8px;
+      background-color: #101720;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: white;
+      color: #101720;
+    }
+    .description {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: left;
+    }
+    
+    h1 {
+      font-size: 35px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Open URL in about:blank</h1>
+    <input type="text" id="urlInput" placeholder='Enter URL. Make sure it starts with "https://"'>
+    <button onclick="openUrl()">Open URL</button>
+    <div class="description">
+      <p>Benefits of using About:Blank Cloaking</p>
+      <ul>
+        <li>Prevents URL from being seen in search history.</li>
+        <li>Sites under about:blank cloak don't get blocked as easily.</li>
+        <li>Great for school or work.</li>
+      </ul>
+    </div>
+  </div
