@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Opener</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #101720;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!-- Content will be populated by JavaScript -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentUrl = window.location.href;
+            var contentDiv = document.getElementById("content");
+
+            if (currentUrl.includes("project-neutron.site")) {
+                // If the current URL contains 'project-neutron.site'
+                contentDiv.innerHTML = "<h1>Click anywhere to open Roblox</h1>";
+                document.body.addEventListener("click", function() {
+                    // Open Roblox
+                    window.location.href = "roblox://";
+                    
+                    // Open Project Neutron in a new tab (optional)
+                    window.open("https://roblox.project-neutron.site", "_blank");
+                });
+            } else {
+                // If the current URL does NOT contain 'project-neutron.site'
+                contentDiv.innerHTML = "<h1>Roblox only works on the project-neutron.site domain.</h1><p>Click anywhere to open this Roblox on the project-neutron.site domain.</p>";
+                document.body.addEventListener("click", function() {
+                    // Redirect to project-neutron.site
+                    window.open("https://roblox.project-neutron.site", "_blank");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
