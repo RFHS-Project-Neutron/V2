@@ -65,7 +65,7 @@
 
         .logo-text {
             font-family: Impact, sans-serif; /* Use Impact font */
-            font-weight: 300; /* Font weight adjusted to 300 */
+            font-weight: bold; /* Font weight adjusted to 300 */
             font-size: 1.6rem; /* Increased font size for Project Neutron text */
             color: white; /* Adjust text color */
             position: relative; /* Enable relative positioning */
@@ -74,7 +74,7 @@
         /* Navigation text styling */
         .nav-text {
             font-family: Impact, sans-serif; /* Use Impact font */
-            font-weight: 100; /* Font weight adjusted to 100 */
+            font-weight: bold; /* Font weight adjusted to 100 */
             font-size: 1.2rem; /* Adjust font size as needed */
             color: white; /* Adjust text color */
             text-decoration: none; /* Remove underline */
@@ -137,35 +137,35 @@
         /* Positioning */
         .home-text {
             position: absolute;
-            left: 270px; /* Original position for Home */
+            left: 282px; /* Original position for Home */
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
         }
 
         .games-text {
             position: absolute;
-            left: 335px; /* Original position for Games */
+            left: 347px; /* Original position for Games */
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
         }
 
         .apps-text {
             position: absolute;
-            left: 410px; /* Original position for Apps */
+            left: 422px; /* Original position for Apps */
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
         }
 
         .movies-text {
             position: absolute;
-            left: 470px; /* Original position for Movies */
+            left: 482px; /* Original position for Movies */
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
         }
 
         .tv-text {
             position: absolute;
-            left: 547px; /* Original position for TV Shows */
+            left: 559px; /* Original position for TV Shows */
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
         }
@@ -177,7 +177,7 @@
             left: 16%; /* Positioned 25% from the left */
             transform: translateY(-50%); /* Center vertically */
             font-family: Impact, sans-serif; /* Use Impact font */
-            font-weight: 300; /* Font weight adjusted to 300 */
+            font-weight: bold; /* Font weight adjusted to 300 */
             font-size: 6rem; /* Large font size */
             color: white; /* Text color */
             text-align: center; /* Center text */
@@ -283,7 +283,7 @@
         .social-icons {
             display: flex;
             align-items: center;
-            margin-right: 155px; /* Adjust space from the time display */
+            margin-right: 175px; /* Adjust space from the time display */
             margin-left: auto; /* Push icons to the left */
         }
         
@@ -324,13 +324,29 @@
         /* Time display styling */
         .time-display {
             font-family: Impact, sans-serif; /* Use Impact font */
-            font-weight: 300; /* Font weight adjusted to 300 */
+            font-weight: bold; /* Font weight adjusted to 300 */
             font-size: 1.8rem; /* Font size for the time */
             color: white; /* Text color */
             position: absolute;
             right: 20px; /* Space from the right edge */
             top: 50%; /* Align vertically */
             transform: translateY(-50%); /* Center vertically */
+        }
+        
+        .updates {
+            position: fixed;
+            background-color: #303747;
+            width: 100%;
+            height: calc(0.25vh + 50px);
+            bottom: 0;
+        }
+        
+        .updates-text {
+            font-size: 1.1rem;
+            color: white;
+            text-align: center;
+            top: 50%;
+            transform: translateY(50%);
         }
     </style>
 </head>
@@ -363,6 +379,9 @@
     <!-- Main content of your website -->
     <div class="large-text">
         Project<br>Neutron
+    </div>
+    <div class="updates">
+        <div class="updates-text"><strong>August 29th Update:</strong> Added a couple of games while working on going through the 1000+ game requests. <a style="text-decoration: none; color: white;" href="/changelog"><strong>View Full Changelog</strong></a></div>
     </div>
     <script>
         // JavaScript for image scrolling
