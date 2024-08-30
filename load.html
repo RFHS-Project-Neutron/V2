@@ -356,6 +356,11 @@
 
         if (game) {
             switch (game) {
+                case '1v1-lol':
+                    iframe.src = '/gs/1v1-lol';
+                    image.src = 'https://pbs.twimg.com/profile_images/1618270716381593601/FDftiXwH_400x400.jpg';
+                    text.textContent = '1v1.LOL';
+                    break;
                 case '2048':
                     iframe.src = '/gs/2048';
                     image.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/800px-2048_logo.svg.png';
@@ -684,15 +689,20 @@
             }
         } else if (app) {
             switch (app) {
+                case 'ab-cloaker':
+                    iframe.src = '/apps/ab-cloaker';
+                    image.src = 'https://i.pinimg.com/280x280_RS/bd/e9/c5/bde9c5afa50c454ad7363adfa5037aa9.jpg';
+                    text.textContent = 'About:Blank Cloaker';
+                    break;
                 case 'invisible-character':
                     iframe.src = '/apps/invisible-character';
                     image.src = '/assets/images/invisible-character-logo.png';
                     text.textContent = 'Invisible Character';
                     break;
-                case 'ab-cloaker':
-                    iframe.src = '/apps/ab-cloaker';
-                    image.src = 'https://i.pinimg.com/280x280_RS/bd/e9/c5/bde9c5afa50c454ad7363adfa5037aa9.jpg';
-                    text.textContent = 'About:Blank Cloaker';
+                case 'youtube':
+                    iframe.src = '/apps/YouTube';
+                    image.src = 'https://cdn.iconscout.com/icon/free/png-256/free-youtube-logo-icon-download-in-svg-png-gif-file-formats--social-media-70-flat-icons-color-pack-logos-432560.png?f=webp&w=256';
+                    text.textContent = 'YouTube';
                     break;
                 default:
                     iframe.src = '/404';
