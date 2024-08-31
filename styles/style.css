@@ -390,3 +390,50 @@
             width: 25vw; /* Match the width of the image */
             transform: translateX(50%); /* Move the text to center it */
         }
+
+        .updates-container {
+            width: 65%;
+            max-width: 800px;
+            background-color: transparent;
+            margin-top: 20px;
+            margin-left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            border: 1px solid white;
+        }
+        
+        .newest-update {
+            margin-top: 35px;
+        }
+        
+        .oldest-update {
+            margin-bottom: 25px;
+        }
+
+        .updates-title {
+            font-size: 1.8rem;
+            color: white;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 8px;
+            margin-left: 15px;
+        }
+        
+        .update-date {
+            font-size: 1.1rem;
+            color: lightgray;
+            text-align: left;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        
+        .updates-description {
+            font-size: 1rem;
+            color: white;
+            text-align: left;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
