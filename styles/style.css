@@ -391,6 +391,23 @@
             transform: translateX(50%); /* Move the text to center it */
         }
 
+        .changelog-title {
+            font-size: 2.1rem;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 36px;     
+        }
+
+        .changelog-date {
+            font-size: 1rem;
+            color: lightgray;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 0;   
+            position: relative;
+        }
+
         .updates-container {
             width: 65%;
             max-width: 800px;
@@ -436,4 +453,361 @@
             margin-left: 15px;
             margin-right: 15px;
             margin-bottom: 10px;
+        }
+
+        .centered-text {
+            position: absolute;
+            left: 50%; /* Updated position */
+            top: 16vh;
+            transform: translate(-50%, -50%);
+            font-family: Impact, sans-serif;
+            font-weight: 300;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .themes-text {
+            position: absolute;
+            left: 50%; /* Updated position */
+            top: 35vh;
+            transform: translate(-50%, -50%);
+            font-family: Impact, sans-serif;
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .cloak-text {
+            position: absolute;
+            left: 50%; /* Updated position */
+            top: 52.5vh;
+            transform: translate(-50%, -50%);
+            font-family: Impact, sans-serif;
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        #ab-cloak {
+            position: absolute;
+            left: 50%; /* Center the button horizontally */
+            top: 22vh; /* Position 20px below the search bar */
+            transform: translateX(-50%); /* Center the button horizontally */
+            background-color: transparent; /* Transparent background */
+            color: white; /* White text color */
+            font-family: Impact, sans-serif; /* Font family */
+            font-size: 1.2rem; /* Font size */
+            border: 1.5px solid #fff; /* 1.5px white border */
+            border-radius: 12px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            transform-origin: center; /* Scale from the center */
+        }
+
+        #ab-cloak:hover {
+            background-color: #303747; /* Slightly visible white background on hover */
+            color: #fff; /* Ensure text remains white on hover */
+            transform: translateX(-50%) scale(1.1); /* Slightly enlarge the button on hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+        }
+        
+        /* Dropdown styling */
+        .dropdown {
+            position: absolute;
+            left: 50%; /* Center the dropdown horizontally */
+            top: 39vh; /* Position it appropriately on the page */
+            transform: translateX(-50%); /* Center the dropdown horizontally */
+            background-color: transparent; /* Transparent background */
+            color: white; /* White text color */
+            font-family: Impact, sans-serif; /* Font family */
+            font-size: 1.2rem; /* Font size */
+            border: 1.5px solid #fff; /* 1.5px white border */
+            border-radius: 12px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for dropdown */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            transform-origin: center; /* Scale from the center */
+        }
+
+        .dropdown:hover {
+            background-color: #303747; /* Slightly visible white background on hover */
+            color: #fff; /* Ensure text remains white on hover */
+            transform: translateX(-50%) scale(1.1); /* Slightly enlarge the dropdown on hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+        }
+
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            position: absolute;
+            background-color: #101720; /* Background color for dropdown content */
+            border: 1.5px solid #fff; /* Border matching the button */
+            border-radius: 12px; /* Rounded corners */
+            min-width: 160px; /* Minimum width */
+            z-index: 1; /* Stack on top */
+        }
+
+        .dropdown-content a {
+            color: white; /* White text color */
+            padding: 12px 16px; /* Padding for links */
+            text-decoration: none; /* No underline */
+            display: block; /* Block display for links */
+            font-family: Impact, sans-serif; /* Font family */
+            font-size: 1rem; /* Font size */
+            border-bottom: 1px solid #fff; /* Border for separation */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #303747; /* Background color on hover */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block; /* Show dropdown content on hover */
+        }
+        
+        .text-cloak-container {
+            position: absolute;
+            top: 60vh; /* Center vertically in the viewport */
+            left: 50%; /* Center horizontally in the viewport */
+            transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Align items vertically in the center */
+            gap: 10px; /* Space between the text box and button */
+        }
+
+        /* Styling for text box */
+        .text-cloak-box {
+            height: 40px;
+            width: 300px;
+            background-color: transparent;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-size: 1.2rem;
+            border: 1.5px solid #fff;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 0; /* Remove margin to avoid extra spacing */
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Styling for Set Tab Name button */
+        .set-tab-name-button {
+            height: 40px;
+            width: 160px;
+            background-color: transparent;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-size: 1.2rem;
+            border: 1.5px solid #fff;
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0; /* Remove margin to avoid extra spacing */
+        }
+        
+        .icon-cloak-container {
+            position: absolute;
+            top: 68vh; /* Center vertically in the viewport */
+            left: 50%; /* Center horizontally in the viewport */
+            transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Align items vertically in the center */
+            gap: 10px; /* Space between the text box and button */
+        }
+
+        /* Styling for icon text box */
+        .icon-cloak-box {
+            height: 40px;
+            width: 300px;
+            background-color: transparent;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-size: 1.2rem;
+            border: 1.5px solid #fff;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 0; /* Remove margin to avoid extra spacing */
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Styling for Set Tab Icon button */
+        .set-tab-icon-button {
+            height: 40px;
+            width: 160px;
+            background-color: transparent;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-size: 1.2rem;
+            border: 1.5px solid #fff;
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0; /* Remove margin to avoid extra spacing */
+        }
+        
+        .panic-key-text {
+            position: absolute;
+            left: 50%; /* Updated position */
+            top: 87vh;
+            transform: translate(-50%, -50%);
+            font-family: Impact, sans-serif;
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .preset-buttons {
+            position: absolute;
+            left: 50%; /* Center horizontally */
+            top: 74vh; /* Adjust vertical position as needed */
+            transform: translateX(-50%); /* Center horizontally */
+            display: flex; /* Use flexbox for alignment */
+            gap: 10px; /* Space between buttons */
+        }
+
+        .preset-button {
+            height: 40px; /* Height of each button */
+            width: 40px; /* Width of each button */
+            background-color: transparent; /* Transparent background */
+            background-size: 16px 16px; /* Scale the background image to fit within the button */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent repeating the background image */
+            color: white; /* Text color */
+            font-family: Impact, sans-serif; /* Font family */
+            font-size: 1.2rem; /* Font size */
+            border: 1.5px solid #fff; /* Border */
+            border-radius: 8px; /* Slightly rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+
+        .preset-button:hover {
+            background-color: #303747; /* Slightly visible background on hover */
+            color: #fff; /* Ensure text remains white on hover */
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+        }
+        
+        .set-panic-key-container {
+            position: absolute;
+            top: 94vh; /* Center vertically in the viewport */
+            left: 50%; /* Center horizontally in the viewport */
+            transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Align items vertically in the center */
+            gap: 10px; /* Space between the text box and button */
+        }
+
+        /* Styling for text box */
+        .set-panic-key-box {
+            height: 40px;
+            width: 300px;
+            background-color: transparent;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-size: 1.2rem;
+            border: 1.5px solid #fff;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 0; /* Remove margin to avoid extra spacing */
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Styling for Set Tab Name button */
+        .set-panic-key-button {
+            height: 40px;
+            width: 160px;
+            background-color: transparent;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-size: 1.2rem;
+            border: 1.5px solid #fff;
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0; /* Remove margin to avoid extra spacing */
+        }
+        
+        .set-panic-url-container {
+            position: absolute;
+            top: 102vh; /* Center vertically in the viewport */
+            left: 50%; /* Center horizontally in the viewport */
+            transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Align items vertically in the center */
+            gap: 10px; /* Space between the text box and button */
+        }
+
+        /* Styling for text box */
+        .set-panic-url-box {
+            height: 40px;
+            width: 300px;
+            background-color: transparent;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-size: 1.2rem;
+            border: 1.5px solid #fff;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 0; /* Remove margin to avoid extra spacing */
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Styling for Set Tab Name button */
+        .set-panic-url-button {
+            height: 40px;
+            width: 160px;
+            background-color: transparent;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-size: 1.2rem;
+            border: 1.5px solid #fff;
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0; /* Remove margin to avoid extra spacing */
+        }
+        
+        #ad-panic-key {
+            position: absolute;
+            left: 50%; /* Center the button horizontally */
+            top: 8vh; /* Position 20px below the search bar */
+            transform: translateX(-50%); /* Center the button horizontally */
+            background-color: transparent; /* Transparent background */
+            color: white; /* White text color */
+            font-family: Impact, sans-serif; /* Font family */
+            font-size: 1.2rem; /* Font size */
+            border: 1.5px solid #fff; /* 1.5px white border */
+            border-radius: 12px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            transform-origin: center; /* Scale from the center */
+        }
+
+        #ad-panic-key:hover {
+            background-color: #303747; /* Slightly visible white background on hover */
+            color: #fff; /* Ensure text remains white on hover */
+            transform: translateX(-50%) scale(1.1); /* Slightly enlarge the button on hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+        }
+        
+        .hidden-text-container {
+            position: absolute;
+            top: 120vh;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hidden-text {
+            font-size: 24px;
+            color: transparent;
         }
