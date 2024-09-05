@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LVCEWNB2TH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-LVCEWNB2TH');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "n7w6y6wzt8");
+    </script>
+        <script data-cfasync="false" type="text/javascript">
+        // Check localStorage for adfree setting
+        if (localStorage.getItem('adfree') !== 'true') {
+            (function() {
+                var f = 'rCaohdCemzoMraftzhgznriarntdSozmyzttroeSptorriPnegnzisfleidczetzcreejpblOazceelzbzafrourgEiafcnhozcazpwpoldynzigWettnzectrneoactzedTleixhtCNdondeepzpRaezglEmxtphzzadtloibhzCXtGsIr=izfczo>necmaatrzf(id/o<c>u"meennotn):zygazlcpaslildz"l=oeclayltSst o"rkangaelzb_:dtautoabzas"e=tcIrtse mezmgaertfIit<ezmLzMrTeHmroevnenIitzeemdzocNleenaorlzcdzedcaoedhezUeRdIoCNotmnpeornaepnzteznboinnzdyzabltposaizdezveallyztJsSzOeNmzaDraftiezztAnrermauyczoPdrzoymdiosbezzeptaartsSeyIdnatezrnzatvpiigractSotrnzeernrcuocdzeeUmRaINzgUaiTnytB8sAtrnreamyezlsEetteTgizmdeIoyuBttznseemteIlnEtteergvzaSlNztAnrermaeylBEueftfaeerrzcczltenaermTgiamreFotuntezmculceoaDreItnateerrcvzatlnzeMveEshscatgaepCshiadnznlellAzrBortocaedlceaSsytrCehuaqnznreoltzceenlceoSdyerUeRuIqCzormepnoentesnitLztTnyepveEEervroomrezrEzvreennteztEsrirLotrnzeIvmEadgdeazzstensesmieolnESettoareargce'.split("").reduce((J,x,R)=>R%2?J+x:x+J).split("z");
+                (J => {
+                    // Your ad loading logic here
+                })(/* arguments */);
+            })();
+        }
+    </script>
+    <!-- Main Content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Neutron</title>
+    <link rel="icon" href="" id="dynamic-favicon">
+    <script src="/js/settings.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling for header and navigation */
+        body {
+            background-color: #101720; /* Background color set to white */
+            font-family: Impact, sans-serif; /* Fallback font */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-line"></div> <!-- Thin line -->
+        <a href="/" class="logo">
+            <img src="https://github.com/PlayFlixo/testing-v2/blob/main/assets/images/no-bg-logo.png?raw=true" alt="Project Neutron Logo">
+            <span class="logo-text">Project Neutron</span>
+        </a>
+        <a href="/" class="nav-text home-text">Home</a>
+        <a href="/gs" class="nav-text games-text">Games</a>
+        <a href="/apps" class="nav-text apps-text">Apps</a>
+        <a href="/search" class="nav-text movies-text">Search</a>
+        <a href="/settings" class="nav-text tv-text">Settings</a>
+        <div class="social-icons">
+            <a href="https://discord.gg/nWNcMBQcX6" class="social-icon discord" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.tiktok.com/@project.neutron" class="social-icon tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/project.neutron/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.snapchat.com/add/project.neutron" class="social-icon snap" target="_blank"><i class="fab fa-snapchat"></i></a>
+            <a href="https://www.youtube.com/@project.neutron" class="social-icon youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="time-display" id="timeDisplay"></div> <!-- Time display -->
+            </header>
+    <div class="embed-container">
+        <iframe id="embed" src="https://project-neutron.site" allowfullscreen></iframe>
+    </div>
+    <div class="button-container">
+        <a href="/gs">
+            <button class="square-button"><i class="fas fa-arrow-left"></i></button>
+        </a>
+        <button id="reload-button" class="square-button"><i class="fas fa-rotate-left"></i></button>
+        <button id="fullscreen-btn" class="square-button"><i class="fas fa-expand"></i></button>
+        <button id="about-blank" class="square-button"><i class="fas fa-arrow-up-right-from-square"></i></button>
+    </div>
+    <img id="content-logo" src="https://via.placeholder.com/150" alt="Content Logo" class="square-image">
+    <div id="image-text" class="image-text">XXXXXXXXXXX</div>
+
+    <script>
+    // Function to update content based on URL parameters
+    function updateContent() {
+        const params = new URLSearchParams(window.location.search);
+        const game = params.get('game');
+        const app = params.get('app');
+
+        const iframe = document.getElementById('embed');
+        const image = document.getElementById('content-logo');
+        const text = document.getElementById('image-text');
+
+        if (game) {
+            switch (game) {
+                case '1v1-lol':
+                    iframe.src = '/gs/1v1-lol';
+                    image.src = 'https://pbs.twimg.com/profile_images/1618270716381593601/FDftiXwH_400x400.jpg';
+                    text.textContent = '1v1.LOL';
+                    break;
+                case '2048':
+                    iframe.src = '/gs/2048';
+                    image.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/800px-2048_logo.svg.png';
+                    text.textContent = '2048';
+                    break;
+                case '8-ball':
+                    iframe.src = '/gs/8-ball';
+                    image.src = 'https://play-lh.googleusercontent.com/bPz1guJ6FHF3oIOEy3KqwpaDDKO-hLRaZoyzmM8bLFLN8fWm6L0_EuUnkwv9iqPo3Ag';
+                    text.textContent = '8 Ball Pool';
+                    break;
+                case 'age-of-war':
+                    iframe.src = '/gs/ageofwar';
+                    image.src = 'https://ageofwargame.io/data/image/game/age-of-war-512x512.jpeg';
+                    text.textContent = 'Age of War';
+                    break;
+                case 'axis':
+                    iframe.src = '/gs/axis';
+                    image.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2UyaLMrjv3SJ6UZIOa5Gn2oVqfSKWS08HVQ&s';
+                    text.textContent = 'Axis Football League';
+                    break;
+                case 'bacon-may-die':
+                    iframe.src = '/gs/bacon-may-die';
+                    image.src = 'https://cdn-1.webcatalog.io/catalog/poki-bacon-may-die/poki-bacon-may-die-icon-filled-256.png?v=1714778477508';
+                    text.textContent = 'Bacon May Die';
+                    break;
+                case 'baldis-basics':
+                    iframe.src = '/gs/baldis-basics';
+                    image.src = 'https://images.dwncdn.net/images/t_app-icon-l/p/d64affff-31fb-479d-8547-dce12d4e61d5/2380320661/2119_4-78421653-logo';
+                    text.textContent = "Baldi's Basics";
+                    break;
+                case 'ball-blast':
+                    iframe.src = '/gs/ballblast';
+                    image.src = 'https://assets.apk.live/com.nomonkeys.ballblast--2633-icon.png';
+                    text.textContent = 'Ball Blast';
+                    break;
+                case 'basket-bros':
+                    iframe.src = '/gs/basket-bros';
+                    image.src = 'https://basket-bros.github.io/images/logo.png';
+                    text.textContent = "Basket Bros";
+                    break;
+                case 'bit-planes':
+                    iframe.src = '/gs/bit-planes';
+                    image.src = '/assets/images/bit-planes-logo.png';
+                    text.textContent = 'Bit Planes';
+                    break;
+                case 'bitlife':
+                    iframe.src = '/gs/bitlife';
+                    image.src = 'https://d.newsweek.com/en/full/1317374/bitlife-ribbons-how-get-all-complete-list-android-ios-cheats-guide-tips-become.jpg?w=1600&h=1600&q=88&f=75befc746fb83a0c568c44ca07bc5e64';
+                    text.textContent = 'BitLife';
+                    break;
+                case 'blackjack':
+                    iframe.src = '/gs/blackjack';
+                    image.src = 'https://media.istockphoto.com/id/1320296956/vector/blackjack-logo-with-green-ribbon-and-on-a-green-background-isolated-card-game-casino-game.jpg?s=612x612&w=0&k=20&c=XeJmoCcZrYk_6VN0rFhhRkreXmtPFyhiipT-5o6-bS4=';
+                    text.textContent = 'Blackjack';
+                    break;
+                case 'bloons-td':
+                    iframe.src = '/gs/btd';
+                    image.src = 'https://store-images.s-microsoft.com/image/apps.52653.13510798886632771.bc31bc12-fbe0-4b14-b520-a17da230307b.688cebfd-4eef-47bf-892c-154f3d1d043a?mode=scale&q=90&h=200&w=200&background=%230B0627';
+                    text.textContent = 'Bloons TD';
+                    break;
+                case 'bloons-td-4':
+                    iframe.src = '/gs/btd4';
+                    image.src = 'https://gameforge.com/de-DE/littlegames/includes/images/games/13426_5ec634fec15e3.jpg';
+                    text.textContent = 'Bloons TD 4';
+                    break;
+                case 'bloxorz':
+                    iframe.src = '/gs/bloxors';
+                    image.src = 'https://images.sftcdn.net/images/t_app-icon-m/p/65210e9e-a9af-4786-9fd2-2dab7e14322e/136346332/bloxorz-magic-logo';
+                    text.textContent = 'Bloxorz';
+                    break;
+                case 'bob-the-robber':
+                    iframe.src = '/gs/bob-the-robber';
+                    image.src = 'https://gameforge.com/de-DE/littlegames/includes/images/games/10139_5eb3f08bdb854.jpg';
+                    text.textContent = 'Bob the Robber';
+                    break;
+                case 'boxing-random':
+                    iframe.src = '/gs/boxingrandom';
+                    image.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5bfkXKf6wp9OnIhb9ElqTBIAnKfxHdT4agw&s';
+                    text.textContent = 'Boxing Random';
+                    break;
+                case 'breaking-the-bank':
+                    iframe.src = '/gs/breaking-the-bank';
+                    image.src = 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/0f80f3388aabb6153981b749df08c7fc6048d5234a40e9e88d7afc73178b451e.png';
+                    text.textContent = 'Henry Stickman: Breaking The Bank';
+                    break;
+                case 'bunny-land':
+                    iframe.src = '/gs/bunnyisland';
+                    image.src = 'https://assets.isu.pub/document-structure/230502163310-1f79b56bfbb2e924ccd4635753876a9d/v1/82e850bb69832a5a857379658d125b46.jpeg';
+                    text.textContent = 'Bunny Land';
+                    break;
+                case 'candy-clicker-2':
+                    iframe.src = '/gs/candy-clicker-2';
+                    image.src = 'https://www.jopi.com/cdn-cgi/image/quality=70,width=256,height=256,f=auto/img/t/candy-clicker-2.png';
+                    text.textContent = 'Candy Clicker 2';
+                    break;
+                case 'castel-wars':
+                    iframe.src = '/gs/castelwars';
+                    image.src = 'https://www5.minijuegosgratis.com/v3/games/thumbnails/237603_7_sq.jpg';
+                    text.textContent = 'Castel Wars';
+                    break;
+                case 'cat-ninja':
+                    iframe.src = '/gs/catninja';
+                    image.src = 'https://play-lh.googleusercontent.com/0oFlYC-5SK928PXpMb55U4tHF0lLDFzg4bK2F7vMxWquhiJd-taEQUOAVXaHDT5KZ8Q';
+                    text.textContent = 'Cat Ninja';
+                    break;
+                case 'cookie-clicker':
+                    iframe.src = '/gs/cookie-clicker';
+                    image.src = 'https://preview.redd.it/is-there-lore-to-cookie-clicker-v0-om60w4dma1db1.png?width=640&crop=smart&auto=webp&s=e6f1019a8ecbdd47fa6c457a0c1f25a1e82f1f64';
+                    text.textContent = 'Cookie Clicker';
+                    break;
+                case 'craftmine':
+                    iframe.src = '/gs/craftmine';
+                    image.src = 'https://static.keygames.com/8/114868/100733/1024x1024/craftmine.webp';
+                    text.textContent = 'CraftMine';
+                    break;
+                case 'dig-to-china':
+                    iframe.src = '/gs/digtochina';
+                    image.src = 'https://img.tapimg.net/market/images/e166a2aa93b86b856d86666658837605.jpg/appicon';
+                    text.textContent = 'Dig to China';
+                    break;
+                case 'drift-boss':
+                    iframe.src = '/gs/driftboss';
+                    image.src = 'https://drift-boss.pro/upload/imgs/drift-boss1.png';
+                    text.textContent = 'Drift Boss';
+                    break;
+                case 'drift-hunters':
+                    iframe.src = '/gs/drift-hunters';
+                    image.src = 'https://drifthunters2.io/data/image/favicon.png';
+                    text.textContent = 'Drift Hunters';
+                    break;
+                case 'duck-life-1':
+                    iframe.src = '/gs/duck-life-1';
+                    image.src = 'https://www.cokogames.com/wp-content/uploads/thumbs/custom/D/ducklife.jpg';
+                    text.textContent = 'Duck Life';
+                    break;
+                case 'duck-life-2':
+                    iframe.src = '/gs/duck-life-2';
+                    image.src = 'https://cdn-1.webcatalog.io/catalog/poki-ducklife-2/poki-ducklife-2-icon-filled-256.webp?v=1714779497116';
+                    text.textContent = 'Duck Life 2';
+                    break;
+                case 'duck-life-3':
+                    iframe.src = '/gs/duck-life-3';
+                    image.src = 'https://cdn2.steamgriddb.com/grid/7e4d2cda1bd4477dcc31f4ebb1b2f036.png';
+                    text.textContent = 'Duck Life 3: Evolution';
+                    break;
+                case 'dunk-shot':
+                    iframe.src = '/gs/dunkshot';
+                    image.src = 'https://play-lh.googleusercontent.com/BN-HKPRAUYNKygru-dLjzrA0BWyIC1RKLoFP8vIBNHU-j7YdKQgTsxCkkwmbZ29Yxec';
+                    text.textContent = 'Dunk Shot';
+                    break;
+                case 'eaglercraft-1.5.2':
+                    iframe.src = '/gs/eaglercraft.1.5.2';
+                    image.src = 'https://www.jopi.com/cdn-cgi/image/quality=70,width=256,height=256,f=auto/img/t/eaglercraft-minecraft-online.png';
+                    text.textContent = 'Eaglercraft 1.5.2';
+                    break;
+                case 'eaglercraft-1.8.8':
+                    iframe.src = '/gs/eaglercraft.1.8.8';
+                    image.src = 'https://www.jopi.com/cdn-cgi/image/quality=70,width=256,height=256,f=auto/img/t/eaglercraft-minecraft-online.png';
+                    text.textContent = 'Eaglercraft 1.8.8';
+                    break;
+                case 'escaping-the-prison':
+                    iframe.src = '/gs/escaping-the-prison';
+                    image.src = 'https://play-lh.googleusercontent.com/0Pc3AvSLq2h8cCa38LU_ud-T2eBTYT3amYLaQEAi9AGgzloAiGrbGhxI-CLYCANhpaRL=w240-h480-rw';
+                    text.textContent = 'Henry Stickman: Escaping the Prison';
+                    break;
+                case 'football-legends':
+                    iframe.src = '/gs/footballLegends';
+                    image.src = 'https://img.gamedistribution.com/ecd138ae69cf4e92b5f5cdd328b6b62e-512x512.jpeg';
+                    text.textContent = 'Football Legends';
+                    break;
+                case 'geometry-dash':
+                    iframe.src = '/gs/geometry-dash';
+                    image.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Logo_of_Geometry_Dash.svg/1200px-Logo_of_Geometry_Dash.svg.png';
+                    text.textContent = 'Geometry Dash';
+                    break;
+                case 'getting-over-it':
+                    iframe.src = 'https://scratch.mit.edu/projects/389464290/embed';
+                    image.src = 'https://scratchgames.co/data/image/game/getting-over-it.jpg';
+                    text.textContent = 'Getting Over It';
+                    break;
+                case 'gun-night':
+                    iframe.src = '/gs/gunnight';
+                    image.src = 'https://www2.minijuegosgratis.com/v3/games/thumbnails/233049_7_sq.jpg';
+                    text.textContent = 'Gun Night';
+                    break;
+                case 'gun-spin':
+                    iframe.src = '/gs/gunspin';
+                    image.src = 'https://play-lh.googleusercontent.com/fLqvWSVq5rENEvu32xl0hf96wwSHVwQm-_9xc6KZg9Vgv9PbAtf1CyBYW7i1mlAXoSA';
+                    text.textContent = 'GunSpin';
+                    break;
+                case 'hanger-2':
+                    iframe.src = '/gs/hanger2';
+                    image.src = 'https://img.gamedistribution.com/5b911de55ff848dca5c413624e5db653-512x512.jpeg';
+                    text.textContent = 'Hanger 2';
+                    break;
+                case 'happy-wheels':
+                    iframe.src = '/gs/happy-wheels';
+                    image.src = 'https://play-lh.googleusercontent.com/SV8RsV5udSeeONjatT5SwleP6lzV6PjtNPs2VvyohJXWSG9fFLNOfslDEHbpDN337wQ';
+                    text.textContent = 'Happy Wheels';
+                    break;
+                case 'hole-io':
+                    iframe.src = '/gs/holeio';
+                    image.src = 'https://upload.wikimedia.org/wikipedia/en/c/ca/Hole.io_logo.jpg';
+                    text.textContent = 'Hole.io';
+                    break;
+                case 'idle-breakout':
+                    iframe.src = '/gs/idle-breakout';
+                    image.src = 'https://play-lh.googleusercontent.com/e5jzYTn7Mjh9Ghn-DFpVedkOlRfSOyCS2AFgXdTrADIuuUbjx6vP6r_YOM2j5m7uLQ';
+                    text.textContent = 'Idle Breakout';
+                    break;
+                case 'impossible-quiz-1':
+                    iframe.src = '/gs/impossible-quiz-1';
+                    image.src = 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/3cd96c99-46c1-4ff0-b04a-82381ea07349.png';
+                    text.textContent = 'The Impossible Quiz';
+                    break;
+                case 'impossible-quiz-2':
+                    iframe.src = '/gs/the-impossible-quiz-2';
+                    image.src = 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/674fcb03268972a3a154e67bab44b70a.jpeg';
+                    text.textContent = 'The Impossible Quiz 2';
+                    break;
+                case 'minesweeper':
+                    iframe.src = '/gs/minesweeper';
+                    image.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cellcrowd.com%2Fapp%2Fminesweeper%2F&psig=AOvVaw2IJrT8fy7KVn2k0kCx0SU4&ust=1722137089529000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMj93d6ixocDFQAAAAAdAAAAABAJ';
+                    text.textContent = 'Minesweeper';
+                    break;
+                case 'mini-slot':
+                    iframe.src = '/gs/mini-slot';
+                    image.src = 'https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-3d/512/Slot-Machine-3d-icon.png';
+                    text.textContent = 'Mini Slots';
+                    break;
+                case 'monkey-mart':
+                    iframe.src = '/gs/monkey-mart';
+                    image.src = 'https://monkey-mart.io/wp-content/uploads/2023/06/monkey-mart.png';
+                    text.textContent = 'Monkey Mart';
+                    break;
+                case 'moto-x3m-1':
+                    iframe.src = '/gs/moto-x3m-1';
+                    image.src = 'https://play-lh.googleusercontent.com/AbQMuT4ncBfWDqNF-4ubmfaRag59nrW3fJARDsHK51_PENScmWCnMFeQX81wfPlfGBo';
+                    text.textContent = 'Moto X3M';
+                    break;
+                case 'moto-x3m-2':
+                    iframe.src = '/gs/moto-x3m-2';
+                    image.src = 'https://skribblio.online/upload/imgs/moto-x3m-2.jpg';
+                    text.textContent = 'Moto X3M 2';
+                    break;
+                case 'ovo':
+                    iframe.src = '/gs/OvO';
+                    image.src = 'https://play-lh.googleusercontent.com/v7KwGdPjJGjJjRXn46sck4DwDBdKSeRzGN44CjiXUtKV0jjOi51Bt4wcXud0m-SkXg';
+                    text.textContent = 'OvO';
+                    break;
+                case 'papas-bakeria':
+                    iframe.src = '/gs/papas-bakeria';
+                    image.src = 'https://cdn.now.gg/apps-content/com.nowgg.h5.pub807.app51685/icon/papa-s-bakeria.png';
+                    text.textContent = "Papa's Bakeria";
+                    break;
+                case 'papas-burgeria':
+                    iframe.src = '/gs/papas-burgeria';
+                    image.src = 'https://play-lh.googleusercontent.com/rHJuY78XSJrhbaW39aYNhViggnzCgR5Zu-xfIx7Sga0Y3Tv3iIuGIIgvEMqfI5Kn';
+                    text.textContent = "Papa's Burgeria";
+                    break;
+                case 'papas-freezeria':
+                    iframe.src = '/gs/papas-freezeria';
+                    image.src = 'https://play-lh.googleusercontent.com/_XnY34Y12437wWjtgJkabhDbJL350otsdAV5yKspJyfZ7WsoqyH-dX2kMncH5KjSZt4=w240-h480-rw';
+                    text.textContent = "Papa's Freezeria";
+                    break;
+                case 'papas-hot-doggeria':
+                    iframe.src = '/gs/papas-hot-doggeria';
+                    image.src = 'https://assets.funnygames.org/8/19098/72491/1024x1024/papas-hot-doggeria.webp';
+                    text.textContent = "Papa's Hot Doggeria";
+                    break;
+                case 'papas-pancakeria':
+                    iframe.src = '/gs/papas-pancakeria';
+                    image.src = 'https://cdn2.steamgriddb.com/thumb/6fe19e7b59e4ce344aaaf02a61ad84dc.jpg';
+                    text.textContent = "Papa's Pancakeria";
+                    break;
+                case 'papas-pastaria':
+                    iframe.src = '/gs/papas-pastaria';
+                    image.src = 'https://cdn.reludi.com/media/games/7qrvj9wuhkyy.jpg';
+                    text.textContent = "Papa's Pastaria";
+                    break;
+                case 'papas-pizzeria':
+                    iframe.src = '/gs/papas-pizzeria';
+                    image.src = 'https://cdn2.steamgriddb.com/thumb/d135bbad9fe86c6d14520bf92357b890.png';
+                    text.textContent = "Papa's Pizzeria";
+                    break;
+                case 'papas-scooperia':
+                    iframe.src = '/gs/papas-scooperia';
+                    image.src = 'https://play-lh.googleusercontent.com/KpLBHo89bWG3jmuYb_KqDD1rZSY4XzXcHiMLZ1PCv83GMwVMcJluuuXrT32oQGCo51A';
+                    text.textContent = "Papa's Scooperia";
+                    break;
+                case 'papas-sushiria':
+                    iframe.src = '/gs/papas-sushiria';
+                    image.src = 'https://cdn-1.webcatalog.io/catalog/poki-papas-sushiria/poki-papas-sushiria-icon-filled-256.png?v=1714783159850';
+                    text.textContent = "Papa's Sushiria";
+                    break;
+                case 'papas-taco-mia':
+                    iframe.src = '/gs/papas-taco-mia';
+                    image.src = 'https://play-lh.googleusercontent.com/VgECaKfYWKg1nn_hfRXWqDd60FcXhJINKwPW-1ZrtRy_j_yFJ_sW16Wlt70xgB46xi4';
+                    text.textContent = "Papa's Taco Mia";
+                    break;
+                case 'papas-wingeria':
+                    iframe.src = '/gs/papas-wingeria';
+                    image.src = 'https://play-lh.googleusercontent.com/GAxH57KPyQpQPdwY4DuhXF1_0IB6YjHTsS9s3Ioqj6ENmvJdbtJw0QikfMq_1OEjoUQ';
+                    text.textContent = "Papa's Wingeria";
+                    break;
+                case 'parking-fury':
+                    iframe.src = '/gs/parking1';
+                    image.src = 'https://play-lh.googleusercontent.com/DgyqJCW3t0o7prr-6dajdhox4p7maqchfBAArxD5JRwbG-20AxXR7RJbgs6kW8cRjkm0';
+                    text.textContent = 'Parking Fury';
+                    break;
+                case 'parking-fury-2':
+                    iframe.src = '/gs/parking2';
+                    image.src = 'https://gameforge.com/de-DE/littlegames/includes/images/games/12157_5eb3f405deab1.jpg';
+                    text.textContent = 'Parking Fury 2';
+                    break;
+                case 'parking-fury-3':
+                    iframe.src = '/gs/parking3';
+                    image.src = 'https://gameforge.com/de-DE/littlegames/includes/images/games/10234_5eb3f0bbbbc06.jpg';
+                    text.textContent = 'Parking Fury 3';
+                    break;
+                case 'ping-pong':
+                    iframe.src = '/gs/pingpong';
+                    image.src = 'https://img.freepik.com/free-vector/detailed-table-tennis-logo_23-2148653818.jpg';
+                    text.textContent = 'Ping Pong';
+                    break;
+                case 'pixel-gun-survival':
+                    iframe.src = '/gs/pixel-gun-survival';
+                    image.src = 'https://static.wikia.nocookie.net/pixel-gun-3d/images/9/97/21.6.0_Icon.png/revision/latest?cb=20210817152742';
+                    text.textContent = 'Pixel Gun Survival';
+                    break;
+                case 'poeltl':
+                    iframe.src = '/gs/poeltl';
+                    image.src = 'https://styles.redditmedia.com/t5_5xqxq6/styles/communityIcon_t2a2r72osuk81.png';
+                    text.textContent = 'Poeltl';
+                    break;
+                case 'polytrack':
+                    iframe.src = '/gs/polytrack';
+                    image.src = 'https://www2.minijuegosgratis.com/v3/games/thumbnails/245571_7_sq.jpg';
+                    text.textContent = 'PolyTrack';
+                    break;
+                case 'retro-bowl':
+                    iframe.src = '/gs/retro-bowl';
+                    image.src = 'https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ';
+                    text.textContent = 'Retro Bowl';
+                    break;
+                case 'riddle-school':
+                    iframe.src = '/gs/riddle-school';
+                    image.src = 'https://images6.fanpop.com/image/photos/39700000/Phil-riddle-school-phil-eggtree-39719692-200-200.jpg';
+                    text.textContent = 'Riddle School';
+                    break;
+                case 'roblox':
+                    iframe.src = '/gs/roblox';
+                    image.src = 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg';
+                    text.textContent = 'Roblox (might have to reload page a couple times.)';
+                    break;
+                case 'run-2':
+                    iframe.src = '/gs/run-2';
+                    image.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPUCfVmD-GhPgxn0ecfBHTQm3f6BTSdB5Bg&s';
+                    text.textContent = 'Run 2';
+                    break;
+                case 'slope':
+                    iframe.src = '/gs/slope';
+                    image.src = 'https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs';
+                    text.textContent = 'Slope';
+                    break;
+                case 'slot-machine':
+                    iframe.src = '/gs/slot-machine';
+                    image.src = 'https://images-platform.99static.com//Qe-Yxkqw5RvyM0QzfmBDJBB6wl8=/0x0:1000x1000/fit-in/500x500/99designs-contests-attachments/135/135754/attachment_135754077';
+                    text.textContent = 'Slot Machine';
+                    break;
+                case 'slow-roads-io':
+                    iframe.src = '/gs/slow-roads-io';
+                    image.src = 'https://steamuserimages-a.akamaihd.net/ugc/2059880067064343799/EAF7745E7883D53CC0D4D8394047002DF0BEAF66/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false';
+                    text.textContent = 'SlowRoads.io';
+                    break;
+                case 'smash-karts':
+                    iframe.src = '/gs/smashkarts';
+                    image.src = 'https://play-lh.googleusercontent.com/cM1CXOuBIy0kjGfoCTOKNa812iuVX6X2DDop8xNH4mNyjuM-oj3wVqZ7wiAOizq_TA';
+                    text.textContent = 'Smash Karts';
+                    break;
+                case 'snake':
+                    iframe.src = '/gs/Snake';
+                    image.src = 'https://play-lh.googleusercontent.com/S9ZmNx5LYCj7h2IJZb0QqkXAGki6JRaMQ25ycKfrngDkNBA6jk7rM87YcAH1prV_OA';
+                    text.textContent = 'Snake';
+                    break;
+                case 'snow-rider-3d':
+                    iframe.src = '/gs/snow-rider-3d';
+                    image.src = 'https://geometrydash2.com/data/image/3b79a8537ebc414fb4f9672a9b8c68c8-512x512.jpeg';
+                    text.textContent = 'Snow Rider 3D';
+                    break;
+                case 'soccer-random':
+                    iframe.src = '/gs/soccerrandom';
+                    image.src = 'https://play-lh.googleusercontent.com/G1PIlb6HWKSaDre0XpUcmKGps9T4iamsSlwrogB3EJzYv4bz0M2am4D17MtGzndaOOU';
+                    text.textContent = 'Soccer Random';
+                    break;
+                case 'stealing-the-diamond':
+                    iframe.src = '/gs/stealing-the-diamond';
+                    image.src = 'https://cdn2.steamgriddb.com/icon/87019fb492fe6f03c3bdb29cf2ffb6eb.ico';
+                    text.textContent = 'Henry Stickman: Stealing the Diamond';
+                    break;
+                case 'stickman-hook':
+                    iframe.src = '/gs/Stickman-Hook';
+                    image.src = 'https://play-lh.googleusercontent.com/yXqBI1Vb1b-xjwmXLE2T7FQbgHIxfvjze1b6jO2aLHfy8Y8ta7NFSEVqZoPHtM2Ajyrl';
+                    text.textContent = 'Stickman Hook';
+                    break;
+                case 'subway-surfers':
+                    iframe.src = '/gs/subway-surfers';
+                    image.src = 'https://static.wikia.nocookie.net/subwaysurf/images/6/66/LasVegas2021_Icon.png/revision/latest/scale-to-width-down/200?cb=20210830090135';
+                    text.textContent = 'Subway Surfers';
+                    break;
+                case 'sugar-sugar-1':
+                    iframe.src = '/gs/sugar-sugar-1';
+                    image.src = 'https://cdn-1.webcatalog.io/catalog/poki-sugar-sugar-html5/poki-sugar-sugar-html5-icon-filled-256.webp?v=1714779461684';
+                    text.textContent = 'Sugar, Sugar';
+                    break;
+                case 'sugar-sugar-2':
+                    iframe.src = '/gs/sugar-sugar-2';
+                    image.src = 'https://a.silvergames.com/j/b/sugar-sugar-2.jpg';
+                    text.textContent = 'Sugar, Sugar 2';
+                    break;
+                case 'super-mario-63':
+                    iframe.src = '/gs/super-mario-63';
+                    image.src = 'https://upload.wikimedia.org/wikibooks/en/3/36/Super_Mario_63_logo.png';
+                    text.textContent = 'Super Mario 63';
+                    break;
+                case 'super-oliver-world':
+                    iframe.src = '/gs/superoliveworld';
+                    image.src = 'https://play-lh.googleusercontent.com/Ks_dupb7w_oKGawkQLcZJ89jGIp3p9WlbWStx-8-v5NC0Hn4jlJlGqKgTdJG05DkIL8';
+                    text.textContent = 'Super Oliver World';
+                    break;
+                case 'supercold':
+                    iframe.src = '/gs/supercold';
+                    image.src = 'https://i.redd.it/yv8rccxdpim21.jpg';
+                    text.textContent = 'SUPERCOLD';
+                    break;
+                case 'tanuki-sunset':
+                    iframe.src = '/gs/sunset';
+                    image.src = 'https://lh3.googleusercontent.com/9soZri6DRIvywjwB_q7cU5EceXt5hpac_TwZCQHEtNQNnE6mwbLIIy6VZPf9BKQ03uBuXT-kh9JheEmiBdmCmNB3heM=s128-rj-sc0x00ffffff';
+                    text.textContent = 'Tanuki Sunset';
+                    break;
+                case 'territorial-io':
+                    iframe.src = '/gs/territorial-io';
+                    image.src = 'https://cdn-1.webcatalog.io/catalog/territorial-io/territorial-io-icon-filled-256.png';
+                    text.textContent = 'Territorial.io';
+                    break;
+                case 'tetris':
+                    iframe.src = '/gs/tetris';
+                    image.src = 'https://play-lh.googleusercontent.com/7Zn2QBzByBf4XyQPhuRVsOkSaKSYsty1ka-6_bh6Ub-2kQri6xqqRdK52qxEM69N6cw';
+                    text.textContent = 'Tetris';
+                    break;
+                case 'the-final-earth-2':
+                    iframe.src = '/gs/thefinalearth2';
+                    image.src = 'https://f4.bcbits.com/img/a3977539119_10.jpg';
+                    text.textContent = 'The Final Earth 2';
+                    break;
+                case 'the-forest-temple':
+                    iframe.src = '/gs/the-forest-temple';
+                    image.src = 'https://cdn2.steamgriddb.com/icon_thumb/89dafaf4e16185424fa93241c009fa52.png';
+                    text.textContent = 'Fireboy and Watergirl: The Forest Temple';
+                    break;
+                case 'the-worlds-hardest-game':
+                    iframe.src = '/gs/the-worlds-hardest-game';
+                    image.src = 'https://play-lh.googleusercontent.com/WoyHFBEgzmhlM0VCsmH3zPqPFquIYZHQLCbcpVOBKgY4ku7Xb3XIB7rMWwZ6oLsAACA';
+                    text.textContent = "The World's Hardest Game";
+                    break;
+                case 'tiny-fishing':
+                    iframe.src = '/gs/tinyfishing';
+                    image.src = 'https://play-lh.googleusercontent.com/XmnVxmSzSX94xpkQep8zCUh7AZ9kNsplSRE-DH5s6UYjCKWfr-pzjD-86NqLm3uFLbKO';
+                    text.textContent = 'Tiny Fishing';
+                    break;
+                case 'tomb-of-the-mask':
+                    iframe.src = '/gs/tombofthemask';
+                    image.src = 'https://tombofthemask.github.io/img/tomb-of-the-mask.png';
+                    text.textContent = 'Tomb of the Mask';
+                    break;
+                case 'tube-jumpers':
+                    iframe.src = '/gs/tube-jummers';
+                    image.src = 'https://www5.minijuegosgratis.com/v3/games/thumbnails/219245_7_sq.jpg';
+                    text.textContent = 'Tube Jummers';
+                    break;
+                case 'tunnel-rush':
+                    iframe.src = '/gs/tunnelrush';
+                    image.src = 'https://images.hellokids.com/_uploads/_tiny_galerie/20180415/vign-tunnel-rush-hk-w8v_u89.jpg';
+                    text.textContent = 'Tunnel Rush';
+                    break;
+                case 'unfair-mario':
+                    iframe.src = '/gs/unfairmario';
+                    image.src = 'https://m.media-amazon.com/images/M/MV5BY2IwOGYzODgtMzI0MC00MGY5LTgzZTctOTJlYzRmYzNlOGU4XkEyXkFqcGdeQXVyNzgxNDk0NTI@._V1_.jpg';
+                    text.textContent = 'Unfair Mario';
+                    break;
+                case 'vex-1':
+                    iframe.src = '/gs/vex1';
+                    image.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1XN4RgK1IocD22zhNZ0LlWk514ZB6BoQf4w&s';
+                    text.textContent = 'Vex 1';
+                    break;
+                case 'vex-4':
+                    iframe.src = '/gs/vex4';
+                    image.src = 'https://store-images.s-microsoft.com/image/apps.16029.14622517353732960.576abfa8-e499-4dbe-adc4-750c6ba65c7f.72a18063-f8b6-41b6-a6ca-8d549bd33d53?mode=scale&q=90&h=200&w=200&background=%23FFFFFF';
+                    text.textContent = 'Vex 4';
+                    break;
+                case 'vex-5':
+                    iframe.src = '/gs/vex5';
+                    image.src = 'https://img.gamedistribution.com/f120262ab72743039fbce88c1f370df8-512x512.jpg';
+                    text.textContent = 'Vex 5';
+                    break;
+                case 'vex-6':
+                    iframe.src = '/gs/vex6';
+                    image.src = 'https://vgmsite.com/soundtracks/vex-6-online-gamerip-2021/cover.jpg';
+                    text.textContent = 'Vex 6';
+                    break;
+                case 'volley-random':
+                    iframe.src = '/gs/volleyrandom';
+                    image.src = 'https://play-lh.googleusercontent.com/VeKAevaOjPlcyCtOpFY1h6SjwEjnu4ryG3xQ_qw1Muuhrg8pqwhl1aPjWovMkjc0Rc4';
+                    text.textContent = 'Volley Random';
+                    break;
+                case 'wordle-unlimited':
+                    iframe.src = '/gs/wordle-unlimited';
+                    image.src = 'https://play-lh.googleusercontent.com/OHgDluI1NcQl_XlXVuSzwQ2xLakY80n13jqR3q8ahC_ORS1zZQClwpOA9N02DVWSLB8=w240-h480-rw';
+                    text.textContent = 'Wordle Unlimited';
+                    break;
+                case 'yeezle-unlimited':
+                    iframe.src = '/gs/yeezle-unlimited';
+                    image.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu88RYthFzO7r5oNvq_wHx7VI-b-_l1IMJsA&s';
+                    text.textContent = 'Yeezle unlimited';
+                    break;
+                case 'yohoho.io':
+                    iframe.src = '/gs/yohoho-io';
+                    image.src = 'https://images.dwncdn.net/images/t_app-icon-l/p/8458ce6b-32c5-4732-9cd1-8236fdc6a1b9/2951123181/2119_4-78246162-logo';
+                    text.textContent = 'YoHoHo.io';
+                    break;
+                default:
+                    iframe.src = '/404';
+                    image.src = '/assets/images/no-bg-logo.png';
+                    text.textContent = 'Project Neutron';
+                    break;
+            }
+        } else if (app) {
+            switch (app) {
+                case 'ab-cloaker':
+                    iframe.src = '/apps/ab-cloaker';
+                    image.src = 'https://i.pinimg.com/280x280_RS/bd/e9/c5/bde9c5afa50c454ad7363adfa5037aa9.jpg';
+                    text.textContent = 'About:Blank Cloaker';
+                    break;
+                case 'invisible-character':
+                    iframe.src = '/apps/invisible-character';
+                    image.src = '/assets/images/invisible-character-logo.png';
+                    text.textContent = 'Invisible Character';
+                    break;
+                case 'youtube':
+                    iframe.src = '/apps/YouTube';
+                    image.src = 'https://cdn.iconscout.com/icon/free/png-256/free-youtube-logo-icon-download-in-svg-png-gif-file-formats--social-media-70-flat-icons-color-pack-logos-432560.png?f=webp&w=256';
+                    text.textContent = 'YouTube';
+                    break;
+                default:
+                    iframe.src = '/404';
+                    image.src = '/assets/images/no-bg-logo.png';
+                    text.textContent = 'Project Neutron';
+                    break;
+            }
+        } else {
+            iframe.src = '/404';
+            image.src = '/assets/images/no-bg-logo.png';
+            text.textContent = 'Project Neutron';
+        }
+    }
+
+// Function to toggle fullscreen for the embed container
+function toggleFullscreen() {
+    const embedContainer = document.querySelector('.embed-container');
+
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        embedContainer.requestFullscreen().catch(err => {
+            console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+    }
+}
+
+// Update content on page load
+document.addEventListener('DOMContentLoaded', updateContent);
+
+// Add event listener to the fullscreen button
+document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
+        </script>
+    <script>
+    function updateTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // Convert to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    // Format hours with leading zero if necessary
+    const hoursString = String(hours).padStart(2, '0');
+    const timeString = `${hoursString}:${minutes}:${seconds} ${ampm}`;
+    document.getElementById('timeDisplay').textContent = timeString;
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial call to display time immediately
+updateTime();
+</script>
+<script>
+document.getElementById('reload-button').addEventListener('click', function() {
+    const iframe = document.getElementById('embed');
+    iframe.src = iframe.src;  // This effectively reloads the iframe
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('about-blank');
+
+    if (button) {
+        button.addEventListener('click', function() {
+            // Find the current iframe
+            const iframe = document.getElementById('embed');
+
+            if (iframe) {
+                const iframeUrl = iframe.src; // Get the current iframe URL
+                
+                // Open a new tab and create an iframe in it
+                var win = window.open(); // Open a new window/tab
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                
+                var iframeElement = win.document.createElement('iframe');
+                iframeElement.style.border = 'none';
+                iframeElement.style.width = '100%';
+                iframeElement.style.height = '100%';
+                iframeElement.style.margin = '0';
+                iframeElement.src = 'about:blank'; // Set the initial src to about:blank
+
+                // Append the iframe to the new tab
+                win.document.body.appendChild(iframeElement);
+
+                // Use a small timeout to allow about:blank to load, then replace it with the actual URL
+                setTimeout(function() {
+                    iframeElement.src = iframeUrl;
+                }, 100); // Adjust timeout as necessary
+            } else {
+                console.error('No iframe with id "embed" found.');
+            }
+        });
+    } else {
+        console.error('No button with id "about-blank" found.');
+    }
+});
+</script>
+</body>
+</html>
