@@ -316,7 +316,7 @@ function updateDisplay() {
 }
 
 // Style the error message box
-errorMessageBox.style.position = 'absolute';
+errorMessageBox.style.position = 'fixed';
 errorMessageBox.style.top = '20px';
 errorMessageBox.style.left = '50%';
 errorMessageBox.style.transform = 'translateX(-50%)';
@@ -471,7 +471,7 @@ upgradesButtons.forEach((button, index) => {
 // Load saved game state on startup
 loadGame();
 
-// Save game state every 5 seconds
+// Save game state every second
 setInterval(saveGame, 1000);
 </script>
 </body>
