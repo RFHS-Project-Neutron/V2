@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac 'n Cheese Clicker</title>
+    <link rel="icon" href="Build/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Build/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2C2C2C;
+            font-family: 'Poppins', sans-serif;
+            color: #F5F5DC;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .title-container {
+            height: 120px;
+            background-color: transparent;
+            width: 100vw;
+            top: 0;
+            position: absolute;
+            border-bottom: 1px hidden white;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center horizontally */
+        }
+        
+        h1 {
+            font-family: 'Pacifico', cursive;
+            text-align: center;
+            margin: 0; /* Remove margin */
+            z-index: 100;
+            font-size: 2.1rem;
+        }
+        
+        h2 {
+            position: fixed; /* Position absolute to place it in corners */
+            margin: 0; /* Remove margin */
+            font-size: 1.2rem; /* Adjust font size if needed */
+        }
+        
+        .bowls {
+            top: 10px; /* Adjust vertical position for bowls */
+            left: 10px; /* Adjust horizontal position for bowls */
+        }
+        
+        .money {
+            top: 10px; /* Adjust vertical position for money */
+            right: 10px; /* Adjust horizontal position for money */
+        }
+        
+        .bps {
+            bottom: 10px;
+            left: 10px;
+            position: absolute;
+        }
+
+        .sell-button {
+            margin-top: 10px; /* Add space between title and button */
+            padding: 10px 20px; /* Adjust padding for button */
+            background-color: #FFA500; /* Orange background */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.2rem; /* Adjust font size if needed */
+            cursor: pointer; /* Change cursor to pointer */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .sell-button:hover {
+            background-color: #FF8C00; /* Darker orange on hover */
+        }
+
+        .clicker-container {
+            height: calc(100vh - 345px);
+            background-color: transparent;
+            width: 100vw;
+            top: 100px; /* Adjust top positioning */
+            position: absolute;   
+        }
+
+        .upgrades-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100vw;
+            position: relative; /* Change to relative positioning */
+            top: calc(75px + calc(100vh - 320px)); /* Adjust this if needed */
+            background-color: transparent;
+            border-top: 1px solid white;
+            padding: 10px 0;
+        }
+        
+        .bowl {
+            width: auto;
+            height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .upgrades-title {
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 5px 0;
+            font-weight: bold;
+            font-family: 'Playful', cursive;
+            width: 100%;
+        }
+        
+        .upgrades-box {
+            width: 335px;
+            height: auto;
+            background-color: transparent;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border: 1px solid white;
+            border-radius: 10px;
+            justify-content: space-between; /* Align children with space between */
+        }
+        
+        .chef-image {
+            height: 55px;
+            width: 55px;
+            margin-right: 10px;
+        }
+        
+        .chef-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Allow it to grow and take available space */
+        }
+        
+        .chef-title {
+            font-size: 1.2rem;
+            color: #F5F5DC;
+        }
+        
+        .chef-description {
+            font-size: 1rem;
+            color: #F5F5DC;
+        }
+        
+        .price {
+            font-size: 1.5rem; /* Adjust price font size if needed */
+            margin-left: 10px; /* Add space between description and price */
+            color: white; /* Ensure the price is visible */
+        }
+        
+        .bowl.pop {
+            transform: scale(1.01); /* Scale the bowl to 110% */
+            transition: transform 0.65s ease-in-out; /* Transition for smooth scaling */
+        }
+    </style>
+</head>
+<body>
+    <h2 class="bowls">0 Bowls of Mac 'n Cheese</h2>
+    <h2 class="money">$0</h2>
+    <div class="title-container">
+        <h1>Mac and Cheese Clicker</h1>
+        <button class="sell-button">Sell Mac 'n Cheese</button> <!-- Sell button added here -->
+    </div>
+    <div class="clicker-container">
+<img class="bowl" src="https://cdn-icons-png.flaticon.com/256/8512/8512334.png">
+    <h2 class="bps">0 bowls per second</h2>
+    </div>
+    <div class="upgrades-container">
+        <div class="upgrades-title">Upgrades</div>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://images.vexels.com/media/users/3/127400/isolated/lists/43ee1cafca2f947f0be0d94aeff0fc26-chef-cartoon-profession.png">
+            <div class="chef-info">
+                <div class="chef-title">Kitchen Assistant</div>
+                <div class="chef-description">1 bowl every 10s</div>
+            </div>
+            <div class="price">$50</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://www.kidsmathgamesonline.com/images/pictures/shapes/square.jpg">
+            <div class="chef-info">
+                <div class="chef-title">Line Cook</div>
+                <div class="chef-description">3 bowls every 10s</div>
+            </div>
+            <div class="price">$100</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641367.png">
+            <div class="chef-info">
+                <div class="chef-title">Head Chef</div>
+                <div class="chef-description">8 bowls every 10s</div>
+            </div>
+            <div class="price">$250</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/2831/2831517.png">
+            <div class="chef-info">
+                <div class="chef-title">Sous Chef</div>
+                <div class="chef-description">20 bowls every 10s</div>
+            </div>
+            <div class="price">$500</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641382.png">
+            <div class="chef-info">
+                <div class="chef-title">Catering Team</div>
+                <div class="chef-description">50 bowls every 10s</div>
+            </div>
+            <div class="price">$1,000</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641382.png">
+            <div class="chef-info">
+                <div class="chef-title">Culinary Expert</div>
+                <div class="chef-description">150 bowls every 10s</div>
+            </div>
+            <div class="price">$2,500</div>
+        </button>
+        <!-- New Advanced Chefs -->
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641367.png">
+            <div class="chef-info">
+                <div class="chef-title">Master Chef</div>
+                <div class="chef-description">400 bowls every 10s</div>
+            </div>
+            <div class="price">$5,000</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641382.png">
+            <div class="chef-info">
+                <div class="chef-title">Culinary Genius</div>
+                <div class="chef-description">1,000 bowls every 10s</div>
+            </div>
+            <div class="price">$10,000</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641367.png">
+            <div class="chef-info">
+                <div class="chef-title">Gourmet Specialist</div>
+                <div class="chef-description">3,000 bowls every 10s</div>
+            </div>
+            <div class="price">$25,000</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641382.png">
+            <div class="chef-info">
+                <div class="chef-title">Executive Chef</div>
+                <div class="chef-description">7,500 bowls every 10s</div>
+            </div>
+            <div class="price">$50,000</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641367.png">
+            <div class="chef-info">
+                <div class="chef-title">Michelin Star Chef</div>
+                <div class="chef-description">20,000 bowls every 10s</div>
+            </div>
+            <div class="price">$100,000</div>
+        </button>
+        <button class="upgrades-box">
+            <img class="chef-image" src="https://cdn-icons-png.flaticon.com/256/1641/1641382.png">
+            <div class="chef-info">
+                <div class="chef-title">Culinary Legend</div>
+                <div class="chef-description">65,000 bowls every 10s</div>
+            </div>
+            <div class="price">$250,000</div>
+        </button>
+    </div>
+<script>
+// Select the bowl image, bowls counter, money counter, and BPS counter
+const bowlImage = document.querySelector('.bowl');
+const bowlsCounter = document.querySelector('.bowls');
+const moneyCounter = document.querySelector('.money');
+const bpsCounter = document.querySelector('.bps');
+const errorMessageBox = document.createElement('div'); // Create error message box
+
+// Initialize bowls, money count, and BPS
+let bowls = 0;
+let money = 0;
+let bowlsPerSecond = 0;
+
+// Load saved data from localStorage if available
+function loadGame() {
+    const savedData = JSON.parse(localStorage.getItem('macAndCheeseClicker')) || {};
+    bowls = savedData.bowls || 0;
+    money = savedData.money || 0;
+    bowlsPerSecond = savedData.bowlsPerSecond || 0;
+    updateDisplay(); // Update the display with loaded values
+}
+
+// Save the game state to localStorage
+function saveGame() {
+    const gameData = {
+        bowls,
+        money,
+        bowlsPerSecond
+    };
+    localStorage.setItem('macAndCheeseClicker', JSON.stringify(gameData));
+}
+
+// Update the displayed values
+function updateDisplay() {
+    bowlsCounter.textContent = `${Math.floor(bowls)} Bowls of Mac 'n Cheese`;
+    moneyCounter.textContent = `$${money.toFixed(2)}`;
+    updateBPSDisplay();
+}
+
+// Style the error message box
+errorMessageBox.style.position = 'absolute';
+errorMessageBox.style.top = '20px';
+errorMessageBox.style.left = '50%';
+errorMessageBox.style.transform = 'translateX(-50%)';
+errorMessageBox.style.backgroundColor = 'rgba(255, 0, 0, 0.8)';
+errorMessageBox.style.color = 'white';
+errorMessageBox.style.padding = '10px';
+errorMessageBox.style.borderRadius = '5px';
+errorMessageBox.style.zIndex = '1000';
+errorMessageBox.style.display = 'none';
+document.body.appendChild(errorMessageBox);
+
+// Function to update bowls count
+function addBowl(count = 1) {
+    bowls += count; // Increment bowls count by the count
+    updateDisplay(); // Update displayed values
+}
+
+// Function to sell bowls
+function sellBowls() {
+    const earnings = bowls * 3; // $3 per bowl
+    money += earnings; // Update money total
+    bowls = 0; // Reset bowls count
+    updateDisplay(); // Update the display
+}
+
+// Function to round money to 2 decimal places and update display
+function updateMoneyDisplay() {
+    moneyCounter.textContent = `$${money.toFixed(2)}`; // Round to 2 decimals
+}
+
+// Function to purchase upgrades
+function purchaseUpgrade(cost, bowlsPerSecondIncrease) {
+    if (money >= cost) {
+        money -= cost; // Deduct the cost
+        bowlsPerSecond += bowlsPerSecondIncrease; // Increment bowls per second
+        updateDisplay(); // Update the display
+    } else {
+        showError("Not enough money to purchase this upgrade!");
+    }
+}
+
+// Function to update bowls based on bowls per second
+function updateBowls() {
+    addBowl(bowlsPerSecond); // Add bowls according to bowls per second
+}
+
+// Function to update the bowls per second display
+function updateBPSDisplay() {
+    const displayedBPS = Math.round(bowlsPerSecond * 10) / 10;
+    bpsCounter.textContent = `${displayedBPS} bowls per second`;
+}
+
+// Start interval to add bowls based on bowls per second
+setInterval(updateBowls, 1000); // Update every 1 second
+
+// Function to show error message
+function showError(message) {
+    errorMessageBox.textContent = message; // Set the error message
+    errorMessageBox.style.display = 'block'; // Show the box
+
+    // Hide the error message after a few seconds
+    setTimeout(() => {
+        errorMessageBox.style.display = 'none'; // Hide message
+    }, 3000);
+}
+
+// Add click event listener to the bowl image
+bowlImage.addEventListener('click', function() {
+    addBowl(); // Add 1 bowl when the bowl image is clicked
+
+    // Add pop effect only on click
+    bowlImage.classList.add('pop');
+
+    // Remove pop class after the animation
+    setTimeout(() => {
+        bowlImage.classList.remove('pop');
+    }, 100); // Match this duration with the CSS transition time
+});
+
+// Add click event listener to the sell button
+const sellButton = document.querySelector('.sell-button');
+sellButton.addEventListener('click', sellBowls);
+
+// Add click event listeners for each upgrade
+const upgradesButtons = document.querySelectorAll('.upgrades-box');
+
+upgradesButtons.forEach((button, index) => {
+    button.addEventListener('click', function() {
+        let cost;
+        let bpsIncrease;
+
+        // Set the cost and bowls per second increase based on the upgrade index
+        switch (index) {
+            case 0:
+                cost = 50;
+                bpsIncrease = 0.1; // Kitchen Assistant
+                break;
+            case 1:
+                cost = 100;
+                bpsIncrease = 0.3; // Line Cook
+                break;
+            case 2:
+                cost = 250;
+                bpsIncrease = 0.8; // Head Chef
+                break;
+            case 3:
+                cost = 500;
+                bpsIncrease = 2; // Sous Chef
+                break;
+            case 4:
+                cost = 1000;
+                bpsIncrease = 5; // Catering Team
+                break;
+            case 5:
+                cost = 2500;
+                bpsIncrease = 15; // Culinary Expert
+                break;
+            case 6:
+                cost = 5000;
+                bpsIncrease = 40; // Master Chef
+                break;
+            case 7:
+                cost = 10000;
+                bpsIncrease = 100; // Culinary Genius
+                break;
+            case 8:
+                cost = 25000;
+                bpsIncrease = 300; // Gourmet Specialist
+                break;
+            case 9:
+                cost = 50000;
+                bpsIncrease = 750; // Executive Chef
+                break;
+            case 10:
+                cost = 100000;
+                bpsIncrease = 2000; // Michelin Star Chef
+                break;
+            case 11:
+                cost = 250000;
+                bpsIncrease = 6500; // Culinary Legend
+                break;
+            default:
+                cost = 0;
+                bpsIncrease = 0;
+        }
+
+        // Call the purchaseUpgrade function with the appropriate parameters
+        purchaseUpgrade(cost, bpsIncrease);
+    });
+});
+
+// Load saved game state on startup
+loadGame();
+
+// Save game state every 5 seconds
+setInterval(saveGame, 1000);
+</script>
+</body>
+</html>
