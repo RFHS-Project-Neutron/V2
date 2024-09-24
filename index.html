@@ -136,3 +136,127 @@ updateTime();
 </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Popup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .popup-container {
+            width: 400px;
+            height: auto;
+            background-color: white;
+            border-radius: 10px;
+            position: fixed;
+            z-index: 9999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            display: none; /* Initially hidden */
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .getter {
+            font-size: 1.2rem;
+            color: red;
+            margin-top: 10px;
+        }
+
+        .info-text {
+            font-size: 1rem;
+            margin-top: 20px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+
+        .form-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .form-button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container" id="popup">
+        <button class="close-btn" onclick="closePopup()">X</button>
+        <div class="title">PN+ Launch</div>
+        <div class="getter">RFHS Exclusive</div>
+        <div class="info-text">
+            We are trying to gauge interest to see if you would want a premium section, with more games, movies, TV, a proxy, etc. Results will be posted Wednesday.
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkoeVQMsBb33F-IzFhhu7f5huuLdrVR2lXZb5OdyAjetK8JA/viewform" target="_blank" class="form-button">Fill Out the Form</a>
+    </div>
+
+    <script>
+        async function checkIP() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json'); // Use HTTPS for security
+                const data = await response.json();
+                console.log('Detected IP:', data.ip); // Log the detected IP for debugging
+
+                // Check if the IP is the specific one
+                if (['98.61.130.186', '69.4.98.194'].includes(data.ip)) {
+                    document.getElementById('popup').style.display = 'block'; // Show the popup
+                    console.log('Popup should be displayed.'); // Debugging log
+                } else {
+                    console.log('Popup will not be displayed.'); // Debugging log for no match
+                }
+            } catch (error) {
+                console.error('Error fetching IP:', error);
+            }
+        }
+
+        function closePopup() {
+            document.querySelector('.popup-container').style.display = 'none';
+        }
+
+        // Check IP on page load
+        checkIP();
+    </script>
+</body>
+</html>
